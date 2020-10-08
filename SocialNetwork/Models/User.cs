@@ -49,6 +49,7 @@ namespace SocialNetwork.Models
             MessageTo = new List<Message>();
         }
 
+
         public override string ToString() => Name + " " + Surname;
     }
 }

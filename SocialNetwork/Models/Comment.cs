@@ -18,3 +18,4 @@ namespace SocialNetwork.Models
         public User Owner { get; set; }
 
     }
+}
