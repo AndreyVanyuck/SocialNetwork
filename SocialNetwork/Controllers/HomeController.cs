@@ -11,27 +11,32 @@ namespace SocialNetwork.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        IUsersRepository _repository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IUsersRepository repository)
         {
-            _logger = logger;
+            _repository = repository;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
 
-        public IActionResult Privacy()
+        public string Index()
         {
-            return View();
+            return "Social Network";
         }
+        // public IActionResult Index()
+        // {
+        //     return View();
+        // }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        // public IActionResult Privacy()
+        // {
+        //     return View();
+        // }
+
+        // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        // public IActionResult Error()
+        // {
+        //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        // }
     }
 }
