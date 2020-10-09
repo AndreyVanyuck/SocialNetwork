@@ -8,7 +8,7 @@ using SocialNetwork.Models;
 
 namespace SocialNetwork.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(UsersContext))]
     [Migration("20201008201028_init")]
     partial class init
     {

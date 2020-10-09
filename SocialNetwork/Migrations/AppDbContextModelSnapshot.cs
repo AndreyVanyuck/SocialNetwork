@@ -7,7 +7,7 @@ using SocialNetwork.Models;
 
 namespace SocialNetwork.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(UsersContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
