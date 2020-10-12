@@ -65,7 +65,7 @@ namespace SocialNetwork.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Text = table.Column<string>(nullable: true),
-                    Date = table.Column<DateTime>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: true),
                     UserFromId = table.Column<int>(nullable: true),
                     UserToId = table.Column<int>(nullable: true)
                 },
@@ -93,7 +93,7 @@ namespace SocialNetwork.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Text = table.Column<string>(nullable: true),
-                    Date = table.Column<DateTime>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: true),
                     OwnerId = table.Column<int>(nullable: true),
                     Type = table.Column<int>(nullable: false)
                 },
@@ -114,7 +114,7 @@ namespace SocialNetwork.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Date = table.Column<DateTime>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: true),
                     Text = table.Column<string>(nullable: true),
                     PostId = table.Column<int>(nullable: true),
                     OwnerId = table.Column<int>(nullable: true)

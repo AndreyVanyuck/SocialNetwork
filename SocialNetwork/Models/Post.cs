@@ -15,7 +15,7 @@ namespace SocialNetwork.Models
     {
         public int Id { get; set; }
         public string Text { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
         public int? OwnerId { get; set; }
 
         public PostType Type { get; set; }

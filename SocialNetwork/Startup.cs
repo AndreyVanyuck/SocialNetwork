@@ -27,6 +27,7 @@ namespace SocialNetwork
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<IUsersRepository, UsersRepository>();
 
             services.AddDbContext<UsersContext>(options =>
             options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
