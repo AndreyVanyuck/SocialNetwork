@@ -17,7 +17,7 @@ namespace SocialNetwork.Models
         List<Post> GetUsersPhotos(User user); 
         List<User> GetUsersFriends(User user);
         List<Post> GetUsersNews(User user);
-        Dictionary<User, List<Message>> GetUsersMessages(User user);
+      
         Post GetUsersMainPhoto(User user);
 
         User GetUserById(int id);
@@ -39,6 +39,13 @@ namespace SocialNetwork.Models
         void Create(Friendship friendship);
         void Update(Friendship friendship);
         void Remove(Friendship friendship);
+
+        
+        List<User> GetDialogs(User user);
+
+        List<Message> GetUsersMessages(User user, User dialogUser);
+
+        Message GetFirstMessage(User user, User userWith);
 
         void Save();
 

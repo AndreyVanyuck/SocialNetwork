@@ -28,8 +28,17 @@ namespace SocialNetwork.Models
             context.Entry(user)
                    .Collection(c => c.Posts)
                    .Load();
-
-            foreach (var post in user.Posts)
+            return LoadInformationFromPosts(user.Posts.ToList());
+        }
+        public List<Post> GetUsersPost(User user, int num)
+        {
+            var posts = context.Posts.Include(p => p.Owner == user).Take(num).ToList();
+            return LoadInformationFromPosts(posts);
+        }
+        
+        private List<Post> LoadInformationFromPosts(List<Post> posts)
+        {
+            foreach (var post in posts)
             {
                 void load(string x) => context.Entry(post)
                                               .Collection(x)
@@ -38,7 +47,7 @@ namespace SocialNetwork.Models
                 load("Comments");
                 load("Photos");
             }
-            return user.Posts.ToList();
+            return posts;
         }
 
         public List<User> GetUsersFriends(User user)
@@ -72,30 +81,25 @@ namespace SocialNetwork.Models
             return news.OrderBy(n => n.Date).ToList();
         }
 
-        public Dictionary<User, List<Message>> GetUsersMessages(User user)
+        public List<User> GetDialogs(User user)
+        {    
+            var users = context.Messages.Where(m => m.UserFrom == user).Select(u => u.UserTo).Distinct().ToList();
+            users.AddRange(context.Messages.Where(m => m.UserTo == user).Select(u => u.UserFrom).Distinct().ToList());
+            return users;
+        }
+        public List<Message> GetUsersMessages(User user, User dialogUser)
         {
-            void loadMessages(string x) => context.Entry(user)
-                                                  .Collection(x)
-                                                  .Load();
-
-            loadMessages("MessageFrom");
-            loadMessages("MessageTo");
-
-            var messagesFrom = user.MessageFrom;
-            var messageTo = user.MessageTo;
-
-            void loadSenders(string x, Message message)
-                            => context.Entry(message)
-                                      .Reference(x)
-                                      .Load();
-
-            foreach (var message in messagesFrom)
-                loadSenders("UserTo", message);
-
-            foreach (var message in messageTo)
-                loadSenders("UserFrom", message);
-
-            return user.Messages;
+            var outMessages = context.Messages.Where(m => m.UserFrom == user && m.UserTo == dialogUser).ToList();
+            var inMessages = context.Messages.Where(m => m.UserFrom == dialogUser && m.UserTo == user).ToList();
+            var messages = outMessages;
+            messages.AddRange(inMessages);
+            return messages.OrderByDescending(m => m.Date).ToList();
+        }
+        public Message GetFirstMessage(User user, User userWith)
+        {
+            var outMessage = context.Messages.Where(m => m.UserFrom == user && m.UserTo == userWith).Last();
+            var inMessage = context.Messages.Where(m => m.UserFrom == userWith && m.UserTo == user).Last();
+            return outMessage.Date > inMessage.Date ? outMessage : inMessage;
         }
 
         public List<Post> GetUsersPhotos(User user)
@@ -172,5 +176,6 @@ namespace SocialNetwork.Models
         public void Save() => context.SaveChanges();
 
         public User GetUserById(int id) => context.Users.Find(id);
+
     }
 }
