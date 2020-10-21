@@ -1,0 +1,32 @@
+﻿@model Post
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            @*
+            <img class="post-owner-photo" src="@Url.Content(@Model.Owner.MainPhotoPath)" />
+
+        *@
+            <img class="post-owner-photo" src="images/no_photo.png"  alt=""/>
+
+
+        </div>
+        <div class="col-md-10">
+            <div class="post-owner">
+                @Html.ActionLink(@Model.Owner.ToString(), "MainPage", new { userId = @Model.Owner.UserId })
+            </div>
+            <div class="post-data">
+                @Model.Date
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <div class="post-text">
+                 @Model.Text
+            </div>
+        </div>
+    </div>
+</div>
