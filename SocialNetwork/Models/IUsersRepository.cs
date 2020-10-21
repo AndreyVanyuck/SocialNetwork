@@ -19,6 +19,12 @@ namespace SocialNetwork.Models
         List<Post> GetUsersNews(User user);
       
         Post GetUsersMainPhoto(User user);
+        void GetUsersMainPageInfo(User user);
+
+        
+        void Create(User user);
+        void Update(User user);
+        void Remove(User user);
 
         User GetUserById(int id);
 
@@ -40,12 +46,9 @@ namespace SocialNetwork.Models
         void Update(Friendship friendship);
         void Remove(Friendship friendship);
 
-        
-        List<User> GetDialogs(User user);
 
-        List<Message> GetUsersMessages(User user, User dialogUser);
-
-        Message GetFirstMessage(User user, User userWith);
+        List<Dialog> GetDialogs(User user);
+        List<Message> GetMessagesFromDialog(Dialog dialog);
 
         void Save();
 

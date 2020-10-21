@@ -14,7 +14,7 @@ namespace SocialNetwork.Models
         public DateTime? BirthDay { get; set; }
 
         public string Email { get; set; }
-        public string MobiePhone { get; set; }
+        public string MobilePhone { get; set; }
 
         public string Country { get; set; }
         public string City { get; set; }
@@ -72,12 +72,17 @@ namespace SocialNetwork.Models
             }
         }
 
-
         [NotMapped]
         public List<Post> Photos => Posts.Where(p => p.Type == PostType.PhotoOnly).ToList();
 
         [NotMapped]
         public Post MainPhoto => Posts.Single(p => p.Type == PostType.MainPhoto);
+        
+        [NotMapped]
+        public List<Post> WallPosts => Posts.Where(p => p.Type == PostType.Normal).ToList();
+        
+        [NotMapped]
+        public string MainPhotoPath => Posts.Single(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
 
     }
 }

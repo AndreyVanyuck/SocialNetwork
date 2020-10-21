@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using SocialNetwork.Models;
 
 namespace SocialNetwork.Controllers
 {
-    public class PostController
+    public class PostController : Controller
     {
         IUsersRepository _repository;
         User _user;
@@ -14,6 +15,11 @@ namespace SocialNetwork.Controllers
         {
             _repository = repository;
             _user = ((List<User>)_repository.Users)[0];
+        }
+
+        public ActionResult Index(Post post)
+        {
+            return PartialView(post);
         }
 
         public string CreatePost(string text, string[] photos = null)

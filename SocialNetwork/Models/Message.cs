@@ -11,6 +11,9 @@ namespace SocialNetwork.Models
         public int Id { get; set; }
         public string Text { get; set; }
         public DateTime? Date { get; set; }
+        
+        public int? DialogId { get; set; }
+        public Dialog Dialog { get; set; }
 
         public int? UserFromId { get; set; }
         public int? UserToId { get; set; }
@@ -19,6 +22,8 @@ namespace SocialNetwork.Models
         public User UserFrom { get; set; }
         [InverseProperty("MessageTo")]
         public User UserTo { get; set; }
+        
+        public override string ToString() => Date.ToString() + "\n" + UserFrom + ": \n" + Text + "\n";
 
     }
 }

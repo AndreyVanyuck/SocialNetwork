@@ -30,9 +30,10 @@ namespace SocialNetwork.Models
                    .Load();
             return LoadInformationFromPosts(user.Posts.ToList());
         }
-        public List<Post> GetUsersPost(User user, int num)
+
+        public List<Post> GetUsersPosts(User user, int num)
         {
-            var posts = context.Posts.Include(p => p.Owner == user).Take(num).ToList();
+            var posts = context.Posts.Where(p => p.Owner == user).Take(num).ToList();
             return LoadInformationFromPosts(posts);
         }
         
@@ -46,6 +47,10 @@ namespace SocialNetwork.Models
                 load("Likes");
                 load("Comments");
                 load("Photos");
+                
+                context.Entry(post)
+                    .Reference("Owner")
+                    .Load();
             }
             return posts;
         }
@@ -81,25 +86,17 @@ namespace SocialNetwork.Models
             return news.OrderBy(n => n.Date).ToList();
         }
 
-        public List<User> GetDialogs(User user)
+        public List<Dialog> GetDialogs(User user)
         {    
-            var users = context.Messages.Where(m => m.UserFrom == user).Select(u => u.UserTo).Distinct().ToList();
-            users.AddRange(context.Messages.Where(m => m.UserTo == user).Select(u => u.UserFrom).Distinct().ToList());
-            return users;
+            var q = context.Dialogs.ToList();
+            var dialogs = context.Dialogs.Where(d => d.User1Id == user.UserId || d.User2Id == user.UserId).ToList();
+            return dialogs;
         }
-        public List<Message> GetUsersMessages(User user, User dialogUser)
+
+        public List<Message> GetMessagesFromDialog(Dialog dialog)
         {
-            var outMessages = context.Messages.Where(m => m.UserFrom == user && m.UserTo == dialogUser).ToList();
-            var inMessages = context.Messages.Where(m => m.UserFrom == dialogUser && m.UserTo == user).ToList();
-            var messages = outMessages;
-            messages.AddRange(inMessages);
-            return messages.OrderByDescending(m => m.Date).ToList();
-        }
-        public Message GetFirstMessage(User user, User userWith)
-        {
-            var outMessage = context.Messages.Where(m => m.UserFrom == user && m.UserTo == userWith).Last();
-            var inMessage = context.Messages.Where(m => m.UserFrom == userWith && m.UserTo == user).Last();
-            return outMessage.Date > inMessage.Date ? outMessage : inMessage;
+            context.Entry(dialog).Collection("Messages").Load();
+            return dialog.Messages.ToList();
         }
 
         public List<Post> GetUsersPhotos(User user)
@@ -125,12 +122,7 @@ namespace SocialNetwork.Models
 
         public Post GetUsersMainPhoto(User user)
         {
-            context.Entry(user)
-                    .Collection(c => c.Posts)
-                    .Load();
-
-            var mainPhoto = user.MainPhoto;
-
+            var mainPhoto = context.Posts.Single(p => p.Type == PostType.MainPhoto && p.Owner == user);
             void load(string x) => context.Entry(mainPhoto)
                                           .Collection(x)
                                           .Load();
@@ -140,6 +132,16 @@ namespace SocialNetwork.Models
             load("Photos");
 
             return mainPhoto;
+        }
+
+        public void GetUsersMainPageInfo(User user)
+        {
+            GetUsersFriends(user);
+            /*foreach (var friend in user.Friends)
+                GetUsersMainPhoto(friend);*/
+           // GetUsersMainPhoto(user);
+            GetUsersPhotos(user);
+            GetUsersPosts(user);
         }
 
         public void ClearData()
@@ -158,8 +160,33 @@ namespace SocialNetwork.Models
                 context.Comments.Remove(entity);
             foreach (var entity in context.Friendships)
                 context.Friendships.Remove(entity);
+            foreach (var entity in context.Dialogs)
+                context.Dialogs.Remove(entity);
             context.SaveChanges();
         }
+
+         public void Create(User user)
+        {
+            var mainPhotoPost = new Post()
+            {
+                Type = PostType.MainPhoto,
+                Owner = user
+            };
+
+            var mainPhoto = new Photo()
+            {
+                Image = "~/images/no_photo.png",
+                Post = mainPhotoPost
+            };
+
+            context.Posts.Add(mainPhotoPost);
+            context.Photos.Add(mainPhoto);
+            context.Users.Add(user);
+        }
+
+        public void Remove(User user) => context.Users.Remove(user);
+        public void Update(User user) => context.Users.Update(user);
+
 
         public void Create(Message message) => context.Messages.Add(message);
         public void Create(Post post) => context.Posts.Add(post);
