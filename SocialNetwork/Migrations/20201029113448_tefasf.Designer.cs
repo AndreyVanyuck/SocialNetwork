@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SocialNetwork.Models;
 
 namespace SocialNetwork.Migrations
 {
     [DbContext(typeof(UsersContext))]
-    partial class UsersContextModelSnapshot : ModelSnapshot
+    [Migration("20201029113448_tefasf")]
+    partial class tefasf
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -202,16 +204,13 @@ namespace SocialNetwork.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsLogin")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("JobPlace")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("JobPosition")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("MobiePhone")
+                    b.Property<string>("MobilePhone")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")

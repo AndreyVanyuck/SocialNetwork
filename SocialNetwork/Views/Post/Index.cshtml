@@ -6,12 +6,12 @@
             @*
             <img class="post-owner-photo" src="@Url.Content(@Model.Owner.MainPhotoPath)" />
 
-        *@
-            <img class="post-owner-photo" src="images/no_photo.png"  alt=""/>
+            *@
+            <img class="post-owner-photo" src="images/no_photo.png" alt="" />
 
 
         </div>
-        <div class="col-md-10">
+        <div class="col-md-8">
             <div class="post-owner">
                 @Html.ActionLink(@Model.Owner.ToString(), "MainPage", new { userId = @Model.Owner.UserId })
             </div>
@@ -19,6 +19,12 @@
                 @Model.Date
             </div>
         </div>
+        @if (Model.Owner.IsLogin)
+        {
+            <div class="col-md-2">
+                <button type="reset" postId="@Model.Id" class="btn btn-danger btn-sm delete-post-button">Удалить</button>
+            </div>
+        }
     </div>
 
     <div class="row">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,10 +12,13 @@ namespace SocialNetwork.Models
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        [DataType(DataType.Date)]
         public DateTime? BirthDay { get; set; }
 
         public string Email { get; set; }
-        public string MobilePhone { get; set; }
+        public string MobiePhone { get; set; }
+
+        public string TestField { get; set; }
 
         public string Country { get; set; }
         public string City { get; set; }
@@ -25,6 +29,10 @@ namespace SocialNetwork.Models
 
         public string JobPlace { get; set; }
         public string JobPosition { get; set; }
+
+        //TODO исправь идиот
+        public bool IsLogin { get; set; } = true;
+
 
 
         public ICollection<Friendship> IncomingFrienshipRequests { get; set; }
@@ -79,10 +87,10 @@ namespace SocialNetwork.Models
         public Post MainPhoto => Posts.Single(p => p.Type == PostType.MainPhoto);
         
         [NotMapped]
-        public List<Post> WallPosts => Posts.Where(p => p.Type == PostType.Normal).ToList();
+        public List<Post> WallPosts => Posts.Where(p => p.Type == PostType.Normal).Reverse().ToList();
         
-        [NotMapped]
-        public string MainPhotoPath => Posts.Single(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
+        //[NotMapped]
+        //public string MainPhotoPath => Posts.Single(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
 
     }
 }
