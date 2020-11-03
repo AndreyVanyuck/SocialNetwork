@@ -12,7 +12,7 @@ namespace SocialNetwork.Models
         public Post Post { get; set; }
         public int? PostId { get; set; }
 
-        public string OwnerId { get; set; }
+        public int? OwnerId { get; set; }
         public User Owner { get; set; }
     }
 }

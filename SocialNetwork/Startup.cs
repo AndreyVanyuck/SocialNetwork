@@ -11,8 +11,6 @@ using Microsoft.Extensions.Hosting;
 
 using Microsoft.EntityFrameworkCore;
 using SocialNetwork.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Http;
 
 namespace SocialNetwork
 {
@@ -29,19 +27,7 @@ namespace SocialNetwork
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
             services.AddTransient<IUsersRepository, UsersRepository>();
-
-
-            services.AddIdentity<User, IdentityRole>(opts => {
-                opts.Password.RequiredLength = 6;
-                opts.Password.RequireNonAlphanumeric = false;
-                opts.Password.RequireLowercase = false;
-                opts.Password.RequireUppercase = false;
-                opts.Password.RequireDigit = false;
-            }).AddEntityFrameworkStores<UsersContext>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
 
             services.AddDbContext<UsersContext>(options =>
             options.UseSqlite(Configuration.GetConnectionString("UsersContext")));

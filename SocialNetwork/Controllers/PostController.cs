@@ -22,8 +22,7 @@ namespace SocialNetwork.Controllers
             return PartialView(post);
         }
 
-        [Route("createPost/{text}")]
-        public ActionResult Create(string text)
+        public string CreatePost(string text, string[] photos = null)
         {
             var post = new Post()
             {
@@ -32,19 +31,50 @@ namespace SocialNetwork.Controllers
                 Text = text,
                 Type = PostType.Normal
             };
+
+            foreach (var photo in photos)
+            {
+                _repository.Create(
+                    new Photo
+                    {
+                        Image = photo,
+                        Post = post,
+                    });
+            }
             _repository.Create(post);
             _repository.Save();
-            return RedirectToAction("Posts", "User");
+            return "Created";
         }
 
 
-        [Route("removePost/{postId}")]
-        public ActionResult Remove(int postId)
+        public string CreatePhoto(string text, string photo, bool isMain)
         {
-            var post = _repository.GetPostById(postId);
+
+            var post = new Post()
+            {
+                Owner = _user,
+                Date = DateTime.Now,
+                Text = text,
+            };
+
+            post.Type = isMain ? PostType.MainPhoto : PostType.PhotoOnly;
+
+            _repository.Create(
+                new Photo
+                {
+                    Image = photo,
+                    Post = post,
+                });
+           
+            _repository.Create(post);
+            return "Created";
+        }
+
+        public string Remove(Post post)
+        {
             _repository.Remove(post);
             _repository.Save();
-            return RedirectToAction("Posts", "User");
+            return "Removed";
         }
     }
 }

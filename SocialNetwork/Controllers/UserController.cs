@@ -20,26 +20,19 @@ namespace SocialNetwork.Controllers
             return View(_user);
         }
 
-        public ActionResult MainPage(int userId){
-            if (userId == _user.UserId)
-                return Redirect("~/User");
+        public ViewResult MainPage(int userId){
             User user = _repository.GetUserById(userId);
             _repository.GetUsersMainPageInfo(user);
             return View("Index", user);
         }
 
-        public ActionResult Posts()
-        {
-            _repository.GetUsersPosts(_user);
-            return PartialView(_user.WallPosts);
-        }
 
         public ViewResult Friends(int userId)
         {
             User user = userId == 0 ? _user:_repository.GetUserById(userId);  
             var friends =_repository.GetUsersFriends(user);
-           *//*foreach(var friend in friends)
-                _repository.GetUsersMainPhoto(friend);*//*
+           /*foreach(var friend in friends)
+                _repository.GetUsersMainPhoto(friend);*/
             return View(friends);
         }
 
