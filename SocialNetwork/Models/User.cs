@@ -14,7 +14,7 @@ namespace SocialNetwork.Models
         public DateTime? BirthDay { get; set; }
 
         public string Email { get; set; }
-        public string MobilePhone { get; set; }
+        public string MobiePhone { get; set; }
 
         public string Country { get; set; }
         public string City { get; set; }
@@ -25,6 +25,9 @@ namespace SocialNetwork.Models
 
         public string JobPlace { get; set; }
         public string JobPosition { get; set; }
+        //TODO change isLogin
+        public bool IsLogin { get; set; } = true;
+
 
 
         public ICollection<Friendship> IncomingFrienshipRequests { get; set; }
@@ -79,10 +82,10 @@ namespace SocialNetwork.Models
         public Post MainPhoto => Posts.Single(p => p.Type == PostType.MainPhoto);
         
         [NotMapped]
-        public List<Post> WallPosts => Posts.Where(p => p.Type == PostType.Normal).ToList();
+        public List<Post> WallPosts => Posts.Where(p => p.Type == PostType.Normal).Reverse().ToList();
         
-        [NotMapped]
-        public string MainPhotoPath => Posts.Single(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
+       // [NotMapped]
+     //   public string MainPhotoPath => Posts.Single(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
 
     }
 }

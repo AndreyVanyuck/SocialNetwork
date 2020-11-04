@@ -25,6 +25,9 @@ namespace SocialNetwork.Models
         void Create(User user);
         void Update(User user);
         void Remove(User user);
+        Like GetLikeById(int id);
+        Comment GetCommentById(int id);
+        Post GetPostById(int id);
 
         User GetUserById(int id);
 
