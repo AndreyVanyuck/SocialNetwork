@@ -96,7 +96,9 @@ namespace SocialNetwork.Models
         public List<Message> GetMessagesFromDialog(Dialog dialog)
         {
             context.Entry(dialog).Collection("Messages").Load();
-            return dialog.Messages.ToList();
+            GetUsersMainPhoto(GetUserById(dialog.User1Id));
+            GetUsersMainPhoto(GetUserById(dialog.User2Id));
+            return dialog.Messages.OrderBy(m => m.Date).ToList();
         }
 
         public List<Post> GetUsersPhotos(User user)
@@ -119,10 +121,11 @@ namespace SocialNetwork.Models
             }
             return onlyPhotoPosts;
         }
+ /*       public void GetUsersMainPhoto(User user)
 
-        public Post GetUsersMainPhoto(User user)
+        //   public Post GetUsersMainPhoto(User user)
         {
-            var mainPhoto = context.Posts.Single(p => p.Type == PostType.MainPhoto && p.Owner == user);
+         *//*   var mainPhoto = context.Posts.Single(p => p.Type == PostType.MainPhoto && p.Owner == user);
             void load(string x) => context.Entry(mainPhoto)
                                           .Collection(x)
                                           .Load();
@@ -131,7 +134,11 @@ namespace SocialNetwork.Models
             load("Comments");
             load("Photos");
 
-            return mainPhoto;
+            return mainPhoto;*//*
+        }
+ */       public Post GetUsersMainPhoto(User user)
+        {
+            return null;
         }
 
         public void GetUsersMainPageInfo(User user)
@@ -186,7 +193,8 @@ namespace SocialNetwork.Models
 
         public void Remove(User user) => context.Users.Remove(user);
         public void Update(User user) => context.Users.Update(user);
-
+        public void Create(Dialog dialog) => context.Dialogs.Add(dialog);
+        public void Remove(Dialog dialog) => context.Dialogs.Remove(dialog);
 
         public void Create(Message message) => context.Messages.Add(message);
         public void Create(Post post) => context.Posts.Add(post);

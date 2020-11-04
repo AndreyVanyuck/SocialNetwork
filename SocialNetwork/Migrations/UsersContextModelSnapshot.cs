@@ -202,6 +202,9 @@ namespace SocialNetwork.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsLogin")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("JobPlace")
                         .HasColumnType("TEXT");
 

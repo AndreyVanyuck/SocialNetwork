@@ -9,7 +9,7 @@ using SocialNetwork.Models;
 namespace SocialNetwork.Migrations
 {
     [DbContext(typeof(UsersContext))]
-    [Migration("20201012173326_init")]
+    [Migration("20201104110901_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,23 @@ namespace SocialNetwork.Migrations
                     b.HasIndex("PostId");
 
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("SocialNetwork.Models.Dialog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("User1Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("User2Id")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Dialogs");
                 });
 
             modelBuilder.Entity("SocialNetwork.Models.Friendship", b =>
@@ -99,6 +116,9 @@ namespace SocialNetwork.Migrations
                     b.Property<DateTime?>("Date")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("DialogId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Text")
                         .HasColumnType("TEXT");
 
@@ -109,6 +129,8 @@ namespace SocialNetwork.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("DialogId");
 
                     b.HasIndex("UserFromId");
 
@@ -182,6 +204,9 @@ namespace SocialNetwork.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsLogin")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("JobPlace")
                         .HasColumnType("TEXT");
 
@@ -243,6 +268,10 @@ namespace SocialNetwork.Migrations
 
             modelBuilder.Entity("SocialNetwork.Models.Message", b =>
                 {
+                    b.HasOne("SocialNetwork.Models.Dialog", "Dialog")
+                        .WithMany("Messages")
+                        .HasForeignKey("DialogId");
+
                     b.HasOne("SocialNetwork.Models.User", "UserFrom")
                         .WithMany("MessageFrom")
                         .HasForeignKey("UserFromId");

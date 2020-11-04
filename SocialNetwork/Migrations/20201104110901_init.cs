@@ -8,6 +8,20 @@ namespace SocialNetwork.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Dialogs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    User1Id = table.Column<int>(nullable: false),
+                    User2Id = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dialogs", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -24,7 +38,8 @@ namespace SocialNetwork.Migrations
                     School = table.Column<string>(nullable: true),
                     University = table.Column<string>(nullable: true),
                     JobPlace = table.Column<string>(nullable: true),
-                    JobPosition = table.Column<string>(nullable: true)
+                    JobPosition = table.Column<string>(nullable: true),
+                    IsLogin = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -66,12 +81,19 @@ namespace SocialNetwork.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Text = table.Column<string>(nullable: true),
                     Date = table.Column<DateTime>(nullable: true),
+                    DialogId = table.Column<int>(nullable: true),
                     UserFromId = table.Column<int>(nullable: true),
                     UserToId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Messages", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Messages_Dialogs_DialogId",
+                        column: x => x.DialogId,
+                        principalTable: "Dialogs",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Messages_Users_UserFromId",
                         column: x => x.UserFromId,
@@ -213,6 +235,11 @@ namespace SocialNetwork.Migrations
                 column: "PostId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Messages_DialogId",
+                table: "Messages",
+                column: "DialogId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Messages_UserFromId",
                 table: "Messages",
                 column: "UserFromId");
@@ -249,6 +276,9 @@ namespace SocialNetwork.Migrations
 
             migrationBuilder.DropTable(
                 name: "Photos");
+
+            migrationBuilder.DropTable(
+                name: "Dialogs");
 
             migrationBuilder.DropTable(
                 name: "Posts");

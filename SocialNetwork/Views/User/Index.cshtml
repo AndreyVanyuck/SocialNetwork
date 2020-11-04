@@ -9,12 +9,21 @@
                             <div class="username-dt">
                                 <div class="usr-pic">
                                     @*              <img src="@Url.Content(@Model.MainPhotoPath)" alt="">*@
-                                                <img src="~/images/no_photo.png" >
+                                    <img src="~/images/no_photo.png">
                                 </div>
                             </div>
                             <div class="user-specs">
                                 <h3>@Model</h3>
                             </div>
+                            @if (!Model.IsLogin)
+                            {
+                                <button type="submit" id="sendMessageButtonMainPage"
+                                        userToId="@Model.UserId" class="btn btn-primary"
+                                        onclick="@("window.location.href='" + @Url.Action("Index", "Message",
+                                new { userWithId = @Model.UserId as int? }) + "'");">
+                                    Отправить сообщение
+                                </button>
+                            }
                         </div>
                     </div>
                     <div class="friends-main full-width">
@@ -55,8 +64,8 @@
                     </div>
                 }
                 <div class="posts" id="postsArea">
-                    @{await Html.RenderPartialAsync("Posts", @Model.WallPosts);}
-                </div>
+@*                    @{await Html.RenderPartialAsync("Posts", @Model.WallPosts);}
+*@                </div>
             </div>
         </div>
     </div>

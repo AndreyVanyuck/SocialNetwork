@@ -42,7 +42,7 @@ namespace SocialNetwork.Controllers
         [Route("removePost/{postId}")]
         public ActionResult Remove(int postId)
         {
-            var post = _repository.GetPostById(postId)
+            var post = _repository.GetPostById(postId);
             _repository.Remove(post);
             _repository.Save();
             return RedirectToAction("Posts", "User");
