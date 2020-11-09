@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using SocialNetwork.Models;
 
 namespace SocialNetwork.Controllers
@@ -17,8 +18,9 @@ namespace SocialNetwork.Controllers
             _user = ((List<User>)_repository.Users)[0];
         }
 
-        public ActionResult Index(Post post)
+        public ActionResult Index(int postId)
         {
+            var post = _repository.GetPostById(postId);
             return PartialView(post);
         }
 
@@ -46,6 +48,11 @@ namespace SocialNetwork.Controllers
             _repository.Remove(post);
             _repository.Save();
             return RedirectToAction("Posts", "User");
+        }
+
+        public override void OnActionExecuted(ActionExecutedContext context)
+        {
+            ViewBag.User = _user;
         }
     }
 }

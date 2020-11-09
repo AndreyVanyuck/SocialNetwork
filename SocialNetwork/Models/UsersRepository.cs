@@ -121,22 +121,29 @@ namespace SocialNetwork.Models
             }
             return onlyPhotoPosts;
         }
- /*       public void GetUsersMainPhoto(User user)
-
-        //   public Post GetUsersMainPhoto(User user)
+        public HashSet<Like> GetUsersLikes(User user)
         {
-         *//*   var mainPhoto = context.Posts.Single(p => p.Type == PostType.MainPhoto && p.Owner == user);
-            void load(string x) => context.Entry(mainPhoto)
-                                          .Collection(x)
-                                          .Load();
-
-            load("Likes");
-            load("Comments");
-            load("Photos");
-
-            return mainPhoto;*//*
+            var likes = context.Likes.Where(l => l.Owner == user).ToHashSet();
+            return likes;
         }
- */       public Post GetUsersMainPhoto(User user)
+
+        /*       public void GetUsersMainPhoto(User user)
+
+               //   public Post GetUsersMainPhoto(User user)
+               {
+                *//*   var mainPhoto = context.Posts.Single(p => p.Type == PostType.MainPhoto && p.Owner == user);
+                   void load(string x) => context.Entry(mainPhoto)
+                                                 .Collection(x)
+                                                 .Load();
+
+                   load("Likes");
+                   load("Comments");
+                   load("Photos");
+
+                   return mainPhoto;*//*
+               }
+        */
+        public Post GetUsersMainPhoto(User user)
         {
             return null;
         }
@@ -198,7 +205,15 @@ namespace SocialNetwork.Models
 
         public void Create(Message message) => context.Messages.Add(message);
         public void Create(Post post) => context.Posts.Add(post);
-        public void Remove(Post post) => context.Posts.Remove(post);
+        public void Remove(Post post)
+        {
+            LoadInformationFromPosts(new List<Post> { post });
+            foreach (var like in post.Likes)
+                Remove(like);
+            foreach (var comment in post.Comments)
+                Remove(comment);
+            context.Posts.Remove(post);
+        }
         public void Create(Like like) => context.Likes.Add(like);
         public void Remove(Like like) => context.Likes.Remove(like);
         public void Create(Comment comment) => context.Comments.Add(comment);
@@ -209,7 +224,13 @@ namespace SocialNetwork.Models
         public void Update(Friendship friendship) => context.Friendships.Update(friendship);
         public void Remove(Friendship friendship) => context.Friendships.Remove(friendship);
         public void Save() => context.SaveChanges();
-        public Post GetPostById(int id) => context.Posts.Find(id);
+        public Post GetPostById(int id)
+        {
+            var post = context.Posts.Find(id);
+            LoadInformationFromPosts(new List<Post> { post });
+            GetUsersMainPhoto(post.Owner);
+            return post;
+        }
         public Like GetLikeById(int id) => context.Likes.Find(id);
         public Comment GetCommentById(int id) => context.Comments.Find(id);
 

@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-2">
             @*
-            <img class="post-owner-photo" src="@Url.Content(@Model.Owner.MainPhotoPath)" />
+                <img class="post-owner-photo" src="@Url.Content(@Model.Owner.MainPhotoPath)" />
 
             *@
             <img class="post-owner-photo" src="images/no_photo.png" alt="" />
@@ -31,8 +31,22 @@
         <div class="col-md-2"></div>
         <div class="col-md-10">
             <div class="post-text">
-                 @Model.Text
+                @Model.Text
+            </div>
+            <div class="post-likes">
+                <button class="btn post-like-button not-liked" id="@Model.Id" postId="@Model.Id"><span class="glyphicon glyphicon-heart" postId="@Model.Id"></span> @Model.Likes.Count</button>
             </div>
         </div>
     </div>
+    <script src="~/js/post_deleting.js"></script>
+
+    @if (((User)ViewBag.User).Likes.Select(l => l.PostId).Contains(Model.Id))
+    {
+        <script>
+                $(document).ready(function(){
+                    $('#@Model.Id').removeClass('not-liked');
+                    $('#@Model.Id').addClass('liked');
+                });
+        </script>
+    }
 </div>

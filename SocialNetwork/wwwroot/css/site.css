@@ -502,6 +502,31 @@ img {
 
 .delete-post-button {
 }
+
+.post-likes {
+    float: right;
+    margin-bottom: 10px;
+}
+
+    .post-likes > .not-liked {
+        background-color: #006064;
+        color: #FFF;
+    }
+
+        .post-likes > .not-liked:hover {
+            background-color: #FF1122;
+            color: #FFF;
+        }
+
+    .post-likes > .liked {
+        background-color: #FF1122;
+        color: #FFF;
+    }
+
+        .post-likes > .liked:hover {
+            background-color: #006064;
+            color: #FFF;
+        }
 /* ============== user-information ============== */
 
 .info {

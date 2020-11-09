@@ -32,6 +32,8 @@ namespace SocialNetwork.Models
         void Remove(Dialog dialog);
 
         User GetUserById(int id);
+        HashSet<Like> GetUsersLikes(User user);
+
 
         void Create(Message message);
 
