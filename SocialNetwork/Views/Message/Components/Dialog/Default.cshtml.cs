@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SocialNetwork.Views.Message
+namespace SocialNetwork.Views.Message.Components.Dialogs
 {
-    public class IndexModel : PageModel
+    public class DefaultModel : PageModel
     {
         public void OnGet()
         {

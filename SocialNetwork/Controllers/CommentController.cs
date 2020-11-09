@@ -46,11 +46,5 @@ namespace SocialNetwork.Controllers
             Post post = _repository.GetPostById(postId);
             return PartialView(post.Comments);
         }
-        public string Remove(Comment comment)
-        {
-            _repository.Remove(comment);
-            _repository.Save();
-            return "Removed";
-        }
     }
 }

@@ -213,8 +213,10 @@ namespace SocialNetwork.Models
         public void Update(User user) => context.Users.Update(user);
         public void Create(Dialog dialog) => context.Dialogs.Add(dialog);
         public void Remove(Dialog dialog) => context.Dialogs.Remove(dialog);
+        public void Update(Dialog dialog) => context.Dialogs.Update(dialog);
 
         public void Create(Message message) => context.Messages.Add(message);
+
         public void Create(Post post) => context.Posts.Add(post);
         public void Remove(Post post)
         {
@@ -242,6 +244,8 @@ namespace SocialNetwork.Models
             return post;
         }
         public Like GetLikeById(int id) => context.Likes.Find(id);
+        public Message GetMessageById(int id) => context.Messages.Find(id);
+
         public Comment GetCommentById(int id)
         {
             var comment = context.Comments.Find(id);

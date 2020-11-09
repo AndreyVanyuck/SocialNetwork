@@ -28,8 +28,12 @@ namespace SocialNetwork.Models
         Like GetLikeById(int id);
         Comment GetCommentById(int id);
         Post GetPostById(int id);
+        Message GetMessageById(int id);
+
         void Create(Dialog dialog);
         void Remove(Dialog dialog);
+        void Update(Dialog dialog);
+
 
         User GetUserById(int id);
         HashSet<Like> GetUsersLikes(User user);
