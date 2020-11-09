@@ -210,7 +210,10 @@ namespace SocialNetwork.Models
         }
 
         public void Remove(User user) => context.Users.Remove(user);
-        public void Update(User user) => context.Users.Update(user);
+        public void Update(User user)
+        {
+            context.Entry(user).State = EntityState.Modified;
+        }
         public void Create(Dialog dialog) => context.Dialogs.Add(dialog);
         public void Remove(Dialog dialog) => context.Dialogs.Remove(dialog);
         public void Update(Dialog dialog) => context.Dialogs.Update(dialog);
