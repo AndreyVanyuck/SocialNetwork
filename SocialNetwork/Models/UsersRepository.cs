@@ -51,6 +51,17 @@ namespace SocialNetwork.Models
                 context.Entry(post)
                     .Reference("Owner")
                     .Load();
+                GetUsersMainPhoto(post.Owner);
+                foreach (var comment in post.Comments)
+                {
+                    context.Entry(comment)
+                              .Reference("Owner")
+                              .Load();
+                    context.Entry(comment)
+                              .Reference("Post")
+                              .Load();
+                    GetUsersMainPhoto(comment.Owner);
+                }
             }
             return posts;
         }
@@ -228,11 +239,17 @@ namespace SocialNetwork.Models
         {
             var post = context.Posts.Find(id);
             LoadInformationFromPosts(new List<Post> { post });
-            GetUsersMainPhoto(post.Owner);
             return post;
         }
         public Like GetLikeById(int id) => context.Likes.Find(id);
-        public Comment GetCommentById(int id) => context.Comments.Find(id);
+        public Comment GetCommentById(int id)
+        {
+            var comment = context.Comments.Find(id);
+            context.Entry(comment)
+                   .Reference("Post")
+                   .Load();
+            return comment;
+        }
 
         public User GetUserById(int id) => context.Users.Find(id);
 
