@@ -1,10 +1,11 @@
 ﻿@model Post
+@addTagHelper SocialNetwork.TagHelpers.LikeTagHelper, SocialNetwork
 
 <div class="post full-width">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
-              @*  <img class="post-owner-photo" src="@Url.Content(@Model.Owner.MainPhotoPath)" />*@
+                @*  <img class="post-owner-photo" src="@Url.Content(@Model.Owner.MainPhotoPath)" />*@
                 <img class="post-owner-photo" src="~/images/no_photo.png" />
             </div>
             <div class="col-md-8">
@@ -30,20 +31,10 @@
                     @Model.Text
                 </div>
                 <div class="post-likes">
-                    <button class="btn post-like-button not-liked" postId="@Model.Id"><span class="glyphicon glyphicon-heart" postId="@Model.Id"></span> @Model.Likes.Count</button>
+                    <like class="btn post-like-button not-liked" postId="@Model.Id"><span class="glyphicon glyphicon-heart" postId="@Model.Id"></span> @Model.Likes.Count</like>
                 </div>
             </div>
         </div>
-
-        @if (((User)ViewBag.User).Likes.Select(l => l.PostId).Contains(Model.Id))
-        {
-            <script>
-                    $(document).ready(function(){
-                        $('[postId="@Model.Id"]').removeClass('not-liked');
-                        $('[postId="@Model.Id"]').addClass('liked');
-                    });
-            </script>
-        }
     </div>
 </div>
 
