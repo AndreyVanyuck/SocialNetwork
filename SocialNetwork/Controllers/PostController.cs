@@ -12,6 +12,9 @@ namespace SocialNetwork.Controllers
         IUsersRepository _repository;
         User _user;
 
+        const int pageSize = 5;
+
+
         public PostController(IUsersRepository repository)
         {
             _repository = repository;

@@ -99,7 +99,7 @@ namespace SocialNetwork.Models
             var friends = user.Friends;
             friends.AddRange(user.Following);
             foreach (var friend in friends)
-                news.AddRange(GetUsersPosts(friend));
+                news.AddRange(GetUsersPosts(friend).Where(p => p.Type == PostType.Normal));
             return news.OrderBy(n => n.Date).Reverse().ToList();
         }
 
