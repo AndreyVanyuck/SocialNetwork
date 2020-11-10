@@ -16,14 +16,14 @@
                       @*  <img src="@Url.Content(@request.MainPhotoPath)" />*@
                         <img src="~/images/no_photo.png" />
                     </div>
-                    @Html.ActionLink(@request.ToString(), "MainPage", new { userId = @request.UserId })
+                    @Html.ActionLink(@request.ToString(), "MainPage", new { userId = @request.Id })
                     <div class="request-buttons">
                         <button class="btn btn-success" onclick="@("window.location.href='" +
-                                    @Url.Action("ConfirmRequestFromFriendsView", "Friendship", new { userId = request.UserId }) + "'");">
+                                    @Url.Action("ConfirmRequestFromFriendsView", "Friendship", new { userId = request.Id }) + "'");">
                             Добавить
                         </button>
                         <button class="btn btn-danger" onclick="@("window.location.href='" +
-                                    @Url.Action("CancelRequestFromFriendsView", "Friendship", new { userId = request.UserId }) + "'");">
+                                    @Url.Action("CancelRequestFromFriendsView", "Friendship", new { userId = request.Id }) + "'");">
                             Удалить
                         </button>
                     </div>
@@ -46,7 +46,7 @@
                         @*<img src="@Url.Content(@friend.MainPhotoPath)" />*@
                         <img src="/images/no_photo.png" />
                     </div>
-                    @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.UserId })
+                    @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
                 </div>
             </div>
             }

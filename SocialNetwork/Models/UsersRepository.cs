@@ -106,7 +106,7 @@ namespace SocialNetwork.Models
         public List<Dialog> GetDialogs(User user)
         {    
             var q = context.Dialogs.ToList();
-            var dialogs = context.Dialogs.Where(d => d.User1Id == user.UserId || d.User2Id == user.UserId).ToList();
+            var dialogs = context.Dialogs.Where(d => d.User1Id == user.Id || d.User2Id == user.Id).ToList();
             return dialogs;
         }
 
@@ -144,22 +144,28 @@ namespace SocialNetwork.Models
             return likes;
         }
 
-        /*       public void GetUsersMainPhoto(User user)
+    /*    public Post GetUsersMainPhoto(User user)
+        {
+            try
+            {
+                var mainPhoto = context.Posts.Where(p => p.Type == PostType.MainPhoto && p.Owner == user).
+                                              Single();
 
-               //   public Post GetUsersMainPhoto(User user)
-               {
-                *//*   var mainPhoto = context.Posts.Single(p => p.Type == PostType.MainPhoto && p.Owner == user);
-                   void load(string x) => context.Entry(mainPhoto)
-                                                 .Collection(x)
-                                                 .Load();
+                void load(string x) => context.Entry(mainPhoto)
+                                              .Collection(x)
+                                              .Load();
 
-                   load("Likes");
-                   load("Comments");
-                   load("Photos");
+                load("Likes");
+                load("Comments");
+                load("Photos");
 
-                   return mainPhoto;*//*
-               }
-        */
+                return mainPhoto;
+            }
+            catch (InvalidOperationException)
+            {
+                return null;
+            }
+        }*/
         public Post GetUsersMainPhoto(User user)
         {
             return null;
@@ -171,8 +177,8 @@ namespace SocialNetwork.Models
             /*foreach (var friend in user.Friends)
                 GetUsersMainPhoto(friend);*/
            // GetUsersMainPhoto(user);
-            GetUsersPhotos(user);
-            GetUsersPosts(user);
+           GetUsersPhotos(user);
+           GetUsersPosts(user);
         }
 
         public void ClearData()
@@ -257,6 +263,7 @@ namespace SocialNetwork.Models
         public void Update(Post post) => context.Posts.Update(post);
 
         public Like GetLikeById(int id) => context.Likes.Find(id);
+
         public Message GetMessageById(int id) => context.Messages.Find(id);
 
         public Comment GetCommentById(int id)
@@ -269,6 +276,8 @@ namespace SocialNetwork.Models
         }
 
         public User GetUserById(int id) => context.Users.Find(id);
+        public User GetUserById(string id) => context.Users.Find(id);
+
 
     }
 }

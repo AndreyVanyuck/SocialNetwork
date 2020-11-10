@@ -13,9 +13,11 @@ namespace SocialNetwork.Controllers
         }
 
 
-        public RedirectToActionResult Index()
+        public ActionResult Index()
         {
-            return  RedirectToAction("Index", "User");
+            if (User.Identity.IsAuthenticated)
+                return RedirectToAction("Index", "User");
+            return View();
         }
 
     }

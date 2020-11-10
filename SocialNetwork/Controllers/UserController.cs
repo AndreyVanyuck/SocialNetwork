@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using System.IO;
 using System;
 using SocialNetwork.ViewModels;
+using Microsoft.AspNetCore.Identity;
 
 namespace SocialNetwork.Controllers 
 {
@@ -16,12 +17,17 @@ namespace SocialNetwork.Controllers
     {
         IUsersRepository _repository;
         IHostingEnvironment _environment;
+
         User _user;
-        public UserController(IUsersRepository repository, IHostingEnvironment environment)
+        public UserController(IUsersRepository repository,
+                              IHostingEnvironment environment,
+                              IHttpContextAccessor httpContextAccessor,
+                              UserManager<User> userManager)
         {
             _repository = repository;
             _environment = environment;
-            _user = ((List<User>)_repository.Users)[0];
+            var id = userManager.GetUserId(httpContextAccessor.HttpContext.User);
+            _user = _repository.GetUserById(id);
         }
 
         public ViewResult Index(){
@@ -29,8 +35,8 @@ namespace SocialNetwork.Controllers
             return View(_user);
         }
 
-        public ActionResult MainPage(int userId) {
-            if (userId == _user.UserId)
+        public ActionResult MainPage(string userId) {
+            if (userId == _user.Id)
                 return Redirect("~/User");
             User user = _repository.GetUserById(userId);
             _repository.GetUsersMainPageInfo(user);
@@ -43,9 +49,9 @@ namespace SocialNetwork.Controllers
             _repository.GetUsersPosts(user);
             return PartialView(user.WallPosts);
         }*/
-        public ViewResult Friends(int userId)
+        public ViewResult Friends(string userId = null)
         {
-            User user = userId == 0 ? _user:_repository.GetUserById(userId);  
+            User user = userId == null ? _user:_repository.GetUserById(userId);  
             var friends =_repository.GetUsersFriends(user);
             /*foreach(var friend in friends)
                  _repository.GetUsersMainPhoto(friend);*/
@@ -86,14 +92,15 @@ namespace SocialNetwork.Controllers
         [NonAction]
         public async Task UpdateAvatar(IFormFile avatar)
         {
-            string path = "/usersPhotos/avatar" + _user.UserId + ".jpg";
+            string path = "/usersPhotos/avatar" + _user.Id + ".jpg";
             using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
             {
                 await avatar.CopyToAsync(fileStream);
             }
 
             var prevPhoto = _repository.GetUsersMainPhoto(_user);
-            _repository.Remove(prevPhoto);
+            if (prevPhoto != null)
+                _repository.Remove(prevPhoto);
 
             Post mainPhoto = new Post { Owner = _user, Date = DateTime.Now, Type = PostType.MainPhoto };
             Photo photo = new Photo { Image = path, Post = mainPhoto };
@@ -106,7 +113,7 @@ namespace SocialNetwork.Controllers
 
         public override void OnActionExecuted(ActionExecutedContext context)
         {
-            ViewBag.User = _user;
+            ViewBag.LoggedUser = _user;
         }
     }
 }

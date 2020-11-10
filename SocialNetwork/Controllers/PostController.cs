@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using SocialNetwork.Models;
@@ -15,10 +16,13 @@ namespace SocialNetwork.Controllers
         const int pageSize = 5;
 
 
-        public PostController(IUsersRepository repository)
+        public PostController(IUsersRepository repository,
+                             IHttpContextAccessor httpContextAccessor,
+                             UserManager<User> userManager)
         {
             _repository = repository;
-            _user = ((List<User>)_repository.Users)[0];
+            var id = userManager.GetUserId(httpContextAccessor.HttpContext.User);
+            _user = _repository.GetUserById(id);
         }
 
         public ActionResult Index(int postId)
@@ -53,15 +57,15 @@ namespace SocialNetwork.Controllers
             return RedirectToAction("PostsList");
         }
 
-        public PartialViewResult PostsList(int? userId = null)
+        public PartialViewResult PostsList(string userId = null)
         {
-            User user = userId == null ? _user : _repository.GetUserById(userId.Value);
+            User user = userId == null ? _user : _repository.GetUserById(userId);
             _repository.GetUsersPosts(user);
             return PartialView(user.WallPosts);
         }
         public override void OnActionExecuted(ActionExecutedContext context)
         {
-            ViewBag.User = _user;
+            ViewBag.LoggedUser = _user;
         }
     }
 }

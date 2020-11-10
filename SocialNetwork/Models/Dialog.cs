@@ -7,8 +7,8 @@ namespace SocialNetwork.Models
     {
         public int Id { get; set; }
 
-        public int User1Id { get; set; }
-        public int User2Id { get; set; }
+        public string User1Id { get; set; }
+        public string User2Id { get; set; }
         public int LastMessageId { get; set; }
 
         public ICollection<Message> Messages { get; set; }

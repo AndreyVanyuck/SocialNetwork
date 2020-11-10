@@ -18,7 +18,7 @@
     {
         <script>
             $(document).ready(function(){
-                var userWithId = @((int)ViewBag.userWithId);
+                var userWithId = "@ViewBag.userWithId";
                 $('.user-dialog').each(function(indx, element){
                     if (element.getAttribute('userId') == userWithId)
                         $(element).addClass('selected');

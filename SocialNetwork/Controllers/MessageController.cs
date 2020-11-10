@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SocialNetwork.Models;
 
@@ -10,20 +12,23 @@ namespace SocialNetwork.Controllers
     {
         IUsersRepository _repository;
         User _user;
-        public MessageController(IUsersRepository repository)
+        public MessageController(IUsersRepository repository,
+                                IHttpContextAccessor httpContextAccessor,
+                                UserManager<User> userManager)
         {
             _repository = repository;
-            _user = ((List<User>)_repository.Users)[0];
+            var id = userManager.GetUserId(httpContextAccessor.HttpContext.User);
+            _user = _repository.GetUserById(id);
         }
 
-        public ViewResult Index(int? userWithId = null)
+        public ViewResult Index(string userWithId = null)
         {
             ViewBag.userWithId = userWithId;
             return View();
         }
 
         [Route("dialog/{userId}")]
-        public ViewComponentResult Dialog(int userId)
+        public ViewComponentResult Dialog(string userId)
         {
             return ViewComponent("Dialog", new { userId });
         }
@@ -35,21 +40,21 @@ namespace SocialNetwork.Controllers
         }
 
         [Route("sendMessage/{userToId}/{text}")]
-        public RedirectResult SendMessage(int userToId, string text)
+        public RedirectResult SendMessage(string userToId, string text)
         {
             var userTo = _repository.GetUserById(userToId);
             Dialog dialog = null ;
             try
             {
-                dialog = _repository.GetDialogs(_user).Single(d => (d.User1Id == _user.UserId && d.User2Id == userToId) ||
-                                                                (d.User2Id == _user.UserId && d.User1Id == userToId));
+                dialog = _repository.GetDialogs(_user).Single(d => (d.User1Id == _user.Id && d.User2Id == userToId) ||
+                                                                (d.User2Id == _user.Id && d.User1Id == userToId));
 
             }
             catch (InvalidOperationException)
             {
                 dialog = new Dialog()
                 {
-                    User1Id = _user.UserId,
+                    User1Id = _user.Id,
                     User2Id = userToId
                 };
 

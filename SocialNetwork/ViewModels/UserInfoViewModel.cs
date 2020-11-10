@@ -12,7 +12,7 @@ namespace SocialNetwork.ViewModels
         public Gender Gender { get; set; }
 
         public string Email { get; set; }
-        public string MobilePhone { get; set; }
+        public string PhoneNumber { get; set; }
 
         public string Country { get; set; }
         public string City { get; set; }
@@ -33,7 +33,7 @@ namespace SocialNetwork.ViewModels
             Surname = user.Surname;
             BirthDay = user.BirthDay;
             Email = user.Email;
-            MobilePhone = user.MobiePhone;
+            PhoneNumber = user.PhoneNumber;
             Country = user.Country;
             City = user.City;
             Address = user.Address;

@@ -15,8 +15,8 @@ namespace SocialNetwork.Models
         public int? DialogId { get; set; }
         public Dialog Dialog { get; set; }
 
-        public int? UserFromId { get; set; }
-        public int? UserToId { get; set; }
+        public string UserFromId { get; set; }
+        public string UserToId { get; set; }
 
         [InverseProperty("MessageFrom")]
         public User UserFrom { get; set; }

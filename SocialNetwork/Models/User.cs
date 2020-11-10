@@ -1,4 +1,5 @@
-﻿using SocialNetwork.ViewModels;
+﻿using Microsoft.AspNetCore.Identity;
+using SocialNetwork.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,18 +16,13 @@ namespace SocialNetwork.Models
         [Display(Name = "Женский")]
         Female
     }
-    public class User
+    public class User : IdentityUser
     {
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime? BirthDay { get; set; }
         public Gender Gender { get; set; }
-
-
-        public string Email { get; set; }
-        public string MobiePhone { get; set; }
-
         public string Country { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
@@ -105,7 +101,7 @@ namespace SocialNetwork.Models
                 }
                 catch (NullReferenceException)
                 {
-                    return null;
+                    return "~/images/no_photo.png";
                 }
             }
         }
@@ -161,7 +157,7 @@ namespace SocialNetwork.Models
             Surname = info.Surname;
             BirthDay = info.BirthDay;
             Email = info.Email;
-            MobiePhone = info.MobilePhone;
+            PhoneNumber = info.PhoneNumber;
             Country = info.Country;
             City = info.City;
             Address = info.Address;
