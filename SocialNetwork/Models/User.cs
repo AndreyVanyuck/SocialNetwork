@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SocialNetwork.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -106,6 +107,36 @@ namespace SocialNetwork.Models
                 {
                     return null;
                 }
+            }
+        }
+
+        [NotMapped]
+        public List<User> Followers
+        {
+            get
+            {
+                List<User> followers = new List<User>();
+
+                foreach (var request in IncomingFrienshipRequests.Where
+                                  (f => f.Status == FriendshipStatus.Rejected ||
+                                  f.Status == FriendshipStatus.Waiting).ToList())
+                    followers.Add(request.RequestFrom);
+                return followers;
+            }
+        }
+
+        [NotMapped]
+        public List<User> Following
+        {
+            get
+            {
+                List<User> following = new List<User>();
+
+                foreach (var request in OutgoingFrienshipRequests.Where
+                                  (f => f.Status == FriendshipStatus.Rejected ||
+                                  f.Status == FriendshipStatus.Waiting).ToList())
+                    following.Add(request.RequestTo);
+                return following;
             }
         }
 

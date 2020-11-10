@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using SocialNetwork.Models;
 
-namespace SocialNetwork
+namespace SocialNetwork.ViewModels
 {
     public class UserInfoViewModel
     {

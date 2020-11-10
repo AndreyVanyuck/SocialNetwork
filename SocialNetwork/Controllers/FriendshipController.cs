@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using SocialNetwork.Models;
 
 namespace SocialNetwork.Controllers
 {
-    public class FriendshipController
+    public class FriendshipController : Controller
     {
         IUsersRepository _repository;
         User _user;
@@ -15,8 +17,9 @@ namespace SocialNetwork.Controllers
             _user = ((List<User>)_repository.Users)[0];
         }
 
-        public string AddToFriends (User user)
+        public RedirectToActionResult AddToFriends(int userId)
         {
+            var user = _repository.GetUserById(userId);
             var request = new Friendship()
             {
                 RequestFrom = _user,
@@ -26,21 +29,60 @@ namespace SocialNetwork.Controllers
 
             _repository.Create(request);
             _repository.Save();
-            return "Request has been sent to " + user;
+            return RedirectToAction("MainPage", "User", new { userId });
         }
 
-        public string ConfirmRequest(Friendship request)
+        public RedirectToActionResult ConfirmRequest(int userId)
         {
+            var request = GetRequest(userId);
             request.Status = FriendshipStatus.Confirmed;
             _repository.Update(request);
-            return request.RequestFrom + " added to friends";
+            _repository.Save();
+            return RedirectToAction("MainPage", "User", new { userId });
         }
 
-        public string RemoveFromFriends(Friendship request)
+        public RedirectToActionResult CancelRequest(int userId)
         {
+            var request = GetRequest(userId);
+            _repository.Remove(request);
+            _repository.Save();
+            return RedirectToAction("MainPage", "User", new { userId });
+        }
+
+        public RedirectToActionResult Remove(int userId)
+        {
+            var request = GetRequest(userId);
             request.Status = FriendshipStatus.Rejected;
             _repository.Update(request);
-            return request.RequestFrom + " removed from friends";
+            _repository.Save();
+            return RedirectToAction("MainPage", "User", new { userId });
+        }
+
+        [NonAction]
+        private Friendship GetRequest(int userId)
+        {
+            var user = _repository.GetUserById(userId);
+            return _repository.Friendships.Single(f =>
+                    (f.RequestFrom == _user && f.RequestTo == user) ||
+                    (f.RequestFrom == user && f.RequestTo == _user));
+        }
+
+        public RedirectToActionResult ConfirmRequestFromFriendsView(int userId)
+        {
+            var request = GetRequest(userId);
+            request.Status = FriendshipStatus.Confirmed;
+            _repository.Update(request);
+            _repository.Save();
+            return RedirectToAction("Friends", "User");
+        }
+
+        public RedirectToActionResult CancelRequestFromFriendsView(int userId)
+        {
+            var request = GetRequest(userId);
+            request.Status = FriendshipStatus.Rejected;
+            _repository.Update(request);
+            _repository.Save();
+            return RedirectToAction("Friends", "User");
         }
 
 

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using System;
+using SocialNetwork.ViewModels;
 
 namespace SocialNetwork.Controllers 
 {
@@ -46,9 +47,19 @@ namespace SocialNetwork.Controllers
         {
             User user = userId == 0 ? _user:_repository.GetUserById(userId);  
             var friends =_repository.GetUsersFriends(user);
-           /*foreach(var friend in friends)
-                _repository.GetUsersMainPhoto(friend);*/
-            return View(friends);
+            /*foreach(var friend in friends)
+                 _repository.GetUsersMainPhoto(friend);*/
+            FriendsRequestsViewModel friendsVM = new FriendsRequestsViewModel
+            {
+                Friends = user.Friends
+            };
+
+            if (user == _user)
+                friendsVM.Requests = user.IncomingFrienshipRequests.Where(r => r.Status == FriendshipStatus.Waiting)
+                                                     .Select(r => r.RequestFrom).ToList();
+    /*        foreach (var r in friendsVM.Requests)
+                _repository.GetUsersMainPhoto(r);*/
+            return View(friendsVM);
         }
 
         public ViewResult News()
