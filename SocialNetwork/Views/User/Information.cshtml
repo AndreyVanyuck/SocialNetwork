@@ -1,4 +1,4 @@
-﻿@model User
+﻿@model UserInfoViewModel
 
 <div class="container-fluid info">
         @if (@Model.BirthDay != null || @Model.Country != null || @Model.City != null)
@@ -74,18 +74,18 @@
             </div>
         }
 
-        @if (@Model.MobiePhone != null || Model.Email != null)
+        @if (@Model.MobilePhone != null || Model.Email != null)
         {
             <div class="info-section full-width">
                 @{
-                    if (@Model.MobiePhone != null)
+                    if (@Model.MobilePhone != null)
                     {
                         <div class="row info-row">
                             <div class="col-lg-4 col-md-5 col-sm-6 info-name">
                                 Мобильный телефон:
                             </div>
                             <div class="col-lg-8 col-md-7 col-sm-6 info-value">
-                                @Model.MobiePhone
+                                @Model.MobilePhone
                             </div>
                         </div>
                     }

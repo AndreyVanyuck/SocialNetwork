@@ -24,6 +24,25 @@ namespace SocialNetwork
         public string JobPlace { get; set; }
         public string JobPosition { get; set; }
         public IFormFile Avatar { get; set; }
+        public UserInfoViewModel()
+        {
+        }
+        public UserInfoViewModel(User user)
+        {
+            Name = user.Name;
+            Surname = user.Surname;
+            BirthDay = user.BirthDay;
+            Email = user.Email;
+            MobilePhone = user.MobiePhone;
+            Country = user.Country;
+            City = user.City;
+            Address = user.Address;
+            School = user.School;
+            University = user.University;
+            JobPlace = user.JobPlace;
+            JobPosition = user.JobPosition;
+            Gender = user.Gender;
+        }
 
     }
 }

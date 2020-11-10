@@ -1,4 +1,4 @@
-﻿@model User
+﻿@model UserInfoViewModel
 
     <div class="update-page">
         <form method="post" enctype="multipart/form-data">
@@ -51,8 +51,8 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="MobiePhone" class="control-label">Мобильный телефон</label>
-                <input type="text" asp-for="MobiePhone" class="form-control" value="@Model.MobiePhone" />
+                <label asp-for="MobilePhone" class="control-label">Мобильный телефон</label>
+                <input type="text" asp-for="MobilePhone" class="form-control" value="@Model.MobilePhone" />
             </div>
 
             <hr />
