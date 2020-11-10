@@ -228,6 +228,8 @@ namespace SocialNetwork.Models
                 Remove(like);
             foreach (var comment in post.Comments)
                 Remove(comment);
+            foreach (var photo in post.Photos)
+                Remove(photo);
             context.Posts.Remove(post);
         }
         public void Create(Like like) => context.Likes.Add(like);
@@ -246,6 +248,8 @@ namespace SocialNetwork.Models
             LoadInformationFromPosts(new List<Post> { post });
             return post;
         }
+        public void Update(Post post) => context.Posts.Update(post);
+
         public Like GetLikeById(int id) => context.Likes.Find(id);
         public Message GetMessageById(int id) => context.Messages.Find(id);
 

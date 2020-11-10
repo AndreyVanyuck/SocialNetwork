@@ -28,7 +28,7 @@ namespace SocialNetwork.Components
                 _repository.GetUsersMainPhoto(second_user);
                 users.Add((second_user, _repository.GetMessageById(dialog.LastMessageId)));
             }
-          //  users = users.OrderByDescending(u => u.Item2.Date).ToList();
+            users = users.OrderByDescending(u => u.Item2.Date).ToList();
             return View(users);
         }
     }

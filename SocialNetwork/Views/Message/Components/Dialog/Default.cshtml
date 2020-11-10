@@ -1,13 +1,17 @@
 ﻿@model List<Message>
+@{
+    User userWith = ((User)ViewBag.otherUser);
+}
 
 <div class="message-bar-head">
     <div class="usr-msg-details">
         <div class="usr-msg-img">
-            @*            <img src="@Url.Content((((User)ViewBag.otherUser).MainPhotoPath))" alt="">*@
+           @* <img src="@Url.Content((userWith.MainPhotoPath))" alt="">*@
+
             <img src="~/images/no_photo.png" />
         </div>
-        <div class="usr-msg-info">
-            <h3>@((User)ViewBag.otherUser)</h3>
+        <div class="usr-msg-name">
+            @Html.ActionLink(userWith.ToString(), "MainPage", "User", new { userId = userWith.UserId })
         </div>
     </div>
 </div>
@@ -15,7 +19,7 @@
     <div class="free-space"></div>
     @foreach (var message in Model)
     {
-        if (@message.UserFromId == ((User)ViewBag.otherUser).UserId)
+        if (@message.UserFromId == userWith.UserId)
         {
             <div class="main-message-box left">
                 <div class="message-dt left">
@@ -25,7 +29,7 @@
                     <span>@message.Date</span>
                 </div>
                 <div class="msg-usr-img">
-                    @*  <img src="@Url.Content((((User)ViewBag.otherUser).MainPhotoPath))" alt="">*@
+                   @* <img src="@Url.Content(userWith.MainPhotoPath)" alt="">*@
                     <img src="~/images/no_photo.png" />
                 </div>
             </div>
@@ -40,8 +44,8 @@
                     <span>@message.Date</span>
                 </div>
                 <div class="msg-usr-img">
-                    @*      <img src="@Url.Content((((User)ViewBag.ownerUser).MainPhotoPath))" alt="">*@
-                    <img src="~/images/no_photo.png" />
+              @*      <img src="@Url.Content(userWith.MainPhotoPath)" alt="">*@
+                     <img src="~/images/no_photo.png" />
                 </div>
             </div>
         }
@@ -59,7 +63,7 @@
         <textarea class="form-control message-control"
                   id="messageText" rows="3" placeholder="Введите сообщение"></textarea>
         <button type="submit" id="sendMessageButton"
-                userToId="@(((User)ViewBag.otherUser).UserId)"
+                  userToId ="@(userWith.UserId)" 
                 class="btn btn-primary send-message-button">
             Отправить
         </button>

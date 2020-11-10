@@ -3,16 +3,23 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Hosting;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using System;
 
 namespace SocialNetwork.Controllers 
 {
     public class UserController : Controller
     {
         IUsersRepository _repository;
+        IHostingEnvironment _environment;
         User _user;
-        public UserController(IUsersRepository repository)
+        public UserController(IUsersRepository repository, IHostingEnvironment environment)
         {
             _repository = repository;
+            _environment = environment;
             _user = ((List<User>)_repository.Users)[0];
         }
 
@@ -61,12 +68,37 @@ namespace SocialNetwork.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public RedirectToActionResult Update(UserInfoViewModel info)
+        public async Task<RedirectToActionResult> Update(UserInfoViewModel info)
         {
+            if (info.Avatar != null)
+            {
+                await UpdateAvatar(info.Avatar);
+            }
             _user.ChangeInformation(info);
             _repository.Update(_user);
             _repository.Save();
             return RedirectToAction("Index");
+        }
+
+        [NonAction]
+        public async Task UpdateAvatar(IFormFile avatar)
+        {
+            string path = "/usersPhotos/avatar" + _user.UserId + ".jpg";
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await avatar.CopyToAsync(fileStream);
+            }
+
+            var prevPhoto = _repository.GetUsersMainPhoto(_user);
+            _repository.Remove(prevPhoto);
+
+            Post mainPhoto = new Post { Owner = _user, Date = DateTime.Now, Type = PostType.MainPhoto };
+            Photo photo = new Photo { Image = path, Post = mainPhoto };
+            _repository.Create(mainPhoto);
+            _repository.Create(photo);
+
+            _repository.Update(_user);
+            _repository.Save();
         }
 
         public override void OnActionExecuted(ActionExecutedContext context)

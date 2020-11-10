@@ -12,7 +12,7 @@
                     <div class="friend-info full-width">
                         <div class="friend-up-info">
                             @*<img src="@Url.Content(@friend.MainPhotoPath)" />*@
-                            <img src="images/no_photo.png"/>
+                            <img src="/images/no_photo.png"/>
                         </div>
                         @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.UserId })
                     </div>
