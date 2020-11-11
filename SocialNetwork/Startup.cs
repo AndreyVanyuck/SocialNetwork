@@ -31,9 +31,23 @@ namespace SocialNetwork
             services.AddControllersWithViews();
             services.AddTransient<IUsersRepository, UsersRepository>();
 
-            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<UsersContext>();
+            services.AddIdentity<User, IdentityRole>(opts =>
+            {
+                opts.Password.RequiredLength = 6;
+                opts.Password.RequireNonAlphanumeric = false;
+                opts.Password.RequireLowercase = false;
+                opts.Password.RequireUppercase = false;
+                opts.Password.RequireDigit = false;
+            }).AddEntityFrameworkStores<UsersContext>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
+           /* services.AddIdentity<User, IdentityRole>(opts =>
+            {
+                opts.Password.RequiredLength = 6;
+                opts.Password.RequireNonAlphanumeric = false;
+                opts.Password.RequireLowercase = false;
+                opts.Password.RequireUppercase = false;
+                opts.Password.RequireDigit = false;
+            }).AddEntityFrameworkStores<UsersContext>();*/
             services.AddDbContext<UsersContext>(options =>
             options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
         }

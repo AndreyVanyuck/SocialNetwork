@@ -20,5 +20,10 @@ namespace SocialNetwork.Controllers
             return View();
         }
 
+        public ActionResult NoAccess()
+        {
+            return View();
+        }
+
     }
 }

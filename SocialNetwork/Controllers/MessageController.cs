@@ -23,6 +23,9 @@ namespace SocialNetwork.Controllers
 
         public ViewResult Index(string userWithId = null)
         {
+            if (_user.IsBlocked)
+                return View("NoAccess", "Home");
+
             ViewBag.userWithId = userWithId;
             return View();
         }

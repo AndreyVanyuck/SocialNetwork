@@ -38,12 +38,14 @@ namespace SocialNetwork.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "user");
                     await _signInManager.SignInAsync(user, false);
                     return RedirectToAction("Index", "User");
                 }
                 foreach (var error in result.Errors)
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    ModelState.AddModelError("", "Неверный email или пароль.\n" +
+                                                    "Пароль должен быть не менее 6 символов, а email уникальным ");
                 }
             }
             return View(model);
@@ -79,11 +81,6 @@ namespace SocialNetwork.Controllers
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
-        }
-
-        public RedirectToActionResult Test()
-        {
             return RedirectToAction("Index", "Home");
         }
     }

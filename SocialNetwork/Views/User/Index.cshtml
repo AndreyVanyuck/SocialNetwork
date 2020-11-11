@@ -1,6 +1,8 @@
 @model User
 @{
     User ownerUser = (User)ViewBag.LoggedUser;
+    List<string> roles = (List<string>)ViewBag.UserRoles;
+    List<string> ownerRoles = (List<string>)ViewBag.LoggedUserRoles;
 }
 
 <div class="container-fluid">
@@ -17,61 +19,116 @@
                         </div>
                         <div class="user-specs">
                             <h3>@Model</h3>
+                            @if (roles.Contains("admin"))
+                            {
+                                <p>Админ</p>
+                            }
+                            else if (roles.Contains("moderator"))
+                            {
+                                <p>Модератор</p>
+                            }
                         </div>
                         @if (Model != ownerUser)
                         {
-                        <button type="submit"
-                                userToId="@Model.Id" class="btn btn-primary button-main-page"
-                                onclick="@("window.location.href='" + @Url.Action("Index", "Message",
+                            <button type="submit"
+                                    userToId="@Model.Id" class="btn btn-primary button-main-page"
+                                    onclick="@("window.location.href='" + @Url.Action("Index", "Message",
                             new { userWithId = @Model.Id }) + "'");">
-                            Отправить сообщение
-                        </button>
-                        <div class="requests-info">
-                            @if(ownerUser.Friends.Contains(Model))
-                                {
-                            <p>У вас в друзьях</p>
-                            <button type="submit" class="btn btn-primary button-main-page"
-                                    onclick="@("window.location.href='" +
-                                        @Url.Action("Remove", "Friendship", new { userId = Model.Id }) + "'");">
-                                Удалить из друзей
+                                Отправить сообщение
                             </button>
+                            <div class="requests-info">
+                                @if (ownerUser.Friends.Contains(Model))
+                                {
+                                    <p>У вас в друзьях</p>
+                                    <button type="submit" class="btn btn-primary button-main-page"
+                                            onclick="@("window.location.href='" +
+                                        @Url.Action("Remove", "Friendship", new { userId = Model.Id }) + "'");">
+                                        Удалить из друзей
+                                    </button>
                                 }
                                 else if (ownerUser.Followers.Contains(Model))
                                 {
                                     var text = Model.Gender == Gender.Male ? "Подписан на вас" : "Подписана на вас";
-                            <p>@text</p>
+                                    <p>@text</p>
 
-                            <button type="submit" class="btn btn-primary button-main-page"
-                                    onclick="@("window.location.href='" +
+                                    <button type="submit" class="btn btn-primary button-main-page"
+                                            onclick="@("window.location.href='" +
                                         @Url.Action("ConfirmRequest", "Friendship", new { userId = Model.Id }) + "'");">
-                                Добавить в друзья
-                            </button>
+                                        Добавить в друзья
+                                    </button>
                                 }
                                 else if (ownerUser.Following.Contains(Model))
                                 {
-                            <p>Заявка отправлена</p>
-                            <button type="submit" class="btn btn-primary button-main-page"
-                                    onclick="@("window.location.href='" +
+                                    <p>Заявка отправлена</p>
+                                    <button type="submit" class="btn btn-primary button-main-page"
+                                            onclick="@("window.location.href='" +
                                         @Url.Action("CancelRequest", "Friendship", new { userId = Model.Id }) + "'");">
-                                Отменить заявку
-                            </button>
+                                        Отменить заявку
+                                    </button>
                                 }
                                 else
                                 {
-                            <button type="submit" class="btn btn-primary button-main-page"
-                                    onclick="@("window.location.href='" +
+                                    <button type="submit" class="btn btn-primary button-main-page"
+                                            onclick="@("window.location.href='" +
                                         @Url.Action("AddToFriends", "Friendship", new { userId = Model.Id }) + "'");">
-                                Добавить в друзья
-                            </button>
+                                        Добавить в друзья
+                                    </button>
                                 }
-                        </div>
+                            </div>
                         }
                         else
                         {
-                        <button type="submit" class="btn btn-primary button-main-page"
-                                onclick="@("window.location.href='" + @Url.Action("Update", "User") + "'");">
-                            Редактировать страницу
-                        </button>
+                            <button type="submit" class="btn btn-primary button-main-page"
+                                    onclick="@("window.location.href='" + @Url.Action("Update", "User") + "'");">
+                                Редактировать страницу
+                            </button>
+                        }
+                        @if ((ownerRoles.Contains("admin") && !roles.Contains("admin")) ||
+                           (ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
+                        {
+                            <div class="admin-area">
+                                @if (ownerRoles.Contains("admin"))
+                                {
+                                    if (!roles.Contains("admin"))
+                                    {
+                                        <button type="submit" class="btn btn-primary button-main-page"
+                                                onclick="@("window.location.href='" +
+                                            @Url.Action("SetAdmin", "Roles",
+                                            new { userId = Model.Id }) + "'");">
+                                            Назначить админом
+                                        </button>
+                                    }
+
+                                    if (!roles.Contains("moderator"))
+                                    {
+                                        <button type="submit" class="btn btn-primary button-main-page"
+                                                onclick="@("window.location.href='" +
+                                            @Url.Action("SetModerator", "Roles",
+                                            new { userId = Model.Id }) + "'");">
+                                            Назначить модератором
+                                        </button>
+                                    }
+                                    else if (!roles.Contains("admin"))
+                                    {
+                                        <button type="submit" class="btn btn-danger button-main-page-danger"
+                                                onclick="@("window.location.href='" +
+                                            @Url.Action("RemoveModerator", "Roles",
+                                            new { userId = Model.Id }) + "'");">
+                                            Удалить права модератора
+                                        </button>
+                                    }
+                                }
+
+                                @if ((ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
+                                {
+                                    <button type="submit" class="btn btn-danger button-main-page-danger"
+                                            onclick="@("window.location.href='" +
+                                        @Url.Action("Block", "User",
+                                        new { userId = Model.Id }) + "'");">
+                                        Заблокировать
+                                    </button>
+                                }
+                            </div>
                         }
                     </div>
                 </div>

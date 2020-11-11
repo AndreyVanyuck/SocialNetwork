@@ -32,8 +32,8 @@ namespace SocialNetwork.Models
 
         public string JobPlace { get; set; }
         public string JobPosition { get; set; }
-        //TODO change isLogin in BD
-        public bool IsLogin { get; set; } = false;
+        public bool IsBlocked { get; set; }
+
 
 
 

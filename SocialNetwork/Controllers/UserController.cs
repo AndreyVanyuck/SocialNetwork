@@ -10,6 +10,7 @@ using System.IO;
 using System;
 using SocialNetwork.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SocialNetwork.Controllers 
 {
@@ -17,8 +18,9 @@ namespace SocialNetwork.Controllers
     {
         IUsersRepository _repository;
         IHostingEnvironment _environment;
-
         User _user;
+        UserManager<User> _userManager;
+
         public UserController(IUsersRepository repository,
                               IHostingEnvironment environment,
                               IHttpContextAccessor httpContextAccessor,
@@ -28,18 +30,34 @@ namespace SocialNetwork.Controllers
             _environment = environment;
             var id = userManager.GetUserId(httpContextAccessor.HttpContext.User);
             _user = _repository.GetUserById(id);
+            _userManager = userManager;
+
         }
 
-        public ViewResult Index(){
+        public async Task<ActionResult> Index(){
             _repository.GetUsersMainPageInfo(_user);
+            var loggedRoles = (await _userManager.GetRolesAsync(_user)).ToList();
+            ViewBag.LoggedUserRoles = loggedRoles;
+            ViewBag.UserRoles = loggedRoles;
+            if (_user.IsBlocked)
+                return RedirectToAction("NoAccess", "Home");
             return View(_user);
         }
 
-        public ActionResult MainPage(string userId) {
+        public async Task<ActionResult> MainPage(string userId) {
             if (userId == _user.Id)
                 return Redirect("~/User");
             User user = _repository.GetUserById(userId);
             _repository.GetUsersMainPageInfo(user);
+            var roles = (await _userManager.GetRolesAsync(user)).ToList();
+            var loggedRoles = (await _userManager.GetRolesAsync(_user)).ToList();
+            ViewBag.LoggedUserRoles = loggedRoles;
+            ViewBag.UserRoles = roles;
+            if (_user.IsBlocked)
+                return RedirectToAction("NoAccess", "Home");
+            if (user.IsBlocked)
+                return View("BlockedPage", user);
+        
             return View("Index", user);
         }
 
@@ -51,6 +69,8 @@ namespace SocialNetwork.Controllers
         }*/
         public ViewResult Friends(string userId = null)
         {
+            if (_user.IsBlocked)
+                return View("NoAccess", "Home");
             User user = userId == null ? _user:_repository.GetUserById(userId);  
             var friends =_repository.GetUsersFriends(user);
             /*foreach(var friend in friends)
@@ -67,6 +87,26 @@ namespace SocialNetwork.Controllers
                 _repository.GetUsersMainPhoto(r);*/
             return View(friendsVM);
         }
+        [Authorize(Roles = "moderator")]
+        public Task<ActionResult> Block(string userId)
+        {
+            User user = _repository.GetUserById(userId);
+            user.IsBlocked = true;
+            _repository.Update(user);
+            _repository.Save();
+            return MainPage(userId);
+        }
+
+        [Authorize(Roles = "moderator")]
+        public Task<ActionResult> Unblock(string userId)
+        {
+            User user = _repository.GetUserById(userId);
+            user.IsBlocked = false;
+            _repository.Update(user);
+            _repository.Save();
+            return MainPage(userId);
+        }
+
 
         [HttpGet]
         public ViewResult Update()

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>SimpleSocialNetwork</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css?Version=32" />
+    <link rel="stylesheet" href="~/css/site.css?Version=33" />
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="~/js/comments.js"></script>
@@ -18,10 +18,14 @@
         <div class="container">
             <div class="navbar-header">
                 <a asp-area="" asp-controller="User" asp-action="Index" class="navbar-brand">SimpleSocialNetwork</a>
+                <a method="post" asp-controller="Account" asp-action="LogOff" class="navbar-brand">Выйти</a>
+                <a href="https://github.com/AndreyVanyuck/SocialNetwork">Source Code</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="https://github.com/edadasko/SimpleSocialNetwork">Source Code</a></li>
+                    <li><a method="post" asp-controller="Account" asp-action="LogOff" class="navbar-brand">Выйти</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li><a method="post" asp-controller="Account" asp-action="LogOff" class="navbar-brand">Выйти</a></li>
                 </ul>
 
