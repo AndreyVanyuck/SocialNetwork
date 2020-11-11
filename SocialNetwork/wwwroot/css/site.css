@@ -628,7 +628,19 @@ img {
 .add-post-button {
     background-color: #006064;
     float: right;
-    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 0;
+}
+.add-post-button-col {
+    padding: 0;
+    float: right;
+}
+
+.add-post-image {
+    visibility: hidden;
+    margin: 0;
+    height: 0;
 }
 
 #postTextArea {
@@ -667,6 +679,16 @@ img {
             background-color: #006064;
             color: #FFF;
         }
+.post-image {
+    margin: 10px 0;
+    border: thin;
+    border-color: cornsilk;
+}
+
+#attached-photo-name {
+    margin-top: 5px;
+}
+
 /* ============== user-information ============== */
 
 .info {

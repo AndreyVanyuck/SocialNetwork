@@ -84,7 +84,7 @@
                             </button>
                         }
                         @if ((ownerRoles.Contains("admin") && !roles.Contains("admin")) ||
-                           (ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
+                          (ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
                         {
                             <div class="admin-area">
                                 @if (ownerRoles.Contains("admin"))
@@ -139,13 +139,13 @@
                     <div class="friends-main-list">
                         @foreach (var friend in Model.Friends.Take(5))
                         {
-                        <div class="friends-main-usd">
-                            @*                <img src="@Url.Content(@friend.MainPhotoPath)" alt="">*@
-                            <img src="~/images/no_photo.png" />
-                            <div class="friends-text">
-                                @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
+                            <div class="friends-main-usd">
+                                @*                <img src="@Url.Content(@friend.MainPhotoPath)" alt="">*@
+                                <img src="~/images/no_photo.png" />
+                                <div class="friends-text">
+                                    @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
+                                </div>
                             </div>
-                        </div>
                         }
                     </div>
                     <div class="view-more">
@@ -159,14 +159,27 @@
 
                 @if (Model == ownerUser)
                 {
-                <div class="container-fluid">
-                    <div class="post-area">
-                        <div class="form-group">
-                            <textarea class="form-control" id="postTextArea" rows="3" placeholder="Новый пост"></textarea>
+                    <div class="container-fluid">
+                        <div class="post-area">
+                            <div class="form-group">
+                                <form asp-action="Create" asp-controller="Post" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#postsArea" enctype="multipart/form-data">
+                                    <textarea name="Text" id="postTextArea" class="form-control" rows="3" placeholder="Новый пост" />
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-10 col-sm-10 pd-right-none no-pd">
+                                                <label id="attached-photo-name" for="photoPostInput" class="btn">Выберите фото</label>
+                                                <input name="Photo" id="photoPostInput" type="file" class="form-control add-post-image" />
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 pd-right-none no-pd add-post-button-col">
+                                                <input type="submit" value="Добавить" class="btn btn-primary add-post-button" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
                         </div>
-                        <button type="submit" id="addPostButton" class="btn btn-primary add-post-button">Добавить</button>
                     </div>
-                </div>
                 }
                 <div class="posts" id="postsArea">
                     @{await Html.RenderPartialAsync("~/Views/Post/PostsList.cshtml", @Model.WallPosts);}
@@ -175,3 +188,9 @@
         </div>
     </div>
 </div>
+<script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js"></script>
+<script>
+    $("#photoPostInput").change(function () {
+        $("#attached-photo-name").text(this.files[0].name);
+    });
+</script> 
