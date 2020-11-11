@@ -73,11 +73,19 @@ namespace SocialNetwork.Controllers
                 return View("NoAccess", "Home");
             User user = userId == null ? _user:_repository.GetUserById(userId);  
             var friends =_repository.GetUsersFriends(user);
-            /*foreach(var friend in friends)
-                 _repository.GetUsersMainPhoto(friend);*/
+            var followers = user.Followers;
+            var followings = user.Following;
+            foreach (var friend in friends)
+                _repository.GetUsersMainPhoto(friend);
+            foreach (var follower in followers)
+                _repository.GetUsersMainPhoto(follower);
+            foreach (var following in followings)
+                _repository.GetUsersMainPhoto(following);
             FriendsRequestsViewModel friendsVM = new FriendsRequestsViewModel
             {
-                Friends = user.Friends
+                Friends = user.Friends,
+                Followers = user.Followers,
+                Following = user.Following
             };
 
             if (user == _user)
