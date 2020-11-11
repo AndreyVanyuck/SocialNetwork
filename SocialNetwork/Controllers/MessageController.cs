@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using SocialNetwork.Models;
 
 namespace SocialNetwork.Controllers
@@ -80,6 +81,10 @@ namespace SocialNetwork.Controllers
             _repository.Update(dialog);
             _repository.Save();
             return Redirect("~/dialog/" + userToId);
+        }
+        public override void OnActionExecuted(ActionExecutedContext context)
+        {
+            ViewBag.loggedUserId = _user.Id;
         }
     }
 }

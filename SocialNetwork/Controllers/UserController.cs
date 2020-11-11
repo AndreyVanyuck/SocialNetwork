@@ -96,13 +96,16 @@ namespace SocialNetwork.Controllers
             return View(friendsVM);
         }
         [Authorize(Roles = "moderator")]
-        public Task<ActionResult> Block(string userId)
+        public async Task<ActionResult> Block(string userId)
         {
             User user = _repository.GetUserById(userId);
+            var roles = await _userManager.GetRolesAsync(user);
+            if (roles.Contains("admin"))
+                return await MainPage(userId);
             user.IsBlocked = true;
             _repository.Update(user);
             _repository.Save();
-            return MainPage(userId);
+            return await MainPage(userId);
         }
 
         [Authorize(Roles = "moderator")]

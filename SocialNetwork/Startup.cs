@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using SocialNetwork.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
+using SocialNetwork.Hubs;
 
 namespace SocialNetwork
 {
@@ -29,7 +30,9 @@ namespace SocialNetwork
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddSignalR();
+
+            services.AddScoped<IUsersRepository, UsersRepository>();
 
             services.AddIdentity<User, IdentityRole>(opts =>
             {
@@ -40,14 +43,6 @@ namespace SocialNetwork
                 opts.Password.RequireDigit = false;
             }).AddEntityFrameworkStores<UsersContext>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-           /* services.AddIdentity<User, IdentityRole>(opts =>
-            {
-                opts.Password.RequiredLength = 6;
-                opts.Password.RequireNonAlphanumeric = false;
-                opts.Password.RequireLowercase = false;
-                opts.Password.RequireUppercase = false;
-                opts.Password.RequireDigit = false;
-            }).AddEntityFrameworkStores<UsersContext>();*/
             services.AddDbContext<UsersContext>(options =>
             options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
         }
@@ -65,8 +60,15 @@ namespace SocialNetwork
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseStatusCodePages();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ChatHub>("/chat");
+            });
 
             app.UseRouting();
 

@@ -24,6 +24,10 @@ namespace SocialNetwork.Controllers
         {
             return View();
         }
+        public ActionResult Error()
+        {
+            return View();
+        }
 
     }
 }
