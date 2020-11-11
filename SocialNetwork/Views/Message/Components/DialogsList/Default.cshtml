@@ -1,42 +1,43 @@
 ﻿@model List<(User, Message)>;
+@inject IViewLocalizer Localizer
 
 <div class="dialogs-title">
-    <h3>Диалоги</h3>
+    <h3>@Localizer["dialogs"]</h3>
 </div>
 <div class="dialogs-list">
     <ul>
         @foreach (var user in Model)
         {
-            <li userId="@user.Item1.Id" class="user-dialog">
-                <div class="dialogs-msg-details" userId="@user.Item1.Id">
-                    <div class="usr-msg-img" userId="@user.Item1.Id">
-   @*                     <img src="@Url.Content(@user.Item1.MainPhotoPath)" alt="" userId="@user.Item1.Id">*@
-                        <img src="~/images/no_photo.png" />
-                    </div>
-                    <div class="usr-msg-info" userId="@user.Item1.Id">
-                        @{
+        <li userId="@user.Item1.Id" class="user-dialog">
+            <div class="dialogs-msg-details" userId="@user.Item1.Id">
+                <div class="usr-msg-img" userId="@user.Item1.Id">
+                    @*                     <img src="@Url.Content(@user.Item1.MainPhotoPath)" alt="" userId="@user.Item1.Id">*@
+                    <img src="~/images/no_photo.png" />
+                </div>
+                <div class="usr-msg-info" userId="@user.Item1.Id">
+                    @{
                             string text = user.Item1.ToString();
 
-                            @if (user.Item1.ToString().Length > 15)
+                        @if (user.Item1.ToString().Length > 15)
                             {
                                 text = text.Substring(0, 15) + "...";
                             }
-                        }
-                        <h3 userId="@user.Item1.Id">@text</h3>
-                        <h4 userId="@user.Item1.Id">@user.Item2.Date</h4>
-                        @{
-                            text = user.Item2.UserFrom == user.Item1 ? user.Item1.Name + ": " : "Вы: ";
-                            text += user.Item2.Text;
+                    }
+                    <h3 userId="@user.Item1.Id">@text</h3>
+                    <h4 userId="@user.Item1.Id">@user.Item2.Date</h4>
+                    @{
+                            text = user.Item2.UserFrom == user.Item1 ? user.Item1.Name: Localizer["you"].Value;
+                            text += ": ";
                             if (text.Length > 20)
                             {
                                 text = text.Substring(0, 20) + "...";
                             }
 
-                        }
-                        <h4 userId="@user.Item1.Id">@text</h4>
-                    </div>
+                    }
+                    <h4 userId="@user.Item1.Id">@text</h4>
                 </div>
-            </li>
+            </div>
+        </li>
         }
     </ul>
 

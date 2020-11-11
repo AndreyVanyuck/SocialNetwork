@@ -54,7 +54,10 @@ h3 {
     margin-left: auto;
 }
 
-
+.select-language {
+    margin-top: 14px;
+    margin-right: 20px;
+}
 
 .blocked-text {
     margin-top: 20px;

@@ -1,10 +1,11 @@
 ﻿@model LoginViewModel
+@inject IViewLocalizer Localizer
 
 @{
     Layout = "_LoginLayout";
 }
 
-<h3>Вход</h3>
+<h3>@Localizer["sign_in"]</h3>
 
 <form method="post" asp-controller="Account" asp-action="Login"
       asp-route-returnUrl="@Model.ReturnUrl" class="form-group login-container">
@@ -15,15 +16,15 @@
         <span asp-validation-for="Email"></span>
     </div>
     <div>
-        <label asp-for="Password"></label><br />
+        <label asp-for="Password">@Localizer["password"]</label><br />
         <input asp-for="Password" class="form-control" />
         <span asp-validation-for="Password"></span>
     </div>
     <div>
-        <label asp-for="RememberMe"></label>
+        <label asp-for="RememberMe">@Localizer["remember"]</label>
         <input asp-for="RememberMe" />
     </div>
     <div class="button-div">
-        <input type="submit" value="Войти" class="btn btn-default" />
+        <input type="submit" value="@Localizer["sign_in"]" class="btn btn-default" />
     </div>
 </form>

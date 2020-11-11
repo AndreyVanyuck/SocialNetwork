@@ -1,4 +1,5 @@
 ﻿@model List<Message>
+@inject IViewLocalizer Localizer
 @{
     User userWith = ((User)ViewBag.otherUser);
 }
@@ -6,7 +7,7 @@
 <div class="message-bar-head">
     <div class="usr-msg-details">
         <div class="usr-msg-img">
-           @* <img src="@Url.Content((userWith.MainPhotoPath))" alt="">*@
+            @* <img src="@Url.Content((userWith.MainPhotoPath))" alt="">*@
 
             <img src="~/images/no_photo.png" />
         </div>
@@ -21,33 +22,33 @@
     {
         if (@message.UserFromId == userWith.Id)
         {
-            <div class="main-message-box left">
-                <div class="message-dt left">
-                    <div class="message-inner-dt">
-                        <p>@message.Text</p>
-                    </div>
-                    <span>@message.Date</span>
-                </div>
-                <div class="msg-usr-img">
-                   @* <img src="@Url.Content(userWith.MainPhotoPath)" alt="">*@
-                    <img src="~/images/no_photo.png" />
-                </div>
+    <div class="main-message-box left">
+        <div class="message-dt left">
+            <div class="message-inner-dt">
+                <p>@message.Text</p>
             </div>
+            <span>@message.Date</span>
+        </div>
+        <div class="msg-usr-img">
+            @* <img src="@Url.Content(userWith.MainPhotoPath)" alt="">*@
+            <img src="~/images/no_photo.png" />
+        </div>
+    </div>
         }
         else
         {
-            <div class="main-message-box right">
-                <div class="message-dt">
-                    <div class="message-inner-dt">
-                        <p>@message.Text</p>
-                    </div>
-                    <span>@message.Date</span>
-                </div>
-                <div class="msg-usr-img">
-              @*      <img src="@Url.Content(userWith.MainPhotoPath)" alt="">*@
-                     <img src="~/images/no_photo.png" />
-                </div>
+    <div class="main-message-box right">
+        <div class="message-dt">
+            <div class="message-inner-dt">
+                <p>@message.Text</p>
             </div>
+            <span>@message.Date</span>
+        </div>
+        <div class="msg-usr-img">
+            @*      <img src="@Url.Content(userWith.MainPhotoPath)" alt="">*@
+            <img src="~/images/no_photo.png" />
+        </div>
+    </div>
         }
     }
 
@@ -61,11 +62,11 @@
 <div class="message-send-area">
     <div class="mf-field">
         <textarea class="form-control message-control"
-                  id="messageText" rows="3" placeholder="Введите сообщение"></textarea>
+                  id="messageText" rows="3" placeholder="@Localizer["type_message"]"></textarea>
         <button type="submit" id="sendMessageButton"
-                  userToId ="@(userWith.Id)" 
+                userToId="@(userWith.Id)"
                 class="btn btn-primary send-message-button">
-            Отправить
+            @Localizer["send"]
         </button>
     </div>
 </div>

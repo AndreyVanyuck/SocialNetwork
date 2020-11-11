@@ -1,10 +1,12 @@
 @model FriendsRequestsViewModel
+@inject IViewLocalizer Localizer
+
 
 <div class="container-fluid">
     @if (Model.Requests != null && Model.Requests.Count > 0)
     {
         <div class="friends-title">
-            <h3>Заявки</h3>
+            <h3>@Localizer["requests"]</h3>
         </div>
         <div class="friends-list">
             <div class="row">
@@ -20,11 +22,11 @@
                             <div class="request-buttons">
                                 <button class="btn btn-success" onclick="@("window.location.href='" +
                                     @Url.Action("ConfirmRequestFromFriendsView", "Friendship", new { userId = request.Id }) + "'");">
-                                    Добавить
+                                    @Localizer["add"]
                                 </button>
                                 <button class="btn btn-danger" onclick="@("window.location.href='" +
                                     @Url.Action("CancelRequestFromFriendsView", "Friendship", new { userId = request.Id }) + "'");">
-                                    Удалить
+                                    @Localizer["remove"]
                                 </button>
                             </div>
                         </div>
@@ -36,7 +38,7 @@
     @if (Model.Friends.Any())
     {
         <div class="friends-title">
-            <h3>Друзья</h3>
+            <h3>@Localizer["friends"]</h3>
         </div>
 
 
@@ -47,7 +49,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                               @* <img src="@Url.Content(@friend.MainPhotoPath)" />*@
+                                @* <img src="@Url.Content(@friend.MainPhotoPath)" />*@
                                 <img src="~/images/no_photo.png" />
                             </div>
                             @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
@@ -61,7 +63,7 @@
     @if (Model.Following.Any())
     {
         <div class="friends-title">
-            <h3>Вы подписаны на</h3>
+            <h3>@Localizer["following"]</h3>
         </div>
         <div class="friends-list">
             <div class="row">
@@ -84,7 +86,7 @@
     @if (Model.Followers.Any())
     {
         <div class="friends-title">
-            <h3>Подписчики</h3>
+            <h3>@Localizer["followers"]</h3>
         </div>
         <div class="friends-list">
             <div class="row">

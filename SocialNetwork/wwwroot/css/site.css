@@ -126,6 +126,7 @@ main {
     display: table;
 }
 
+
 .main-column {
     float: none;
     display: table-cell;
@@ -1114,3 +1115,9 @@ img {
             font-size: 20px;
             font-weight: 400;
             margin-bottom: 5px;
+        }
+
+.select-language {
+    margin-top: 12px;
+    margin-right: 20px;
+}
