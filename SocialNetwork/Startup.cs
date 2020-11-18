@@ -71,7 +71,10 @@ namespace SocialNetwork
              .AddViewLocalization();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<UsersContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("UsersContext")));
+                  options.UseSqlServer(
+                      Configuration.GetConnectionString("DefaultConnection")));
+            /* services.AddDbContext<UsersContext>(options =>
+            options.UseSqlite(Configuration.GetConnectionString("UsersContext")));*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

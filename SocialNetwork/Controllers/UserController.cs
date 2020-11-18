@@ -95,7 +95,7 @@ namespace SocialNetwork.Controllers
                 _repository.GetUsersMainPhoto(r);*/
             return View(friendsVM);
         }
-        [Authorize(Roles = "moderator")]
+        //[Authorize(Roles = "moderator")]
         public async Task<ActionResult> Block(string userId)
         {
             User user = _repository.GetUserById(userId);
@@ -108,7 +108,7 @@ namespace SocialNetwork.Controllers
             return await MainPage(userId);
         }
 
-        [Authorize(Roles = "moderator")]
+       // [Authorize(Roles = "moderator")]
         public Task<ActionResult> Unblock(string userId)
         {
             User user = _repository.GetUserById(userId);

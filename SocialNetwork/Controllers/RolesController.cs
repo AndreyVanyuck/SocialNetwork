@@ -10,7 +10,7 @@ using SocialNetwork.ViewModels;
 
 namespace SocialNetwork.Controllers
 {
-    [Authorize(Roles = "admin")]
+    //[Authorize(Roles = "admin")]
     public class RolesController : Controller
     {
         UserManager<User> _userManager;
@@ -32,6 +32,7 @@ namespace SocialNetwork.Controllers
         {
             User user = await _userManager.FindByIdAsync(userId);
             await _userManager.AddToRoleAsync(user, "moderator");
+          
             return RedirectToAction("MainPage", "User", new { userId });
         }
 

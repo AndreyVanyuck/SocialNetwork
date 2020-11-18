@@ -97,7 +97,8 @@ namespace SocialNetwork.Models
             {
                 try
                 {
-                    return Posts.SingleOrDefault(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
+                    return "~/images/no_photo.png";
+                    //return Posts.SingleOrDefault(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
                 }
                 catch (NullReferenceException)
                 {

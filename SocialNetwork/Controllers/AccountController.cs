@@ -14,7 +14,6 @@ namespace SocialNetwork.Controllers
         private readonly SignInManager<User> _signInManager;
         private readonly IStringLocalizer<AccountController> _localizer;
 
-
         public AccountController(UserManager<User> userManager,
             SignInManager<User> signInManager,
             IStringLocalizer<AccountController> localizer)

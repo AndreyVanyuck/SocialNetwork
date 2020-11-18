@@ -17,7 +17,7 @@
         @if (Model.Owner == (User)ViewBag.LoggedUser)
         {
             <div class="col-md-2">
-                <button commentId="@Model.Id" postId="@Model.Post.Id" class="btn glyphicon glyphicon-remove delete-comment-button"></button>
+                <button commentId="@Model.Id" postId="@Model.Post.Id" val="del" class="btn  delete-comment-button"></button>
             </div>
         }
     </div>
