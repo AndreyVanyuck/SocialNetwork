@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>SimpleSocialNetwork</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css?Version=36" />
+    <link rel="stylesheet" href="~/css/site.css?Version=37" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="~/js/comments.js"></script>
@@ -24,7 +24,7 @@
             <li><a asp-controller="Message" asp-action="Index">@Localizer["messages"]</a></li>
             <li><a asp-controller="News" asp-action="Index">@Localizer["news"]</a></li>
             <li><a asp-controller="Search" asp-action="Index">@Localizer["search"]</a></li>
-            <li><a method="post" asp-controller="Account" asp-action="LogOff" class="navbar-brand">@Localizer["exit"]</a></li>
+            <li><a method="post" asp-controller="Account" asp-action="LogOff">@Localizer["exit"]</a></li>
             <li>   <a>@await Html.PartialAsync("_SelectLanguagePartial")</a></li>
         </ul>
     </div>

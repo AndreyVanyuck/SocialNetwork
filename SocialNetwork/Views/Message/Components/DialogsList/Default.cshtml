@@ -26,13 +26,16 @@
                     <h3 userId="@user.Item1.Id">@text</h3>
                     <h4 userId="@user.Item1.Id">@user.Item2.Date</h4>
                     @{
-                            text = user.Item2.UserFrom == user.Item1 ? user.Item1.Name: Localizer["you"].Value;
-                            text += ": ";
-                            if (text.Length > 20)
-                            {
-                                text = text.Substring(0, 20) + "...";
-                            }
-
+                        text = user.Item2.UserFrom == user.Item1 ? user.Item1.Name: Localizer["you"].Value;
+                        text += ": ";
+                        if (user.Item2.Text.Length < 10)
+                        {
+                            text += user.Item2.Text;
+                        }
+                        else
+                        {
+                            text += user.Item2.Text.Substring(0, 10) + "...";
+                        }
                     }
                     <h4 userId="@user.Item1.Id">@text</h4>
                 </div>
