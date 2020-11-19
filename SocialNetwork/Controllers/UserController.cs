@@ -11,6 +11,7 @@ using System;
 using SocialNetwork.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using SocialNetwork.Services;
 
 namespace SocialNetwork.Controllers 
 {
@@ -105,17 +106,21 @@ namespace SocialNetwork.Controllers
             user.IsBlocked = true;
             _repository.Update(user);
             _repository.Save();
+            MailService mailService = new MailService();
+            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was blocked", user.Name, user.Surname));
             return await MainPage(userId);
         }
 
-       // [Authorize(Roles = "moderator")]
-        public Task<ActionResult> Unblock(string userId)
+        // [Authorize(Roles = "moderator")]
+        public async Task<ActionResult> Unblock(string userId)
         {
             User user = _repository.GetUserById(userId);
             user.IsBlocked = false;
             _repository.Update(user);
             _repository.Save();
-            return MainPage(userId);
+            MailService mailService = new MailService();
+            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was unblocked", user.Name, user.Surname));
+            return await MainPage(userId);
         }
 
 
