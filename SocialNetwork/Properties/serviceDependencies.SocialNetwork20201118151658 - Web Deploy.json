@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "mssql1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/socialnetworkdbserverkew/databases/SocialNetwork_db",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/socialnetworkdbserverserver/databases/SocialNetwork_db",
       "type": "mssql.azure",
       "connectionId": "UsersContext",
       "secretStore": "AzureAppSettings"

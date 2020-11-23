@@ -71,7 +71,7 @@ namespace SocialNetwork.Controllers
                 UserFrom = _user,
                 UserTo = userTo,
                 Text = text,
-                Date = DateTime.Now,
+                Date = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time")),
                 Dialog = dialog
             };
 

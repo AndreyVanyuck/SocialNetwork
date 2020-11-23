@@ -107,7 +107,7 @@ namespace SocialNetwork.Controllers
             _repository.Update(user);
             _repository.Save();
             MailService mailService = new MailService();
-            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was blocked", user.Name, user.Surname));
+            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was blocked!", user.Name, user.Surname));
             return await MainPage(userId);
         }
 
@@ -119,7 +119,7 @@ namespace SocialNetwork.Controllers
             _repository.Update(user);
             _repository.Save();
             MailService mailService = new MailService();
-            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was unblocked", user.Name, user.Surname));
+            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was unblocked!", user.Name, user.Surname));
             return await MainPage(userId);
         }
 
