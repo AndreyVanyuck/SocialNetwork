@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using SocialNetwork.Models;
+using SocialNetwork.Domain.Core;
 using SocialNetwork.ViewModels;
 
 namespace SocialNetwork.Controllers

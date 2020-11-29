@@ -1,11 +1,12 @@
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
+using SocialNetwork.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SocialNetwork.Services
+namespace SocialNetwork.Services.BusinessLogic
 {
     public static class Constans
     {

@@ -1,7 +1,8 @@
+using SocialNetwork.Domain.Core;
 using System;
 using System.Collections.Generic;
 
-namespace SocialNetwork.Models
+namespace SocialNetwork.Domain.Interfaces
 {
     public interface IUsersRepository
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using SocialNetwork.Models;
+using SocialNetwork.Domain.Interfaces;
 using System;
 
 namespace SocialNetwork.Controllers

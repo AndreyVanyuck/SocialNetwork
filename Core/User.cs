@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using SocialNetwork.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace SocialNetwork.Models
+namespace SocialNetwork.Domain.Core
 {
     public enum Gender
     {
@@ -33,8 +31,6 @@ namespace SocialNetwork.Models
         public string JobPlace { get; set; }
         public string JobPosition { get; set; }
         public bool IsBlocked { get; set; }
-
-
 
 
         public ICollection<Friendship> IncomingFrienshipRequests { get; set; }
@@ -150,23 +146,6 @@ namespace SocialNetwork.Models
                     following.Add(request.RequestTo);
                 return following;
             }
-        }
-
-        public void ChangeInformation(UserInfoViewModel info)
-        {
-            Name = info.Name;
-            Surname = info.Surname;
-            BirthDay = info.BirthDay;
-            Email = info.Email;
-            PhoneNumber = info.PhoneNumber;
-            Country = info.Country;
-            City = info.City;
-            Address = info.Address;
-            School = info.School;
-            University = info.University;
-            JobPlace = info.JobPlace;
-            JobPosition = info.JobPosition;
-            Gender = info.Gender;
         }
     }
 }

@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using SocialNetwork.Domain.Core;
+using SocialNetwork.Domain.Interfaces;
 
-namespace SocialNetwork.Models
+namespace SocialNetwork.Infrastructure.Data
 {
     public class UsersRepository : IUsersRepository
     {

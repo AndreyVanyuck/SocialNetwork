@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -7,7 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using SocialNetwork.Models;
+using SocialNetwork.Domain.Core;
+using SocialNetwork.Domain.Interfaces;
 using SocialNetwork.ViewModels;
 
 namespace SocialNetwork.Controllers

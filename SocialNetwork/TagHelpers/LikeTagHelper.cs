@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
-using SocialNetwork.Models;
 using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using SocialNetwork.Domain.Interfaces;
+using SocialNetwork.Domain.Core;
 
 namespace SocialNetwork.TagHelpers
 {

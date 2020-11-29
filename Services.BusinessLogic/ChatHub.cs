@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 
-namespace SocialNetwork.Hubs
+namespace SocialNetwork.Services.BusinessLogic
 {
     public class ChatHub : Hub
     {

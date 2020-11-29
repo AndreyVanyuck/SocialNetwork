@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SocialNetwork.Models
+namespace SocialNetwork.Domain.Core
 {
     public class Dialog
     {

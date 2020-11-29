@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using SocialNetwork.Models;
+using SocialNetwork.Domain.Core;
 
 namespace SocialNetwork.ViewModels
 {

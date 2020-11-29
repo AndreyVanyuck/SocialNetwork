@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SocialNetwork.Models
+namespace SocialNetwork.Domain.Core
 {
     public enum PostType
     {

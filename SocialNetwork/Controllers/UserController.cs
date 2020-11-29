@@ -1,6 +1,4 @@
-using SocialNetwork.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Hosting;
@@ -10,10 +8,11 @@ using System.IO;
 using System;
 using SocialNetwork.ViewModels;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
-using SocialNetwork.Services;
+using SocialNetwork.Domain.Core;
+using SocialNetwork.Domain.Interfaces;
+using SocialNetwork.Services.BusinessLogic;
 
-namespace SocialNetwork.Controllers 
+namespace SocialNetwork.Controllers
 {
     public class UserController : Controller
     {
@@ -130,6 +129,24 @@ namespace SocialNetwork.Controllers
             return View(new UserInfoViewModel(_user));
         }
 
+        public User ChangeInformation(User user, UserInfoViewModel info)
+        {
+            user.Name = info.Name;
+            user.Surname = info.Surname;
+            user.BirthDay = info.BirthDay;
+            user.Email = info.Email;
+            user.PhoneNumber = info.PhoneNumber;
+            user.Country = info.Country;
+            user.City = info.City;
+            user.Address = info.Address;
+            user.School = info.School;
+            user.University = info.University;
+            user.JobPlace = info.JobPlace;
+            user.JobPosition = info.JobPosition;
+            user.Gender = info.Gender;
+
+            return user;
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -139,7 +156,7 @@ namespace SocialNetwork.Controllers
             {
                 await UpdateAvatar(info.Avatar);
             }
-            _user.ChangeInformation(info);
+            _user = ChangeInformation(_user, info);
             _repository.Update(_user);
             _repository.Save();
             return RedirectToAction("Index");

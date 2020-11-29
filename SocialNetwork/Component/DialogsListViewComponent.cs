@@ -1,10 +1,10 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using SocialNetwork.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
+using SocialNetwork.Domain.Interfaces;
+using SocialNetwork.Domain.Core;
 
 namespace SocialNetwork.Components
 {
