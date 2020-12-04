@@ -49,6 +49,24 @@ namespace SocialNetwork.Domain.Core
         {
             IncomingFrienshipRequests = new List<Friendship>();
             OutgoingFrienshipRequests = new List<Friendship>();
+/*
+            var mainPhotoPost = new Post()
+            {
+                Type = PostType.MainPhoto,
+                Owner = this,
+            };
+
+            var mainPhoto = new Photo()
+            {
+                Image = "~/images/no_photo.png",
+                Post = mainPhotoPost
+            };
+            mainPhotoPost.Photos.Add(mainPhoto);
+            // mainPhoto = new Post
+            *//*     Post mainPhoto = new Post { Owner = _user, Date = DateTime.Now, Type = PostType.MainPhoto };
+                 Photo photo = new Photo { Image = path, Post = mainPhoto };
+                 _repository.Create(mainPhoto);
+                 _repository.Create(photo);*/
             Posts = new List<Post>();
             Comments = new List<Comment>();
             Likes = new HashSet<Like>();
@@ -93,8 +111,9 @@ namespace SocialNetwork.Domain.Core
             {
                 try
                 {
-                    return "~/images/no_photo.png";
-                    //return Posts.SingleOrDefault(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
+                    //return "~/images/no_photo.png";
+                    var path = Posts.SingleOrDefault(p => p.Type == PostType.MainPhoto).Photos.ToList()[0].Image;
+                    return path;
                 }
                 catch (NullReferenceException)
                 {

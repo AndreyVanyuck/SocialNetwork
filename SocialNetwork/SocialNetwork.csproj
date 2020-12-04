@@ -45,6 +45,7 @@
    <ItemGroup>
     <Folder Include="Logs\" />
     <Folder Include="wwwroot\usersPhotos\" />
+    <Folder Include="wwwroot\usersPostPhotos\" />
   </ItemGroup>
 
 </Project>

@@ -146,7 +146,7 @@ namespace SocialNetwork.Infrastructure.Data
             return likes;
         }
 
-    /*    public Post GetUsersMainPhoto(User user)
+        public Post GetUsersMainPhoto(User user)
         {
             try
             {
@@ -167,20 +167,20 @@ namespace SocialNetwork.Infrastructure.Data
             {
                 return null;
             }
-        }*/
-        public Post GetUsersMainPhoto(User user)
+        }
+       /* public Post GetUsersMainPhoto(User user)
         {
             return null;
-        }
+        }*/
 
         public void GetUsersMainPageInfo(User user)
         {
             GetUsersFriends(user);
-            /*foreach (var friend in user.Friends)
-                GetUsersMainPhoto(friend);*/
-           // GetUsersMainPhoto(user);
-           GetUsersPhotos(user);
-           GetUsersPosts(user);
+            foreach (var friend in user.Friends)
+                GetUsersMainPhoto(friend);
+            GetUsersMainPhoto(user);
+            GetUsersPhotos(user);
+            GetUsersPosts(user);
         }
 
         public void ClearData()
@@ -209,18 +209,21 @@ namespace SocialNetwork.Infrastructure.Data
             var mainPhotoPost = new Post()
             {
                 Type = PostType.MainPhoto,
-                Owner = user
+                OwnerId = user.Id
             };
 
             var mainPhoto = new Photo()
             {
                 Image = "~/images/no_photo.png",
-                Post = mainPhotoPost
+                PostId = mainPhotoPost.Id
+                
+                
             };
 
             context.Posts.Add(mainPhotoPost);
             context.Photos.Add(mainPhoto);
             context.Users.Add(user);
+            context.SaveChanges();
         }
 
         public void Remove(User user) => context.Users.Remove(user);

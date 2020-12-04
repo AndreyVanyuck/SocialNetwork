@@ -91,11 +91,11 @@ namespace SocialNetwork.Controllers
             if (user == _user)
                 friendsVM.Requests = user.IncomingFrienshipRequests.Where(r => r.Status == FriendshipStatus.Waiting)
                                                      .Select(r => r.RequestFrom).ToList();
-    /*        foreach (var r in friendsVM.Requests)
-                _repository.GetUsersMainPhoto(r);*/
+            foreach (var r in friendsVM.Requests)
+                _repository.GetUsersMainPhoto(r);
             return View(friendsVM);
         }
-        //[Authorize(Roles = "moderator")]
+      
         public async Task<ActionResult> Block(string userId)
         {
             User user = _repository.GetUserById(userId);
@@ -110,7 +110,7 @@ namespace SocialNetwork.Controllers
             return await MainPage(userId);
         }
 
-        // [Authorize(Roles = "moderator")]
+      
         public async Task<ActionResult> Unblock(string userId)
         {
             User user = _repository.GetUserById(userId);

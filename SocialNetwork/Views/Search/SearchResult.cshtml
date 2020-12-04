@@ -9,7 +9,7 @@
 <div class="full-width user-search-result">
     <row>
         <div class="col-md-4 col-sm-4 pd-left-none no-pd">
-            <img class="search-photo" src="~/images/no_photo.png" />@*src="@Url.Content(user.MainPhotoPath)" alt="">*@
+            <img class="search-photo" src="@Url.Content(user.MainPhotoPath)" alt="">
         </div>
         <div class="col-md-8 col-sm-8 pd-left-none no-pd search-user-info">
             @Html.ActionLink(@user.ToString(), "MainPage", "User", new { userId = @user.Id })

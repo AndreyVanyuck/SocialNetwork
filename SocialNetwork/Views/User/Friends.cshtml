@@ -15,8 +15,8 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                @*  <img src="@Url.Content(@request.MainPhotoPath)" />*@
-                                <img src="~/images/no_photo.png" />
+                                  <img src="@Url.Content(@request.MainPhotoPath)" />
+                             
                             </div>
                             @Html.ActionLink(@request.ToString(), "MainPage", new { userId = @request.Id })
                             <div class="request-buttons">
@@ -49,8 +49,8 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                @* <img src="@Url.Content(@friend.MainPhotoPath)" />*@
-                                <img src="~/images/no_photo.png" />
+                                 <img src="@Url.Content(@friend.MainPhotoPath)" />
+                             
                             </div>
                             @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
                         </div>
@@ -72,8 +72,8 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                @*     <img src="@Url.Content(@following.MainPhotoPath)" />*@
-                                <img src="~/images/no_photo.png" />
+                                  <img src="@Url.Content(@following.MainPhotoPath)" />
+                              
                             </div>
                             @Html.ActionLink(@following.ToString(), "MainPage", new { userId = @following.Id })
                         </div>
@@ -95,9 +95,8 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                @* <img src="@Url.Content(@follower.MainPhotoPath)" />*@
-                                <img src="~/images/no_photo.png" />
-                            </div>
+                                 <img src="@Url.Content(@follower.MainPhotoPath)" />
+                             </div>
                             @Html.ActionLink(@follower.ToString(), "MainPage", new { userId = @follower.Id })
                         </div>
                     </div>

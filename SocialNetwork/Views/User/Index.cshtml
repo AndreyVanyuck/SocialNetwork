@@ -16,8 +16,8 @@
                         <div class="user-profile">
                             <div class="username-dt">
                                 <div class="usr-pic">
-                                    @*                         <img src="@Url.Content(@Model.MainPhotoPath)" alt="">*@
-                                    <img src="~/images/no_photo.png" />
+                                   <img src="@Url.Content(@Model.MainPhotoPath)" alt="">
+                                  
                                 </div>
                             </div>
                             <div class="user-specs">
@@ -143,8 +143,8 @@
                             @foreach (var friend in Model.Friends.Take(5))
                             {
                                 <div class="friends-main-usd">
-                                    @*                <img src="@Url.Content(@friend.MainPhotoPath)" alt="">*@
-                                    <img src="~/images/no_photo.png" />
+                                                    <img src="@Url.Content(@friend.MainPhotoPath)" alt="">
+                                 
                                     <div class="friends-text">
                                         @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
                                     </div>
@@ -166,11 +166,7 @@
                         <div class="container-fluid">
                             <div class="post-area">
                                 <div class="form-group">
-                                    @*<form asp-action="Create" asp-controller="Post" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#postsArea" enctype="multipart/form-data">
-            <input name="Text" id="postText" type="text" class="form-control" placeholder="@Localizer["new_post"]" />
-            <input name="Photo" id="photoPostInput"  type="file" class="form-control add-post-image" />
-            <input type="submit" value="@Localizer["add_post"]" class="btn btn-primary add-post-button" />
-        </form>*@
+  
                                     <form asp-action="Create" asp-controller="Post" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#postsArea" enctype="multipart/form-data">
                                         <textarea name="Text" id="postTextArea" class="form-control" rows="3" placeholder="@Localizer["new_post"]"></textarea>
                                         <div class="container-fluid">
