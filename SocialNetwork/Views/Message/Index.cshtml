@@ -33,7 +33,7 @@
 <script src="js/signalr/dist/browser/signalr.js"></script>
 
 <script>
-    let hubUrl = 'https://localhost:44368/chat';
+    let hubUrl = 'https://mysocialnetworkaspnetcore.azurewebsites.net/chat';
     const hubConnection = new signalR.HubConnectionBuilder()
         .withUrl(hubUrl)
         .configureLogging(signalR.LogLevel.Information)
