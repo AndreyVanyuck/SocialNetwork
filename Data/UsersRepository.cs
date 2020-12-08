@@ -216,8 +216,7 @@ namespace SocialNetwork.Infrastructure.Data
             {
                 Image = "~/images/no_photo.png",
                 PostId = mainPhotoPost.Id
-                
-                
+              
             };
 
             context.Posts.Add(mainPhotoPost);

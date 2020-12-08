@@ -19,7 +19,7 @@ namespace SocialNetwork.Controllers
         {
             _repository = repository;
             var id = userManager.GetUserId(httpContextAccessor.HttpContext.User);
-            _user = _repository.GetUserById(id); ;
+            _user = _repository.GetUserById(id); 
         }
 
         public override void OnActionExecuted(ActionExecutedContext context)

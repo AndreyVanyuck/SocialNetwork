@@ -43,6 +43,7 @@ namespace SocialNetwork
             });
 
             services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddIdentity<User, IdentityRole>(opts =>
             {
@@ -68,7 +69,7 @@ namespace SocialNetwork
             services.AddMvc()
              .AddDataAnnotationsLocalization()
              .AddViewLocalization();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+           
             services.AddDbContext<UsersContext>(options =>
                   options.UseSqlServer(
                       Configuration.GetConnectionString("DefaultConnection")));
