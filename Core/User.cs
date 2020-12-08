@@ -32,6 +32,8 @@ namespace SocialNetwork.Domain.Core
         public string JobPosition { get; set; }
         public bool IsBlocked { get; set; }
 
+        public byte[] Avatar { get; set; }
+
 
         public ICollection<Friendship> IncomingFrienshipRequests { get; set; }
         public ICollection<Friendship> OutgoingFrienshipRequests { get; set; }

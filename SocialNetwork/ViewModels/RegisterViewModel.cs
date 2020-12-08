@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 using SocialNetwork.Domain.Core;
 
 namespace SocialNetwork.ViewModels
@@ -29,6 +30,10 @@ namespace SocialNetwork.ViewModels
         [Required(ErrorMessage = errorMessage)]
         [Display(Name = "Фамилия")]
         public string Surname { get; set; }
+
+        [Required(ErrorMessage = errorMessage)]
+        [Display(Name = "Avatar")]
+        public IFormFile Avatar { get; set; }
 
         [Required(ErrorMessage = errorMessage)]
         [Display(Name = "Пол")]

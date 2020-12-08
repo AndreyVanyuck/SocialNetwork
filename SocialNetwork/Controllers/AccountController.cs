@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.IO;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -32,13 +33,19 @@ namespace SocialNetwork.Controllers
         {
             if (ModelState.IsValid)
             {
+                byte[] imageData = null;
+                using (var binaryReader = new BinaryReader(model.Avatar.OpenReadStream()))
+                {
+                    imageData = binaryReader.ReadBytes((int)model.Avatar.Length);
+                }
                 User user = new User
                 {
                     Email = model.Email,
                     UserName = model.Email,
                     Name = model.Name,
                     Surname = model.Surname,
-                    Gender = model.Gender
+                    Gender = model.Gender,
+                    Avatar = imageData
                 };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

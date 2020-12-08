@@ -72,7 +72,8 @@ namespace SocialNetwork
            
             services.AddDbContext<UsersContext>(options =>
                   options.UseSqlServer(
-                      Configuration.GetConnectionString("DefaultConnection")));
+                      Configuration.GetConnectionString("DefaultConnection"),
+                      b => b.MigrationsAssembly("SocialNetwork")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,7 +5,7 @@
 }
 
 <h3>@Localizer["sign_up"]</h3>
-<form method="post" asp-controller="Account" asp-action="Register" class="form group login-container">
+<form method="post" asp-controller="Account" asp-action="Register" class="form group login-container" enctype="multipart/form-data">
     <div asp-validation-summary="ModelOnly"></div>
     <div>
         <label asp-for="Email"></label><br />
@@ -30,6 +30,11 @@
     <div>
         <label asp-for="Surname">@Localizer["surname"]</label><br />
         <input asp-for="Surname" class="form-control" />
+        <span asp-validation-for="Surname"></span>
+    </div>
+    <div>
+        <label asp-for="Avatar">Avatar</label><br />
+        <input asp-for="Avatar" type="file" class="form-control" />
         <span asp-validation-for="Surname"></span>
     </div>
 
