@@ -144,6 +144,7 @@ namespace SocialNetwork.Controllers
             user.JobPlace = info.JobPlace;
             user.JobPosition = info.JobPosition;
             user.Gender = info.Gender;
+            
 
             return user;
         }
@@ -154,7 +155,12 @@ namespace SocialNetwork.Controllers
         {
             if (info.Avatar != null)
             {
-                await UpdateAvatar(info.Avatar);
+                byte[] imageData = null;
+                using (var binaryReader = new BinaryReader(info.Avatar.OpenReadStream()))
+                {
+                    imageData = binaryReader.ReadBytes((int)info.Avatar.Length);
+                }
+                _user.Avatar = imageData;
             }
             _user = ChangeInformation(_user, info);
             _repository.Update(_user);
@@ -162,27 +168,7 @@ namespace SocialNetwork.Controllers
             return RedirectToAction("Index");
         }
 
-        [NonAction]
-        public async Task UpdateAvatar(IFormFile avatar)
-        {
-            string path = "/usersPhotos/avatar" + _user.Id + ".jpg";
-            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
-            {
-                await avatar.CopyToAsync(fileStream);
-            }
-
-            var prevPhoto = _repository.GetUsersMainPhoto(_user);
-            if (prevPhoto != null)
-                _repository.Remove(prevPhoto);
-
-            Post mainPhoto = new Post { Owner = _user, Date = DateTime.Now, Type = PostType.MainPhoto };
-            Photo photo = new Photo { Image = path, Post = mainPhoto };
-            _repository.Create(mainPhoto);
-            _repository.Create(photo);
-
-            _repository.Update(_user);
-            _repository.Save();
-        }
+ 
 
         public override void OnActionExecuted(ActionExecutedContext context)
         {

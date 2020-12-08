@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Microsoft.AspNetCore.Http;
 using SocialNetwork.Domain.Core;
 
@@ -42,6 +43,7 @@ namespace SocialNetwork.ViewModels
             JobPlace = user.JobPlace;
             JobPosition = user.JobPosition;
             Gender = user.Gender;
+         
         }
 
     }
