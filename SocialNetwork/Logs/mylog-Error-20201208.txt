@@ -1096,3 +1096,639 @@ WHERE [a].[Id] = @__entity_equality_user_0_Id" (0723d8ff)
 2020-12-08T13:48:53.4855519+03:00 8000002c-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/usersPostPhotos/post82bbf169-203d-47e3-accf-7a6e75b2bf7d12082020134845.jpg   (ca22a1cb)
 2020-12-08T13:48:53.6002407+03:00 8000002c-0000-fb00-b63f-84710c7967bb [INF] Sending file. Request path: '"/usersPostPhotos/post82bbf169-203d-47e3-accf-7a6e75b2bf7d12082020134845.jpg"'. Physical path: '"C:\Users\User\source\repos\SocialNetworks\SocialNetwork\wwwroot\usersPostPhotos\post82bbf169-203d-47e3-accf-7a6e75b2bf7d12082020134845.jpg"' (27b0a520)
 2020-12-08T13:48:53.6060161+03:00 8000002c-0000-fb00-b63f-84710c7967bb [INF] Request finished in 144.8404ms 200 image/jpeg (791a596a)
+2020-12-08T13:55:51.0649710+03:00 8000000d-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/   (ca22a1cb)
+2020-12-08T13:55:51.1005158+03:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.Azure.SignalR failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Azure.SignalR, Culture=neutral, PublicKeyToken=null'. Не удается найти указанный файл.
+File name: 'Microsoft.Azure.SignalR, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2020-12-08T13:55:51.1650338+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-08T13:55:51.2417041+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-08T13:55:51.9296739+03:00  [INF] Content root path: "C:\Users\User\source\repos\SocialNetworks\SocialNetwork" (b5d60022)
+2020-12-08T13:55:52.2977938+03:00 8000000d-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "SocialNetwork.Controllers.HomeController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:55:52.3551431+03:00 8000000d-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T13:55:52.4272376+03:00 8000000d-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 6.364ms. (50a9e262)
+2020-12-08T13:55:52.5281344+03:00 8000000d-0001-fc00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/User". (d98d540e)
+2020-12-08T13:55:52.6295463+03:00 8000000d-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" in 234.7585ms (afa2e885)
+2020-12-08T13:55:52.7638273+03:00 8000000d-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1756.9351ms 302  (791a596a)
+2020-12-08T13:55:52.7819888+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User   (ca22a1cb)
+2020-12-08T13:55:52.8696772+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Index()" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:55:53.0492345+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T13:55:53.3357202+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("40"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T13:55:53.3645614+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T13:55:53.5825571+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-08T13:55:53.6111734+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-08T13:55:53.8826422+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T13:55:54.1435954+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (0723d8ff)
+2020-12-08T13:55:54.3555984+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T13:55:54.3812031+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T13:55:54.4106526+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T13:55:54.4495144+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T13:55:55.7329727+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1,065"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T13:55:56.9412963+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3397.0463ms. (50a9e262)
+2020-12-08T13:55:57.0277643+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T13:56:03.6766709+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (0723d8ff)
+2020-12-08T13:56:04.7222424+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 7712.0796ms. (f66409e9)
+2020-12-08T13:56:05.5290115+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" in 11876.9707ms (afa2e885)
+2020-12-08T13:56:05.5723164+03:00 80000033-0001-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/usersPostPhotos/post82bbf169-203d-47e3-accf-7a6e75b2bf7d12082020134845.jpg   (ca22a1cb)
+2020-12-08T13:56:05.6317427+03:00 8000000f-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T13:56:06.2135280+03:00 8000002e-0000-fb00-b63f-84710c7967bb [INF] Request finished in 12814.9804ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T13:56:06.3216260+03:00 80000033-0001-fd00-b63f-84710c7967bb [INF] The file "/usersPostPhotos/post82bbf169-203d-47e3-accf-7a6e75b2bf7d12082020134845.jpg" was not modified (f1f8d725)
+2020-12-08T13:56:06.4404879+03:00 80000033-0001-fd00-b63f-84710c7967bb [INF] Request finished in 856.4707ms 304 image/jpeg (791a596a)
+2020-12-08T13:56:06.4536765+03:00 8000000f-0001-fc00-b63f-84710c7967bb [INF] Request finished in 933.6214ms 404 text/plain (791a596a)
+2020-12-08T13:56:09.3531860+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/Account/LogOff   (ca22a1cb)
+2020-12-08T13:56:09.4694608+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"LogOff\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogOff()" on controller "SocialNetwork.Controllers.AccountController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:56:09.6595545+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.AccountController.LogOff (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T13:56:10.1739953+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2020-12-08T13:56:10.9305520+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2020-12-08T13:56:11.1189548+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2020-12-08T13:56:11.1416174+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.AccountController.LogOff (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 1464.6896ms. (50a9e262)
+2020-12-08T13:56:11.3499730+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2020-12-08T13:56:11.3688876+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.AccountController.LogOff (SocialNetwork)" in 1879.9462ms (afa2e885)
+2020-12-08T13:56:11.3849532+03:00 80000011-0001-fc00-b63f-84710c7967bb [INF] Request finished in 2033.2259ms 302  (791a596a)
+2020-12-08T13:56:11.3969807+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/   (ca22a1cb)
+2020-12-08T13:56:11.4268592+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "SocialNetwork.Controllers.HomeController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:56:11.5092337+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T13:56:11.5262737+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.6919ms. (50a9e262)
+2020-12-08T13:56:11.5618964+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T13:56:13.0254944+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 120.5124ms. (f66409e9)
+2020-12-08T13:56:13.2189086+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" in 1602.2826ms (afa2e885)
+2020-12-08T13:56:13.2878768+03:00 80000013-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1830.0271ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T13:56:13.8352830+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/Account/Register   (ca22a1cb)
+2020-12-08T13:56:13.9078622+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Register\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Register()" on controller "SocialNetwork.Controllers.AccountController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:56:13.9928241+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T13:56:14.0045507+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 0.7398ms. (50a9e262)
+2020-12-08T13:56:14.0251484+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Register". (c83d0e25)
+2020-12-08T13:56:14.8974512+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Register" executed in 883.1959ms. (f66409e9)
+2020-12-08T13:56:15.2920449+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)" in 1030.4838ms (afa2e885)
+2020-12-08T13:56:15.3427072+03:00 80000015-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1681.7871ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T13:56:31.8840510+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44372/Account/Register multipart/form-data; boundary=----WebKitFormBoundarygceBvvS5NPFoe1vl 1066 (ca22a1cb)
+2020-12-08T13:56:31.9926590+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Register\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialNetwork.ViewModels.RegisterViewModel)" on controller "SocialNetwork.Controllers.AccountController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:56:32.3031494+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)" - Validation state: Invalid (dad538d7)
+2020-12-08T13:56:32.3198287+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 7.1977ms. (50a9e262)
+2020-12-08T13:56:32.3315698+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Register". (c83d0e25)
+2020-12-08T13:56:32.9249282+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Register" executed in 58.7843ms. (f66409e9)
+2020-12-08T13:56:33.0597643+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)" in 931.9304ms (afa2e885)
+2020-12-08T13:56:33.1068118+03:00 80000017-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1191.0517ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T13:56:50.4531693+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44372/Account/Register multipart/form-data; boundary=----WebKitFormBoundaryB0tV3bcNBFmAyIzl 122436 (ca22a1cb)
+2020-12-08T13:56:51.3714768+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Register\", controller = \"Account\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialNetwork.ViewModels.RegisterViewModel)" on controller "SocialNetwork.Controllers.AccountController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:56:52.0893598+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T13:56:52.5909419+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T13:56:53.4051142+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("60"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-12-08T13:56:54.2666631+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("136"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = -1) (DbType = Binary), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 256), @p9='?' (DbType = Boolean), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (DbType = DateTimeOffset), @p16='?' (Size = 4000), @p17='?' (Size = 256), @p18='?' (Size = 256), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (DbType = Boolean), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (DbType = Boolean), @p26='?' (Size = 4000), @p27='?' (DbType = Int32), @p28='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [Avatar], [BirthDay], [City], [ConcurrencyStamp], [Country], [Email], [EmailConfirmed], [Gender], [IsBlocked], [JobPlace], [JobPosition], [LockoutEnabled], [LockoutEnd], [Name], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [School], [SecurityStamp], [Surname], [TwoFactorEnabled], [University], [UserId], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28);" (0723d8ff)
+2020-12-08T13:56:54.8995608+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("252"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2020-12-08T13:56:54.9686673+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)" (0723d8ff)
+2020-12-08T13:56:55.0306487+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("18"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2020-12-08T13:56:55.1530476+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-12-08T13:56:55.3950401+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);" (0723d8ff)
+2020-12-08T13:56:55.4448061+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@p28='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = -1) (DbType = Binary), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p29='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 256), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (DbType = DateTimeOffset), @p15='?' (Size = 4000), @p16='?' (Size = 256), @p17='?' (Size = 256), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Boolean), @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Boolean), @p25='?' (Size = 4000), @p26='?' (DbType = Int32), @p27='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [Address] = @p1, [Avatar] = @p2, [BirthDay] = @p3, [City] = @p4, [ConcurrencyStamp] = @p5, [Country] = @p6, [Email] = @p7, [EmailConfirmed] = @p8, [Gender] = @p9, [IsBlocked] = @p10, [JobPlace] = @p11, [JobPosition] = @p12, [LockoutEnabled] = @p13, [LockoutEnd] = @p14, [Name] = @p15, [NormalizedEmail] = @p16, [NormalizedUserName] = @p17, [PasswordHash] = @p18, [PhoneNumber] = @p19, [PhoneNumberConfirmed] = @p20, [School] = @p21, [SecurityStamp] = @p22, [Surname] = @p23, [TwoFactorEnabled] = @p24, [University] = @p25, [UserId] = @p26, [UserName] = @p27
+WHERE [Id] = @p28 AND [ConcurrencyStamp] = @p29;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2020-12-08T13:56:55.7484195+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("60"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-12-08T13:56:56.0578286+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T13:56:56.0887645+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-12-08T13:56:56.2400868+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("42"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-12-08T13:56:56.2851389+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-12-08T13:56:56.3027189+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 4200.4836ms. (50a9e262)
+2020-12-08T13:56:56.3163295+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/User". (d98d540e)
+2020-12-08T13:56:56.3317424+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.AccountController.Register (SocialNetwork)" in 4944.6841ms (afa2e885)
+2020-12-08T13:56:56.3706223+03:00 80000030-0000-fb00-b63f-84710c7967bb [INF] Request finished in 6225.9496ms 302  (791a596a)
+2020-12-08T13:56:56.3715003+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User   (ca22a1cb)
+2020-12-08T13:56:56.3940484+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Index()" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T13:56:56.4846806+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T13:56:56.5217933+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T13:56:56.5510356+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T13:56:56.5721876+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-08T13:56:56.5943974+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-08T13:56:56.6163333+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T13:56:57.0319226+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("57"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (0723d8ff)
+2020-12-08T13:56:57.0870374+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("28"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T13:56:57.1015443+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 537.417ms. (50a9e262)
+2020-12-08T13:56:57.1198016+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T13:56:58.0009577+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 650.0306ms. (f66409e9)
+2020-12-08T13:56:58.0319701+03:00 80000019-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T13:56:58.0560165+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" in 1621.8563ms (afa2e885)
+2020-12-08T13:56:58.1610199+03:00 80000032-0000-fb00-b63f-84710c7967bb [INF] Request finished in 1707.0081ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T13:56:58.2346692+03:00 80000019-0001-fc00-b63f-84710c7967bb [INF] Request finished in 119.6835ms 404 text/plain (791a596a)
+2020-12-08T14:13:29.9221130+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/News   (ca22a1cb)
+2020-12-08T14:13:29.9810070+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"News\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index(Int32)" on controller "SocialNetwork.Controllers.NewsController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:13:29.9972808+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:13:30.9406736+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("219"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:13:31.1368367+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.NewsController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:13:31.2408266+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("70"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-08T14:13:31.3174722+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("33"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-08T14:13:31.3912787+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.NewsController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 204.9613ms. (50a9e262)
+2020-12-08T14:13:31.4698060+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T14:13:31.6346006+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 167.776ms. (f66409e9)
+2020-12-08T14:13:31.6855318+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.NewsController.Index (SocialNetwork)" in 1654.4011ms (afa2e885)
+2020-12-08T14:13:31.7018670+03:00 8000001b-0001-fc00-b63f-84710c7967bb [INF] Request finished in 1771.4997ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T14:13:32.0750611+03:00 8000001d-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T14:13:32.1917749+03:00 8000001d-0001-fc00-b63f-84710c7967bb [INF] Request finished in 156.1897ms 404 text/plain (791a596a)
+2020-12-08T14:13:33.2055626+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User   (ca22a1cb)
+2020-12-08T14:13:33.2352382+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Index()" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:13:33.2523117+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:13:33.4068286+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:13:33.6336551+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:13:34.1024541+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("136"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-08T14:13:34.2076476+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("16"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-08T14:13:34.3673774+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("110"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:13:34.6326997+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (0723d8ff)
+2020-12-08T14:13:34.8501366+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("86"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T14:13:34.8888139+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 1218.1606ms. (50a9e262)
+2020-12-08T14:13:34.9570076+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T14:13:35.3137794+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 343.2535ms. (f66409e9)
+2020-12-08T14:13:35.3548989+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" in 2078.1741ms (afa2e885)
+2020-12-08T14:13:35.4142275+03:00 8000001f-0001-fc00-b63f-84710c7967bb [INF] Request finished in 2167.7416ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T14:13:35.4545173+03:00 80000034-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T14:13:35.4811761+03:00 80000034-0000-fb00-b63f-84710c7967bb [INF] Request finished in 48.609ms 404 text/plain (791a596a)
+2020-12-08T14:51:40.7173281+03:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.Azure.SignalR failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Azure.SignalR, Culture=neutral, PublicKeyToken=null'. Не удается найти указанный файл.
+File name: 'Microsoft.Azure.SignalR, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2020-12-08T14:51:40.7334553+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/   (ca22a1cb)
+2020-12-08T14:51:40.8149135+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-08T14:51:40.9308203+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-08T14:51:40.9528765+03:00  [INF] Content root path: "C:\Users\User\source\repos\SocialNetworks\SocialNetwork" (b5d60022)
+2020-12-08T14:51:41.5822439+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:51:41.8672297+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("70"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:51:42.4348329+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("34"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-12-08T14:51:42.6325415+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("39"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T14:51:42.6522301+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-12-08T14:51:42.7248739+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-12-08T14:51:42.9680364+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "SocialNetwork.Controllers.HomeController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:51:43.0671816+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:51:43.1024947+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 6.8235ms. (50a9e262)
+2020-12-08T14:51:43.3001857+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/User". (d98d540e)
+2020-12-08T14:51:43.4146045+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" in 331.7059ms (afa2e885)
+2020-12-08T14:51:43.6419823+03:00 80000021-0001-fc00-b63f-84710c7967bb [INF] Request finished in 2843.0445ms 302  (791a596a)
+2020-12-08T14:51:43.6681862+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User   (ca22a1cb)
+2020-12-08T14:51:43.7156853+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Index()" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:51:43.8274120+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:51:43.9668988+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:51:43.9925667+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:51:44.9466715+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("544"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:45.0318236+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("10"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:45.2169637+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("36"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:51:45.8155143+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("30"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:46.0148130+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("143"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T14:51:46.6618686+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 2554.6708ms. (50a9e262)
+2020-12-08T14:51:46.8117716+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T14:51:48.6978233+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1921.0516ms. (f66409e9)
+2020-12-08T14:51:48.8003146+03:00 80000014-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T14:51:48.8175637+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" in 4995.9794ms (afa2e885)
+2020-12-08T14:51:48.9424479+03:00 80000036-0000-fb00-b63f-84710c7967bb [INF] Request finished in 5170.498ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T14:51:49.1658997+03:00 80000014-0000-fc00-b63f-84710c7967bb [INF] Request finished in 209.0052ms 404 text/plain (791a596a)
+2020-12-08T14:51:55.1760187+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/Search   (ca22a1cb)
+2020-12-08T14:51:55.2177462+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Search\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "SocialNetwork.Controllers.SearchController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:51:55.2383114+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.SearchController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:51:55.2610538+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:51:55.4158169+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]" (0723d8ff)
+2020-12-08T14:51:55.5830454+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:51:56.3872689+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("244"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:56.6237212+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("149"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:56.9112451+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("86"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:57.1961680+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("29"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:51:57.7954861+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("99"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:51:58.1794783+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("132"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:51:58.2375301+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("18"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:58.2592163+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:58.2898153+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:51:58.3113214+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:51:58.5075701+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.SearchController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 3236.9851ms. (50a9e262)
+2020-12-08T14:51:58.5233515+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T14:52:01.0000487+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.SearchController.Index (SocialNetwork)" in 5774.1077ms (afa2e885)
+2020-12-08T14:52:01.4702725+03:00 80000016-0000-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentNullException: Value cannot be null. (Parameter 'inArray')
+   at System.Convert.ToBase64String(Byte[] inArray)
+   at AspNetCore.Views_Search_SearchResult.ExecuteAsync() in C:\Users\User\source\repos\SocialNetworks\SocialNetwork\Views\Search\SearchResult.cshtml:line 12
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at AspNetCore.Views_Search_Index.ExecuteAsync() in C:\Users\User\source\repos\SocialNetworks\SocialNetwork\Views\Search\Index.cshtml:line 15
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|21_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-08T14:52:02.0825993+03:00 80000016-0000-fc00-b63f-84710c7967bb [INF] Request finished in 6666.0763ms 500 text/html; charset=utf-8 (791a596a)
+2020-12-08T14:56:33.8073963+03:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.Azure.SignalR failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Azure.SignalR, Culture=neutral, PublicKeyToken=null'. Не удается найти указанный файл.
+File name: 'Microsoft.Azure.SignalR, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2020-12-08T14:56:34.6750843+03:00 80000008-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/   (ca22a1cb)
+2020-12-08T14:56:34.7361151+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-08T14:56:35.2136638+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-08T14:56:35.8742228+03:00  [INF] Content root path: "C:\Users\User\source\repos\SocialNetworks\SocialNetwork" (b5d60022)
+2020-12-08T14:56:37.8354427+03:00 80000008-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "SocialNetwork.Controllers.HomeController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:56:38.3537887+03:00 80000008-0001-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:56:38.7520026+03:00 80000008-0001-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 7.7777ms. (50a9e262)
+2020-12-08T14:56:40.9628243+03:00 80000008-0001-fb00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/User". (d98d540e)
+2020-12-08T14:56:41.6624702+03:00 80000008-0001-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" in 3137.3158ms (afa2e885)
+2020-12-08T14:56:44.1715257+03:00 80000008-0001-fb00-b63f-84710c7967bb [INF] Request finished in 8174.9443ms 302  (791a596a)
+2020-12-08T14:56:44.3534481+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User   (ca22a1cb)
+2020-12-08T14:56:44.9623354+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Index()" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:56:45.8474844+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:56:46.8598396+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("185"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:56:47.9350996+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:56:50.9254055+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("165"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-08T14:56:51.4594452+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("22"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-08T14:56:53.1753035+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("456"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:56:54.5774795+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("45"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (0723d8ff)
+2020-12-08T14:56:57.1931643+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2,307"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T14:56:59.3286077+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 11179.3953ms. (50a9e262)
+2020-12-08T14:56:59.9714676+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T14:57:04.9715346+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 4288.508ms. (f66409e9)
+2020-12-08T14:57:06.3951147+03:00 8000000f-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T14:57:07.3175291+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" in 21293.4474ms (afa2e885)
+2020-12-08T14:57:09.4525427+03:00 8000000a-0001-fb00-b63f-84710c7967bb [INF] Request finished in 24476.7161ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T14:57:10.4719600+03:00 8000000f-0000-ff00-b63f-84710c7967bb [INF] Request finished in 5048.8317ms 404 text/plain (791a596a)
+2020-12-08T14:57:18.0876275+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/Search   (ca22a1cb)
+2020-12-08T14:57:20.9683470+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Search\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "SocialNetwork.Controllers.SearchController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:57:22.1191861+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.SearchController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:57:23.5882021+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:57:26.5198569+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("676"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]" (0723d8ff)
+2020-12-08T14:57:29.8019399+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:57:34.5676249+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("329"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:57:35.0992811+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("102"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:57:36.6371107+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("826"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:57:37.6814598+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("86"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:57:41.1705711+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("119"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:57:43.2818678+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("57"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:57:43.3444976+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:57:43.3691380+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:57:43.4537669+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-08T14:57:43.5326212+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("44"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:57:44.4038720+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.SearchController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 21850.6804ms. (50a9e262)
+2020-12-08T14:57:44.4425088+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T14:57:45.1673146+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 490.319ms. (f66409e9)
+2020-12-08T14:57:45.1943020+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.SearchController.Index (SocialNetwork)" in 24198.6656ms (afa2e885)
+2020-12-08T14:57:45.2135853+03:00 8000000c-0001-fb00-b63f-84710c7967bb [INF] Request finished in 30507.6448ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T14:57:49.1777476+03:00 80000011-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T14:57:49.2647878+03:00 80000011-0000-ff00-b63f-84710c7967bb [INF] Request finished in 74.49ms 404 text/plain (791a596a)
+2020-12-08T14:57:52.6436008+03:00 80000013-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T14:57:52.6842691+03:00 80000013-0000-ff00-b63f-84710c7967bb [INF] Request finished in 74.8489ms 404 text/plain (791a596a)
+2020-12-08T14:58:06.7253821+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User/MainPage?userId=4ae3649d-937e-4d39-8fa3-3db647452a24   (ca22a1cb)
+2020-12-08T14:58:06.9607235+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"MainPage\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] MainPage(System.String)" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:58:07.1310260+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User/MainPage?userId=4ae3649d-937e-4d39-8fa3-3db647452a24   (ca22a1cb)
+2020-12-08T14:58:07.2645201+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:58:07.2952375+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"MainPage\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] MainPage(System.String)" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:58:07.3409603+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("14"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:58:07.3499119+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:58:07.6947025+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.MainPage (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:58:07.7631104+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("77"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:58:08.0306301+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.MainPage (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 5.7543ms. (50a9e262)
+2020-12-08T14:58:08.1257550+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.MainPage (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:58:08.1482236+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/User". (d98d540e)
+2020-12-08T14:58:08.1664449+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.MainPage (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult" in 0.3344ms. (50a9e262)
+2020-12-08T14:58:08.1941369+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.MainPage (SocialNetwork)" in 1187.494ms (afa2e885)
+2020-12-08T14:58:08.2112583+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/User". (d98d540e)
+2020-12-08T14:58:08.2264505+03:00 8000000e-0001-fb00-b63f-84710c7967bb [INF] Request finished in 1484.877ms 0  (791a596a)
+2020-12-08T14:58:08.2341636+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.MainPage (SocialNetwork)" in 910.8683ms (afa2e885)
+2020-12-08T14:58:08.3434737+03:00 80000015-0000-ff00-b63f-84710c7967bb [INF] Request finished in 1293.44ms 302  (791a596a)
+2020-12-08T14:58:08.3664220+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/User   (ca22a1cb)
+2020-12-08T14:58:08.4583788+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Index()" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-08T14:58:08.4727751+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-08T14:58:08.5093767+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-08T14:58:08.6485169+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-08T14:58:08.6666298+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-08T14:58:09.1980556+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("19"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-08T14:58:09.4731017+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("85"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-08T14:58:09.8739544+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (0723d8ff)
+2020-12-08T14:58:10.0463360+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("134"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-08T14:58:10.0835484+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 1399.9162ms. (50a9e262)
+2020-12-08T14:58:10.1080167+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-08T14:58:11.1971142+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 306.4794ms. (f66409e9)
+2020-12-08T14:58:11.4440358+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" in 2740.0319ms (afa2e885)
+2020-12-08T14:58:11.5950383+03:00 80000010-0001-fb00-b63f-84710c7967bb [INF] Request finished in 3110.8552ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-08T14:58:13.2295354+03:00 80000002-0001-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44372/js/messages.js   (ca22a1cb)
+2020-12-08T14:58:13.2627938+03:00 80000002-0001-fa00-b63f-84710c7967bb [INF] Request finished in 78.4989ms 404 text/plain (791a596a)

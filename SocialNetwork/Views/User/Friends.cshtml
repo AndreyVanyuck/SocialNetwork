@@ -15,8 +15,8 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                  <img src="@Url.Content(@request.MainPhotoPath)" />
-                             
+                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(request.Avatar))" />
+                   
                             </div>
                             @Html.ActionLink(@request.ToString(), "MainPage", new { userId = @request.Id })
                             <div class="request-buttons">
@@ -49,8 +49,8 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                 <img src="@Url.Content(@friend.MainPhotoPath)" />
-                             
+                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(friend.Avatar))" />
+                              
                             </div>
                             @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
                         </div>
@@ -72,8 +72,9 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                  <img src="@Url.Content(@following.MainPhotoPath)" />
-                              
+                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@following.Avatar))" />
+       
+
                             </div>
                             @Html.ActionLink(@following.ToString(), "MainPage", new { userId = @following.Id })
                         </div>
@@ -95,8 +96,9 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="friend-info full-width">
                             <div class="friend-up-info">
-                                 <img src="@Url.Content(@follower.MainPhotoPath)" />
-                             </div>
+                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(follower.Avatar))" />
+                       
+                            </div>
                             @Html.ActionLink(@follower.ToString(), "MainPage", new { userId = @follower.Id })
                         </div>
                     </div>

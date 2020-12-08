@@ -11,8 +11,9 @@
         <li userId="@user.Item1.Id" class="user-dialog">
             <div class="dialogs-msg-details" userId="@user.Item1.Id">
                 <div class="usr-msg-img" userId="@user.Item1.Id">
-                                         <img src="@Url.Content(@user.Item1.MainPhotoPath)" alt="" userId="@user.Item1.Id">
-                   @* <img src="~/images/no_photo.png" />*@
+                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(user.Item1.Avatar))" userId="@user.Item1.Id" />
+                   @* <img src="@Url.Content(@user.Item1.MainPhotoPath)" alt="" userId="@user.Item1.Id">*@
+                    @* <img src="~/images/no_photo.png" />*@
                 </div>
                 <div class="usr-msg-info" userId="@user.Item1.Id">
                     @{

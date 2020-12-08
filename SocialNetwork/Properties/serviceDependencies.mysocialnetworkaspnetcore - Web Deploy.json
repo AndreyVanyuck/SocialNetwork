@@ -1,16 +1,16 @@
 {
   "dependencies": {
-    "mssql2": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/socialnetworkaspnetcoredbserver/databases/SocialNetwork_db",
-      "type": "mssql.azure",
-      "connectionId": "mybd",
-      "secretStore": "AzureAppSettings"
-    },
     "mssql3": {
       "type": "mssql",
       "connectionId": "DefaultConnection",
       "suggestion": "true",
       "ignored": "true"
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/socialnetworkaspnetcoredbserver/databases/SocialNetwork_db",
+      "type": "mssql.azure",
+      "connectionId": "mybd",
+      "secretStore": "AzureAppSettings"
     }
   }
 }

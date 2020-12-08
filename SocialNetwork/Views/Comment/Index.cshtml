@@ -2,9 +2,8 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2">@**@
-            <img class="comment-owner-photo" src="@Url.Content(@Model.Owner.MainPhotoPath)" />
-        @*<img class="comment-owner-photo" src="~/images/no_photo.png" />*@
+        <div class="col-md-2">
+            <img class="comment-owner-photo" src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Owner.Avatar))" />
         </div>
         <div class="col-md-8">
             <div class="comment-owner">

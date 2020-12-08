@@ -17,8 +17,6 @@
                             <div class="username-dt">
                                 <div class="usr-pic">
                                     <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Avatar))" />
-                                   @* <img src="@Url.Content(@Model.MainPhotoPath)" alt="">
-*@
                                 </div>
                             </div>
                             <div class="user-specs">
@@ -143,13 +141,14 @@
                         <div class="friends-main-list">
                             @foreach (var friend in Model.Friends.Take(5))
                             {
-                                <div class="friends-main-usd">
-                                                    <img src="@Url.Content(@friend.MainPhotoPath)" alt="">
-                                 
-                                    <div class="friends-text">
-                                        @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
-                                    </div>
+                            <div class="friends-main-usd">
+                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@friend.Avatar))" />
+                            
+
+                                <div class="friends-text">
+                                    @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
                                 </div>
+                            </div>
                             }
                         </div>
                         <div class="view-more">
