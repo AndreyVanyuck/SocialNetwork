@@ -328,7 +328,7 @@ body {
 }
 
 img {
-    width: 100%;
+    width: 40%;
     object-fit: cover;
     height: auto;
 }
