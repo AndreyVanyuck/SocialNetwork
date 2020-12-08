@@ -2,4 +2,4 @@
 
 Simple social network
 
-Host: https://socialnetwork20201118151658.azurewebsites.net/
+Host: https://mysocialnetworkaspnetcore.azurewebsites.net/
