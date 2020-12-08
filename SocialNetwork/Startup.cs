@@ -44,6 +44,8 @@ namespace SocialNetwork
 
             services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IMailService, MailService>();
+
 
             services.AddIdentity<User, IdentityRole>(opts =>
             {

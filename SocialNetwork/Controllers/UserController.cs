@@ -20,17 +20,20 @@ namespace SocialNetwork.Controllers
         IHostingEnvironment _environment;
         User _user;
         UserManager<User> _userManager;
+        IMailService _mailService;
 
         public UserController(IUsersRepository repository,
                               IHostingEnvironment environment,
                               IHttpContextAccessor httpContextAccessor,
-                              UserManager<User> userManager)
+                              UserManager<User> userManager,
+                              IMailService mailService)
         {
             _repository = repository;
             _environment = environment;
             var id = userManager.GetUserId(httpContextAccessor.HttpContext.User);
             _user = _repository.GetUserById(id);
             _userManager = userManager;
+            _mailService = mailService;
 
         }
 
@@ -105,8 +108,8 @@ namespace SocialNetwork.Controllers
             user.IsBlocked = true;
             _repository.Update(user);
             _repository.Save();
-            MailService mailService = new MailService();
-            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was blocked!", user.Name, user.Surname));
+            //#IMailService mailService = new MailService();
+            await _mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was blocked!", user.Name, user.Surname));
             return await MainPage(userId);
         }
 
@@ -117,8 +120,8 @@ namespace SocialNetwork.Controllers
             user.IsBlocked = false;
             _repository.Update(user);
             _repository.Save();
-            MailService mailService = new MailService();
-            await mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was unblocked!", user.Name, user.Surname));
+            //MailService mailService = new MailService();
+            await _mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was unblocked!", user.Name, user.Surname));
             return await MainPage(userId);
         }
 

@@ -10,8 +10,16 @@
                 @Html.ActionLink(@Model.Owner.ToString(), "MainPage", "User", new { userId = @Model.Owner.Id })
             </div>
             <div class="comment-date">
-                @Model.Date
+                @Model.Date.ToString("MM/dd/yyyy HH:mm:ss")     
             </div>
+          <script>
+              const items = document.getElementsByClassName("comment-date");
+              for (let i = 0; i < items.length; i++) {
+                  let date = new Date(items[i].innerHTML);
+                  let newDate = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate(), date.getHours(), date.getMinutes(), date.getSeconds()));
+                  items[i].innerHTML = newDate.getFullYear() + "-" + (newDate.getMonth()) + "-" + newDate.getDate() + " " + newDate.getHours() + ":" + newDate.getMinutes() + ":" + newDate.getSeconds();
+              }
+          </script>
         </div>
         @if (Model.Owner == (User)ViewBag.LoggedUser)
         {

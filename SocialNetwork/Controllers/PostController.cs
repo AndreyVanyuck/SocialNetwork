@@ -48,7 +48,7 @@ namespace SocialNetwork.Controllers
             var post = new Post()
             {
                 Owner = _user,
-                Date = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time")),
+                Date = DateTime.UtcNow, //#TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time")),
                 Text = postVM.Text,
                 Type = PostType.Normal
             };

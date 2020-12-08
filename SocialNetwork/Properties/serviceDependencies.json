@@ -1,8 +1,5 @@
 {
   "dependencies": {
-    "secrets1": {
-      "type": "secrets"
-    },
     "mssql1": {
       "type": "mssql",
       "connectionId": "UsersContext"
@@ -10,6 +7,14 @@
     "mssql2": {
       "type": "mssql",
       "connectionId": "mybd"
+    },
+    "signalr1": {
+      "type": "signalr",
+      "connectionId": "Azure__SignalR__ConnectionString"
+    },
+    "secrets1": {
+      "type": "secrets",
+      "connectionId": "VaultUri"
     }
   }
 }
