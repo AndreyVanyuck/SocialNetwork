@@ -1,0 +1,1455 @@
+2020-12-10T00:53:42.3741266+03:00  [DBG] Registered SignalR Protocol: "json", implemented by "Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol". (c8f2a7df)
+2020-12-10T00:53:42.4177103+03:00  [DBG] Found protocol implementation for requested protocol: "json". (c5c3bb54)
+2020-12-10T00:53:43.0330521+03:00  [VRB] '"ChatHub"' hub method '"Send"' is bound. (57c247b4)
+2020-12-10T00:53:43.5529804+03:00  [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"] (5a801ab3)
+2020-12-10T00:53:43.5802904+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Account/Login.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5805455+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Account/Register.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5806048+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Comment/CommentsList.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5806242+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Comment/Index.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5806420+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Home/Error.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5806587+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Home/Index.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5806786+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Home/NoAccess.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5807268+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Home/Privacy.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5807443+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Message/Components/DialogsList/Default.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5807610+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Message/Components/Dialog/Default.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5807808+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Message/Index.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5807963+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/News/Index.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5808125+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Post/Index.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5808287+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Post/PostsList.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5808469+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Search/Index.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5808630+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Search/SearchResult.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5808792+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Shared/Error.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5808963+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Shared/_JustHeaderLayout.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5809153+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Shared/_Layout.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5809315+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Shared/_LoginLayout.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5809477+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Shared/_SelectLanguagePartial.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5809672+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/Shared/_ValidationScriptsPartial.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5809841+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/User/BlockedPage.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5810004+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/User/Friends.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5810172+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/User/Index.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5810541+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/User/Information.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5810718+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/User/Post.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5810893+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/User/Update.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5811050+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/_ViewImports.cshtml"'. (56c4e592)
+2020-12-10T00:53:43.5811234+03:00  [DBG] Initializing Razor view compiler with compiled view: '"/Views/_ViewStart.cshtml"'. (56c4e592)
+2020-12-10T00:53:44.7873737+03:00  [DBG] Starting "ServiceHubDispatcher<SocialNetwork.Services.BusinessLogic.ChatHub>" with 5 connections... (220c2129)
+2020-12-10T00:53:48.3368272+03:00  [INF] Starting transport. Transfer mode: Binary. Url: 'wss://mysocialnetworkservice.service.signalr.net/server/?hub=chathub&cid=74cc6643-346e-4849-b06f-6edc9f4ff6eb'. (ce9b2a03)
+2020-12-10T00:53:48.4400673+03:00  [INF] Starting transport. Transfer mode: Binary. Url: 'wss://mysocialnetworkservice.service.signalr.net/server/?hub=chathub&cid=3fc27327-6246-4df6-97de-8370d695ad57'. (ce9b2a03)
+2020-12-10T00:53:48.4738680+03:00  [INF] Starting transport. Transfer mode: Binary. Url: 'wss://mysocialnetworkservice.service.signalr.net/server/?hub=chathub&cid=2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16'. (ce9b2a03)
+2020-12-10T00:53:48.4945590+03:00  [INF] Starting transport. Transfer mode: Binary. Url: 'wss://mysocialnetworkservice.service.signalr.net/server/?hub=chathub&cid=1307b9c7-3f1d-48f1-aeea-2c677c58fa3a'. (ce9b2a03)
+2020-12-10T00:53:48.5335248+03:00  [INF] Starting transport. Transfer mode: Binary. Url: 'wss://mysocialnetworkservice.service.signalr.net/server/?hub=chathub&cid=6e304876-684a-47cc-a9d6-0cb11bf361b1'. (ce9b2a03)
+2020-12-10T00:53:48.6130501+03:00  [DBG] Loaded hosting startup assembly "SocialNetwork" (3d5180d3)
+2020-12-10T00:53:48.6133845+03:00  [DBG] Loaded hosting startup assembly "Microsoft.Azure.SignalR" (3d5180d3)
+2020-12-10T00:53:48.6271524+03:00  [VRB] Starting connection heartbeat. (0c19dca7)
+2020-12-10T00:53:48.7408721+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-10T00:53:48.7583366+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-10T00:53:48.7756410+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/   (ca22a1cb)
+2020-12-10T00:53:48.7862619+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Wildcard detected, all requests with hosts will be allowed. (af1c1e85)
+2020-12-10T00:53:48.7869972+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:53:48.7961707+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] The request path "/" does not match a supported file type (4910e68e)
+2020-12-10T00:53:48.8096055+03:00  [INF] Content root path: "C:\Users\User\source\repos\SocialNetworks\SocialNetwork" (b5d60022)
+2020-12-10T00:53:48.8110655+03:00  [DBG] Hosting started (e6def423)
+2020-12-10T00:53:48.8955632+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] No candidates found for the request path '"/"' (76d5928c)
+2020-12-10T00:53:48.8967338+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Request did not match any endpoints (328c36bf)
+2020-12-10T00:53:48.9616721+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] 1 candidate(s) found for the request path '"/"' (9406aaa8)
+2020-12-10T00:53:48.9887119+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Endpoint '"SocialNetwork.Controllers.HomeController.Index (SocialNetwork)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/"' (430aaaf2)
+2020-12-10T00:53:48.9920890+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Request matched endpoint '"SocialNetwork.Controllers.HomeController.Index (SocialNetwork)"' (cbf60c4b)
+2020-12-10T00:53:49.0792040+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] Performing unprotect operation to key {e693f770-8c37-475c-871e-eb6a787a5c06} with purposes "('C:\Users\User\source\repos\SocialNetworks\SocialNetwork', 'Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationMiddleware', 'Identity.Application', 'v2')". (97369f67)
+2020-12-10T00:53:49.3286631+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-10T00:53:49.7317738+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<User>()
+    .FirstOrDefault(e => EF.Property<string>(e, \"Id\") == __p_0)"' (e980d05f)
+2020-12-10T00:53:49.8996570+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<User>(
+    asyncEnumerable: new SingleQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.SelectExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (string) Required PK AfterSave:Throw, 0], [Property: User.AccessFailedCount (int) Required, 1], [Property: User.Address (string), 2], [Property: User.Avatar (byte[]), 3], [Property: User.BirthDay (Nullable<DateTime>), 4], [Property: User.City (string), 5], [Property: User.ConcurrencyStamp (string) Concurrency, 6], [Property: User.Country (string), 7], [Property: User.Email (string) MaxLength(256), 8], [Property: User.EmailConfirmed (bool) Required, 9], [Property: User.Gender (Gender) Required, 10], [Property: User.IsBlocked (bool) Required, 11], [Property: User.JobPlace (string), 12], [Property: User.JobPosition (string), 13], [Property: User.LockoutEnabled (bool) Required, 14], [Property: User.LockoutEnd (Nullable<DateTimeOffset>), 15], [Property: User.Name (string), 16], [Property: User.NormalizedEmail (string) Index MaxLength(256), 17], [Property: User.NormalizedUserName (string) Index MaxLength(256), 18], [Property: User.PasswordHash (string), 19], [Property: User.PhoneNumber (string), 20], [Property: User.PhoneNumberConfirmed (bool) Required, 21], [Property: User.School (string), 22], [Property: User.SecurityStamp (string), 23], [Property: User.Surname (string), 24], [Property: User.TwoFactorEnabled (bool) Required, 25], [Property: User.University (string), 26], [Property: User.UserId (int) Required, 27], [Property: User.UserName (string) MaxLength(256), 28], }
+            SELECT TOP(1) a.Id, a.AccessFailedCount, a.Address, a.Avatar, a.BirthDay, a.City, a.ConcurrencyStamp, a.Country, a.Email, a.EmailConfirmed, a.Gender, a.IsBlocked, a.JobPlace, a.JobPosition, a.LockoutEnabled, a.LockoutEnd, a.Name, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.School, a.SecurityStamp, a.Surname, a.TwoFactorEnabled, a.University, a.UserId, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.Id == @__p_0), 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+        SocialNetwork.Infrastructure.Data.UsersContext, 
+        False, 
+        False
+    ), 
+    cancellationToken: queryContext.CancellationToken)"' (02e79cda)
+2020-12-10T00:53:49.9047353+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:49.9063420+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (1ms). (eb909d95)
+2020-12-10T00:53:49.9076013+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:49.9087532+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:49.9314315+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (65d11854)
+2020-12-10T00:53:53.1908107+03:00  [DBG] Started transport. (095243a3)
+2020-12-10T00:53:53.6494139+03:00  [DBG] Started transport. (095243a3)
+2020-12-10T00:53:53.6975825+03:00  [DBG] Sending Handshake request to service. (b729924b)
+2020-12-10T00:53:53.9126354+03:00  [DBG] Sending Handshake request to service. (b729924b)
+2020-12-10T00:53:53.9788117+03:00  [DBG] Started transport. (095243a3)
+2020-12-10T00:53:53.9797921+03:00  [DBG] Sending Handshake request to service. (b729924b)
+2020-12-10T00:53:54.0060211+03:00  [DBG] Received message from application. Payload size: 7. (36fca6fa)
+2020-12-10T00:53:54.0074506+03:00  [DBG] Received message from application. Payload size: 7. (36fca6fa)
+2020-12-10T00:53:54.0193815+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1,202"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-10T00:53:54.0210867+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:54.0222865+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:54.0225371+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:54.0228214+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:54.0365668+03:00  [DBG] Started transport. (095243a3)
+2020-12-10T00:53:54.0387187+03:00  [DBG] Sending Handshake request to service. (b729924b)
+2020-12-10T00:53:54.0436002+03:00  [DBG] Received message from application. Payload size: 7. (36fca6fa)
+2020-12-10T00:53:54.0634235+03:00  [DBG] Received message from application. Payload size: 7. (36fca6fa)
+2020-12-10T00:53:54.1534709+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<IdentityUserClaim<string>>()
+    .Where(uc => uc.UserId.Equals(__user_Id_0))
+    .Select(c => c.ToClaim())"' (e980d05f)
+2020-12-10T00:53:54.2191316+03:00  [DBG] Started transport. (095243a3)
+2020-12-10T00:53:54.2249246+03:00  [DBG] Sending Handshake request to service. (b729924b)
+2020-12-10T00:53:54.2954875+03:00  [DBG] Received message from application. Payload size: 7. (36fca6fa)
+2020-12-10T00:53:54.3145705+03:00  [DBG] Message received. Type: Binary, size: 5, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3151792+03:00  [DBG] Message received. Type: Binary, size: 9, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3167785+03:00  [DBG] Message received. Type: Binary, size: 5, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3188900+03:00  [DBG] Message received. Type: Binary, size: 9, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3202212+03:00  [DBG] Message received. Type: Binary, size: 5, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3203892+03:00  [DBG] Message received. Type: Binary, size: 9, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3212035+03:00  [DBG] Message received. Type: Binary, size: 5, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3213618+03:00  [DBG] Message received. Type: Binary, size: 9, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.3715811+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Claim>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+        SELECT a.Id, a.ClaimType, a.ClaimValue, a.UserId
+        FROM AspNetUserClaims AS a
+        WHERE a.UserId == @__user_Id_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Claim>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:54.3727861+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:54.3729284+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:54.3730256+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:54.3732541+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:54.3734659+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (65d11854)
+2020-12-10T00:53:54.4453655+03:00  [DBG] Handshake with service completes. (4bbedf5c)
+2020-12-10T00:53:54.4459581+03:00  [DBG] Service connection "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a" connected. (3973e000)
+2020-12-10T00:53:54.4643722+03:00  [DBG] Handshake with service completes. (4bbedf5c)
+2020-12-10T00:53:54.4644294+03:00  [DBG] Handshake with service completes. (4bbedf5c)
+2020-12-10T00:53:54.4644792+03:00  [DBG] Service connection "6e304876-684a-47cc-a9d6-0cb11bf361b1" connected. (3973e000)
+2020-12-10T00:53:54.4644793+03:00  [DBG] Service connection "3fc27327-6246-4df6-97de-8370d695ad57" connected. (3973e000)
+2020-12-10T00:53:54.5086102+03:00  [VRB] Starting keep-alive timer. Duration: 5000.00ms (913ca0dc)
+2020-12-10T00:53:54.5367997+03:00  [VRB] Starting keep-alive timer. Duration: 5000.00ms (913ca0dc)
+2020-12-10T00:53:54.5545749+03:00  [DBG] Received 9 bytes from service "6e304876-684a-47cc-a9d6-0cb11bf361b1". (c903667d)
+2020-12-10T00:53:54.5906623+03:00  [DBG] Handshake with service completes. (4bbedf5c)
+2020-12-10T00:53:54.5907518+03:00  [DBG] Service connection "74cc6643-346e-4849-b06f-6edc9f4ff6eb" connected. (3973e000)
+2020-12-10T00:53:54.5907950+03:00  [VRB] Starting keep-alive timer. Duration: 5000.00ms (913ca0dc)
+2020-12-10T00:53:54.5950000+03:00  [DBG] Received 9 bytes from service "3fc27327-6246-4df6-97de-8370d695ad57". (c903667d)
+2020-12-10T00:53:54.6053055+03:00  [DBG] Message received. Type: Binary, size: 5, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.6054554+03:00  [DBG] Message received. Type: Binary, size: 9, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:54.6066275+03:00  [INF] Hub '"ChatHub"' is now connected to '"(Primary)https://mysocialnetworkservice.service.signalr.net"'. (f59abd6f)
+2020-12-10T00:53:54.6068639+03:00  [VRB] Starting keep-alive timer. Duration: 5000.00ms (913ca0dc)
+2020-12-10T00:53:54.6070115+03:00  [DBG] Received 9 bytes from service "74cc6643-346e-4849-b06f-6edc9f4ff6eb". (c903667d)
+2020-12-10T00:53:54.6099780+03:00  [DBG] Handshake with service completes. (4bbedf5c)
+2020-12-10T00:53:54.6100888+03:00  [DBG] Service connection "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16" connected. (3973e000)
+2020-12-10T00:53:54.6101558+03:00  [VRB] Starting keep-alive timer. Duration: 5000.00ms (913ca0dc)
+2020-12-10T00:53:54.6103598+03:00  [DBG] Received 9 bytes from service "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16". (c903667d)
+2020-12-10T00:53:54.6112151+03:00  [DBG] Received 9 bytes from service "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a". (c903667d)
+2020-12-10T00:53:54.6638556+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("224"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-12-10T00:53:54.6740765+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:54.6742203+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:54.6743357+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:54.7580425+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<IdentityUserRole<string>>()
+    .Join(
+        inner: DbSet<IdentityRole>(), 
+        outerKeySelector: userRole => userRole.RoleId, 
+        innerKeySelector: role => role.Id, 
+        resultSelector: (userRole, role) => new { 
+            userRole = userRole, 
+            role = role
+         })
+    .Where(<>h__TransparentIdentifier0 => <>h__TransparentIdentifier0.userRole.UserId.Equals(__userId_0))
+    .Select(<>h__TransparentIdentifier0 => <>h__TransparentIdentifier0.role.Name)"' (e980d05f)
+2020-12-10T00:53:54.8830095+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<string>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT a0.Name
+        FROM AspNetUserRoles AS a
+        INNER JOIN AspNetRoles AS a0 ON a.RoleId == a0.Id
+        WHERE a.UserId == @__userId_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, string>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:54.8883960+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:54.8885493+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:54.8886453+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:54.8890825+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:54.8892727+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (65d11854)
+2020-12-10T00:53:54.9246835+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("24"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-10T00:53:54.9255020+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:54.9256466+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:54.9257439+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:54.9587214+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:54.9588486+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:54.9589642+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:54.9594752+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:54.9596549+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (65d11854)
+2020-12-10T00:53:54.9800458+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-12-10T00:53:54.9809891+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"IdentityRole"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:54.9819532+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:54.9821928+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:54.9823085+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:54.9970036+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<IdentityRoleClaim<string>>()
+    .Where(rc => rc.RoleId.Equals(__role_Id_0))
+    .Select(c => new Claim(
+        c.ClaimType, 
+        c.ClaimValue
+    ))"' (e980d05f)
+2020-12-10T00:53:55.0160992+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Claim>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+        SELECT a.ClaimType, a.ClaimValue
+        FROM AspNetRoleClaims AS a
+        WHERE a.RoleId == @__role_Id_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Claim>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:55.0165900+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:55.0206574+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (4ms). (eb909d95)
+2020-12-10T00:53:55.0213617+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:55.0424535+03:00  [DBG] Received 3 bytes from service "3fc27327-6246-4df6-97de-8370d695ad57". (c903667d)
+2020-12-10T00:53:55.0428523+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:55.0454376+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:55.0470868+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:55.0488122+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:53:55.0208413+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:55.0536671+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:55.0538326+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (65d11854)
+2020-12-10T00:53:55.0782077+03:00  [DBG] Received 3 bytes from service "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16". (c903667d)
+2020-12-10T00:53:55.0783071+03:00  [DBG] Received 3 bytes from service "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a". (c903667d)
+2020-12-10T00:53:55.0783750+03:00  [DBG] Received 3 bytes from service "74cc6643-346e-4849-b06f-6edc9f4ff6eb". (c903667d)
+2020-12-10T00:53:55.0784168+03:00  [DBG] Received 3 bytes from service "6e304876-684a-47cc-a9d6-0cb11bf361b1". (c903667d)
+2020-12-10T00:53:55.0888554+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("26"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-12-10T00:53:55.0892994+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:55.0893908+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:55.0894969+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:55.0993477+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:55.0994896+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:55.0995848+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:55.0997913+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:55.0999386+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (65d11854)
+2020-12-10T00:53:55.1221137+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("13"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-12-10T00:53:55.1224950+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"IdentityRole"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:55.1226859+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:55.1228132+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:55.1229161+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:55.1251021+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:55.1252367+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:55.1253397+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:55.1255453+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:55.1256725+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (65d11854)
+2020-12-10T00:53:55.1562715+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("21"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-12-10T00:53:55.1565911+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:55.1566879+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:55.1567788+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:55.1877595+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2020-12-10T00:53:55.3405838+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Request successfully matched the route with name '"default"' and template '"{controller=Home}/{action=Index}/{id?}"' (adc338ed)
+2020-12-10T00:53:55.4426106+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult Index()" on controller "SocialNetwork.Controllers.HomeController" ("SocialNetwork"). (122b2fdf)
+2020-12-10T00:53:55.4446541+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "authorization" filters (in the following order): ["None"] (6a7aea5c)
+2020-12-10T00:53:55.4453561+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"] (6a7aea5c)
+2020-12-10T00:53:55.4457972+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"] (6a7aea5c)
+2020-12-10T00:53:55.4461055+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "exception" filters (in the following order): ["None"] (6a7aea5c)
+2020-12-10T00:53:55.4462957+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"] (6a7aea5c)
+2020-12-10T00:53:55.4480544+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": Before executing "OnResourceExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:55.4491953+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": After executing "OnResourceExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:55.4575377+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executing controller factory for controller "SocialNetwork.Controllers.HomeController" ("SocialNetwork") (9650b6ae)
+2020-12-10T00:53:55.4604463+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Executed controller factory for controller "SocialNetwork.Controllers.HomeController" ("SocialNetwork") (65418032)
+2020-12-10T00:53:55.4607969+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": Before executing "OnActionExecutionAsync" on filter "Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter". (b4eff790)
+2020-12-10T00:53:55.4613135+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": Before executing "OnActionExecuting" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (b4eff790)
+2020-12-10T00:53:55.4621988+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": After executing "OnActionExecuting" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (3551d07a)
+2020-12-10T00:53:55.5086439+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-10T00:53:55.5649958+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult" in 3.9665ms. (50a9e262)
+2020-12-10T00:53:55.5656464+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": Before executing "OnActionExecuted" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (b4eff790)
+2020-12-10T00:53:55.5658421+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": After executing "OnActionExecuted" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (3551d07a)
+2020-12-10T00:53:55.5660945+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": After executing "OnActionExecutionAsync" on filter "Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter". (3551d07a)
+2020-12-10T00:53:55.5749795+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": Before executing "OnResultExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:55.5751647+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": After executing "OnResultExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:55.5774919+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] Before executing action result "Microsoft.AspNetCore.Mvc.RedirectToActionResult". (0156505a)
+2020-12-10T00:53:55.5911070+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:55.6615551+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User" and "" (98d001ee)
+2020-12-10T00:53:55.7313834+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User" (be9df4e7)
+2020-12-10T00:53:55.7403052+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executing RedirectResult, redirecting to "/User". (d98d540e)
+2020-12-10T00:53:55.7427631+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] After executing action result "Microsoft.AspNetCore.Mvc.RedirectToActionResult". (70c22601)
+2020-12-10T00:53:55.7429589+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": Before executing "OnResultExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:55.7439467+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": After executing "OnResultExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:55.7444019+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": Before executing "OnResourceExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:55.7446163+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": After executing "OnResourceExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:55.7917416+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.HomeController.Index (SocialNetwork)" in 298.6299ms (afa2e885)
+2020-12-10T00:53:55.8286310+03:00 80000002-0000-fb00-b63f-84710c7967bb [VRB] Performing protect operation to key {e693f770-8c37-475c-871e-eb6a787a5c06} with purposes "('C:\Users\User\source\repos\SocialNetworks\SocialNetwork', 'Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationMiddleware', 'Identity.Application', 'v2')". (33ed27fc)
+2020-12-10T00:53:55.8645308+03:00 80000002-0000-fb00-b63f-84710c7967bb [DBG] '"UsersContext"' disposed. (db68f4b4)
+2020-12-10T00:53:55.9587881+03:00 80000002-0000-fb00-b63f-84710c7967bb [INF] Request finished in 7206.5125ms 302  (791a596a)
+2020-12-10T00:53:56.0148365+03:00  [DBG] Connection ID ""18086456105130524673"" disconnecting. (72238361)
+2020-12-10T00:53:56.0161373+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/User   (ca22a1cb)
+2020-12-10T00:53:56.0164890+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:53:56.0194626+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] The request path "/User" does not match a supported file type (4910e68e)
+2020-12-10T00:53:56.0205467+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] No candidates found for the request path '"/User"' (76d5928c)
+2020-12-10T00:53:56.0207178+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Request did not match any endpoints (328c36bf)
+2020-12-10T00:53:56.0320868+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] 1 candidate(s) found for the request path '"/User"' (9406aaa8)
+2020-12-10T00:53:56.0322680+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Endpoint '"SocialNetwork.Controllers.UserController.Index (SocialNetwork)"' with route pattern '"{controller=Home}/{action=Index}/{id?}"' is valid for the request path '"/User"' (430aaaf2)
+2020-12-10T00:53:56.0324799+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Request matched endpoint '"SocialNetwork.Controllers.UserController.Index (SocialNetwork)"' (cbf60c4b)
+2020-12-10T00:53:56.0334004+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Performing unprotect operation to key {e693f770-8c37-475c-871e-eb6a787a5c06} with purposes "('C:\Users\User\source\repos\SocialNetworks\SocialNetwork', 'Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationMiddleware', 'Identity.Application', 'v2')". (97369f67)
+2020-12-10T00:53:56.0368927+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2020-12-10T00:53:56.0383253+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Request successfully matched the route with name '"default"' and template '"{controller=Home}/{action=Index}/{id?}"' (adc338ed)
+2020-12-10T00:53:56.0794876+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Index()" on controller "SocialNetwork.Controllers.UserController" ("SocialNetwork"). (122b2fdf)
+2020-12-10T00:53:56.0797277+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "authorization" filters (in the following order): ["None"] (6a7aea5c)
+2020-12-10T00:53:56.0798179+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "resource" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"] (6a7aea5c)
+2020-12-10T00:53:56.0799251+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)", "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"] (6a7aea5c)
+2020-12-10T00:53:56.0800173+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "exception" filters (in the following order): ["None"] (6a7aea5c)
+2020-12-10T00:53:56.0801036+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"] (6a7aea5c)
+2020-12-10T00:53:56.0801953+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": Before executing "OnResourceExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:56.0804789+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": After executing "OnResourceExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:56.0806196+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing controller factory for controller "SocialNetwork.Controllers.UserController" ("SocialNetwork") (9650b6ae)
+2020-12-10T00:53:56.1594533+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Entity Framework Core "5.0.0" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=SocialNetwork " (9958f5bb)
+2020-12-10T00:53:56.1703911+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<User>()
+    .FirstOrDefault(e => EF.Property<string>(e, \"Id\") == __p_0)"' (e980d05f)
+2020-12-10T00:53:56.1968535+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (string) Required PK AfterSave:Throw, 0], [Property: User.AccessFailedCount (int) Required, 1], [Property: User.Address (string), 2], [Property: User.Avatar (byte[]), 3], [Property: User.BirthDay (Nullable<DateTime>), 4], [Property: User.City (string), 5], [Property: User.ConcurrencyStamp (string) Concurrency, 6], [Property: User.Country (string), 7], [Property: User.Email (string) MaxLength(256), 8], [Property: User.EmailConfirmed (bool) Required, 9], [Property: User.Gender (Gender) Required, 10], [Property: User.IsBlocked (bool) Required, 11], [Property: User.JobPlace (string), 12], [Property: User.JobPosition (string), 13], [Property: User.LockoutEnabled (bool) Required, 14], [Property: User.LockoutEnd (Nullable<DateTimeOffset>), 15], [Property: User.Name (string), 16], [Property: User.NormalizedEmail (string) Index MaxLength(256), 17], [Property: User.NormalizedUserName (string) Index MaxLength(256), 18], [Property: User.PasswordHash (string), 19], [Property: User.PhoneNumber (string), 20], [Property: User.PhoneNumberConfirmed (bool) Required, 21], [Property: User.School (string), 22], [Property: User.SecurityStamp (string), 23], [Property: User.Surname (string), 24], [Property: User.TwoFactorEnabled (bool) Required, 25], [Property: User.University (string), 26], [Property: User.UserId (int) Required, 27], [Property: User.UserName (string) MaxLength(256), 28], }
+        SELECT TOP(1) a.Id, a.AccessFailedCount, a.Address, a.Avatar, a.BirthDay, a.City, a.ConcurrencyStamp, a.Country, a.Email, a.EmailConfirmed, a.Gender, a.IsBlocked, a.JobPlace, a.JobPosition, a.LockoutEnabled, a.LockoutEnd, a.Name, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.School, a.SecurityStamp, a.Surname, a.TwoFactorEnabled, a.University, a.UserId, a.UserName
+        FROM AspNetUsers AS a
+        WHERE a.Id == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)
+    .SingleOrDefault()"' (02e79cda)
+2020-12-10T00:53:56.2108772+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:56.2111080+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:56.2132761+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:56.2258320+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:56.2268792+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (65d11854)
+2020-12-10T00:53:56.2453854+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-10T00:53:56.2478078+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:56.2526068+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:56.2544635+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:56.2552957+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:56.2556702+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executed controller factory for controller "SocialNetwork.Controllers.UserController" ("SocialNetwork") (65418032)
+2020-12-10T00:53:56.2560125+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": Before executing "OnActionExecutionAsync" on filter "Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter". (b4eff790)
+2020-12-10T00:53:56.2563026+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": Before executing "OnActionExecuting" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (b4eff790)
+2020-12-10T00:53:56.2570295+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": After executing "OnActionExecuting" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (3551d07a)
+2020-12-10T00:53:56.2662216+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executing action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" - Validation state: Valid (dad538d7)
+2020-12-10T00:53:56.5284229+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Friendship>()
+    .Where(e => EF.Property<string>(e, \"RequestToId\") == __p_0)
+    .AsTracking()"' (e980d05f)
+2020-12-10T00:53:56.5492456+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Friendship>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Friendship.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Friendship.RequestFromId (no field, string) Shadow FK Index, 1], [Property: Friendship.RequestToId (no field, string) Shadow FK Index, 2], [Property: Friendship.Status (FriendshipStatus) Required, 3], }
+        SELECT f.Id, f.RequestFromId, f.RequestToId, f.Status
+        FROM Friendships AS f
+        WHERE f.RequestToId == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Friendship>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:56.5580851+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:56.5582700+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:56.5584050+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:56.5588326+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:56.5590268+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (65d11854)
+2020-12-10T00:53:56.5749130+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestToId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:56.5759792+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:56.5761749+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:56.5763103+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:56.5916767+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Friendship>()
+    .Where(e => EF.Property<string>(e, \"RequestFromId\") == __p_0)
+    .AsTracking()"' (e980d05f)
+2020-12-10T00:53:56.6040069+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Friendship>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Friendship.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Friendship.RequestFromId (no field, string) Shadow FK Index, 1], [Property: Friendship.RequestToId (no field, string) Shadow FK Index, 2], [Property: Friendship.Status (FriendshipStatus) Required, 3], }
+        SELECT f.Id, f.RequestFromId, f.RequestToId, f.Status
+        FROM Friendships AS f
+        WHERE f.RequestFromId == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Friendship>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:56.6045069+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:56.6047659+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:56.6048704+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:56.6050957+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:56.6052625+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (65d11854)
+2020-12-10T00:53:56.6144879+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[RequestFromId], [f].[RequestToId], [f].[Status]
+FROM [Friendships] AS [f]
+WHERE [f].[RequestFromId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:56.6573181+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Friendship"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:56.7985042+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:56.7986618+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:56.7987880+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:56.8817919+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<User>()
+    .Where(e => EF.Property<string>(e, \"Id\") == __p_0)
+    .AsTracking()"' (e980d05f)
+2020-12-10T00:53:56.9125191+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (string) Required PK AfterSave:Throw, 0], [Property: User.AccessFailedCount (int) Required, 1], [Property: User.Address (string), 2], [Property: User.Avatar (byte[]), 3], [Property: User.BirthDay (Nullable<DateTime>), 4], [Property: User.City (string), 5], [Property: User.ConcurrencyStamp (string) Concurrency, 6], [Property: User.Country (string), 7], [Property: User.Email (string) MaxLength(256), 8], [Property: User.EmailConfirmed (bool) Required, 9], [Property: User.Gender (Gender) Required, 10], [Property: User.IsBlocked (bool) Required, 11], [Property: User.JobPlace (string), 12], [Property: User.JobPosition (string), 13], [Property: User.LockoutEnabled (bool) Required, 14], [Property: User.LockoutEnd (Nullable<DateTimeOffset>), 15], [Property: User.Name (string), 16], [Property: User.NormalizedEmail (string) Index MaxLength(256), 17], [Property: User.NormalizedUserName (string) Index MaxLength(256), 18], [Property: User.PasswordHash (string), 19], [Property: User.PhoneNumber (string), 20], [Property: User.PhoneNumberConfirmed (bool) Required, 21], [Property: User.School (string), 22], [Property: User.SecurityStamp (string), 23], [Property: User.Surname (string), 24], [Property: User.TwoFactorEnabled (bool) Required, 25], [Property: User.University (string), 26], [Property: User.UserId (int) Required, 27], [Property: User.UserName (string) MaxLength(256), 28], }
+        SELECT a.Id, a.AccessFailedCount, a.Address, a.Avatar, a.BirthDay, a.City, a.ConcurrencyStamp, a.Country, a.Email, a.EmailConfirmed, a.Gender, a.IsBlocked, a.JobPlace, a.JobPosition, a.LockoutEnabled, a.LockoutEnd, a.Name, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.School, a.SecurityStamp, a.Surname, a.TwoFactorEnabled, a.University, a.UserId, a.UserName
+        FROM AspNetUsers AS a
+        WHERE a.Id == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:56.9141461+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:56.9142672+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:56.9143873+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:56.9146092+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:56.9147774+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (65d11854)
+2020-12-10T00:53:56.9321509+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Avatar], [a].[BirthDay], [a].[City], [a].[ConcurrencyStamp], [a].[Country], [a].[Email], [a].[EmailConfirmed], [a].[Gender], [a].[IsBlocked], [a].[JobPlace], [a].[JobPosition], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[School], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[University], [a].[UserId], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0" (0723d8ff)
+2020-12-10T00:53:56.9327513+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"User"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:56.9963901+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:56.9965701+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:56.9973342+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.0239358+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Post>()
+    .Where(p => (int)p.Type == 2 && p.Owner == __user_0)
+    .Single()"' (e980d05f)
+2020-12-10T00:53:57.1866716+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => 
+{
+    queryContext.AddParameter(
+        name: \"__entity_equality_user_0_Id\", 
+        value: (object)Invoke(queryContext => ParameterValueExtractor(queryContext, \"__user_0\", Property: User.Id (string) Required PK AfterSave:Throw), queryContext)
+    );
+    return new SingleQueryingEnumerable<Post>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.SelectExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Post.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Post.Date (Nullable<DateTime>), 1], [Property: Post.OwnerId (string) FK Index, 2], [Property: Post.Text (string), 3], [Property: Post.Type (PostType) Required, 4], }
+            SELECT TOP(2) p.Id, p.Date, p.OwnerId, p.Text, p.Type
+            FROM Posts AS p
+            LEFT JOIN AspNetUsers AS a ON p.OwnerId == a.Id
+            WHERE (p.Type == 2) && (a.Id == @__entity_equality_user_0_Id)), 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Post>, 
+        SocialNetwork.Infrastructure.Data.UsersContext, 
+        False, 
+        False
+    )
+        .Single();
+}"' (02e79cda)
+2020-12-10T00:53:57.1933824+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.1935125+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.1936285+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.1938510+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.1940305+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:57.2304211+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("21"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:57.2993502+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Post"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.3624144+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.3625797+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.3627621+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.4095912+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Like>()
+    .Where(e => EF.Property<Nullable<int>>(e, \"PostId\") == __p_0)
+    .AsTracking()"' (e980d05f)
+2020-12-10T00:53:57.4256636+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Like>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Like.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Like.OwnerId (string) FK Index, 1], [Property: Like.PostId (Nullable<int>) FK Index, 2], }
+        SELECT l.Id, l.OwnerId, l.PostId
+        FROM Likes AS l
+        WHERE l.PostId == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Like>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:57.4267084+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.4268592+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.4285573+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.4294334+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.4313966+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.4610281+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("25"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.4615276+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.4616732+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.4618128+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.4739964+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Comment>()
+    .Where(e => EF.Property<Nullable<int>>(e, \"PostId\") == __p_0)
+    .AsTracking()"' (e980d05f)
+2020-12-10T00:53:57.4944457+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Comment>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Comment.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Comment.Date (DateTime) Required, 1], [Property: Comment.OwnerId (string) FK Index, 2], [Property: Comment.PostId (Nullable<int>) FK Index, 3], [Property: Comment.Text (string), 4], }
+        SELECT c.Id, c.Date, c.OwnerId, c.PostId, c.Text
+        FROM Comments AS c
+        WHERE c.PostId == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Comment>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:57.4953142+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.4954872+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.4955982+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.4959774+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.4961511+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.5109119+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.5119518+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.5121425+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.5122484+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.5226993+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Photo>()
+    .Where(e => EF.Property<Nullable<int>>(e, \"PostId\") == __p_0)
+    .AsTracking()"' (e980d05f)
+2020-12-10T00:53:57.5316818+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Photo>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Photo.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Photo.Image (string), 1], [Property: Photo.PostId (Nullable<int>) FK Index, 2], }
+        SELECT p.Id, p.Image, p.PostId
+        FROM Photos AS p
+        WHERE p.PostId == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Photo>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:57.5322721+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.5324126+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.5325219+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.5327223+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.5328905+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.5637014+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("15"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.5791044+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Photo"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.6069593+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.6071271+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.6072221+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.6083677+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.6084828+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.6086015+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.6088089+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.6089936+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:57.6186199+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:57.6191776+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Post"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.6227911+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.6229390+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.6230711+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.6252703+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.6253828+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.6254899+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.6256801+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.6258113+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.6384103+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.6393988+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.6395610+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.6396647+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.6425925+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.6427409+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.6428823+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.6430955+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.6432509+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.6527687+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.6532191+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.6533227+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.6534333+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.6565289+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.6566964+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.6568535+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.6571053+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.6573281+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.6634041+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.6642653+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Photo"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.6646841+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.6648216+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.6649194+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.6795764+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Post>()
+    .Where(e => EF.Property<string>(e, \"OwnerId\") == __p_0)
+    .AsTracking()"' (e980d05f)
+2020-12-10T00:53:57.6883199+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<Post>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Post.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Post.Date (Nullable<DateTime>), 1], [Property: Post.OwnerId (string) FK Index, 2], [Property: Post.Text (string), 3], [Property: Post.Type (PostType) Required, 4], }
+        SELECT p.Id, p.Date, p.OwnerId, p.Text, p.Type
+        FROM Posts AS p
+        WHERE p.OwnerId == @__p_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Post>, 
+    SocialNetwork.Infrastructure.Data.UsersContext, 
+    False, 
+    False
+)"' (02e79cda)
+2020-12-10T00:53:57.6888753+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.6890272+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.6892357+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.6894492+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.6896364+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.7049625+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+WHERE [p].[OwnerId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.7055140+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Post"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.7060459+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Post"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.7063868+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Post"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.7079469+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Post"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.7082212+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.7083286+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.7084613+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.7301075+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.7302369+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.7303545+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.7305498+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.7306678+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:57.7400137+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:57.7409825+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.7411286+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.7413217+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.7449601+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.7451850+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.7453309+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.7455786+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.7457499+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.7534534+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.7658643+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Like"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.7785300+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.7787058+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.7788291+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.7812531+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.7813747+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.7815063+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.7817712+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.7820875+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.7907932+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.8002824+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Comment"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.8814899+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.8816576+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.8817689+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.8903770+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.8904945+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.8906148+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.8908510+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.8913568+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.8989224+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.8993697+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.8994883+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.8995952+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.9018225+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.9019968+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.9021343+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.9023472+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.9025175+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:57.9078163+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:57.9082461+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.9083670+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.9085224+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.9302335+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.9303548+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.9304630+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.9306704+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.9308110+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:57.9395387+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:57.9408141+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.9409680+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.9410956+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.9443125+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.9444655+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.9445629+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.9448086+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.9449547+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.9587611+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.9593158+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Like"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:57.9661520+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.9663098+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.9708708+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.9774337+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.9775802+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.9776834+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.9778985+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.9780498+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.9883712+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:57.9888161+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:57.9889711+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:57.9890868+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:57.9919844+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:57.9921101+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:57.9922471+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:57.9924578+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:57.9926125+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:57.9996357+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:58.0031922+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0037351+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0039700+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.0049674+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.0051069+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.0052394+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.0054306+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.0055863+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:58.0111717+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:58.0119013+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0120285+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0121759+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.0153432+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.0154664+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.0155838+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.0157809+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.0159243+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:58.0266655+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:58.0271232+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Like"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:58.0273404+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0274509+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0275547+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.0296702+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.0298490+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.0299697+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.0301728+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.0305175+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:58.0448422+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:58.0451523+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0452556+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0453745+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.0478582+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.0480037+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.0481027+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.0483014+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.0484337+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:58.0565099+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:58.0568858+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Photo"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:58.0571691+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0573055+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0574130+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.0585278+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.0586480+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.0587764+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.0590509+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.0592053+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:58.0714548+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:58.0717440+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0718331+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0720128+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.0776455+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.0777878+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.0778868+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.0781230+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.0782580+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:58.0867411+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+WHERE [l].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:58.0871578+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Like"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:58.0873807+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0875192+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0876558+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.0901106+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.0902401+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.0903739+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.0905854+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.0907256+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:58.0976609+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [c].[Id], [c].[Date], [c].[OwnerId], [c].[PostId], [c].[Text]
+FROM [Comments] AS [c]
+WHERE [c].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:58.0980268+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Comment"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:58.0982283+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Comment"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:58.0983670+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.0984640+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.0985628+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.1028769+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.1030520+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.1031716+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.1045268+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.1060330+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (65d11854)
+2020-12-10T00:53:58.1123583+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Image], [p].[PostId]
+FROM [Photos] AS [p]
+WHERE [p].[PostId] = @__p_0" (0723d8ff)
+2020-12-10T00:53:58.1128118+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Photo"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:58.1130159+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.1131160+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.1132358+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.1142734+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.1144050+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.1145038+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.1147083+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.1148755+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:58.1215883+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:58.1223861+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.1225455+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.1226933+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.1311824+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.1313352+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.1314740+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.1318014+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.1319879+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:58.1416686+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:58.1419903+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.1421005+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.1422375+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.1445181+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.1446421+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.1447551+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.1451184+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.1452854+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (65d11854)
+2020-12-10T00:53:58.1523229+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [p].[Id], [p].[Date], [p].[OwnerId], [p].[Text], [p].[Type]
+FROM [Posts] AS [p]
+LEFT JOIN [AspNetUsers] AS [a] ON [p].[OwnerId] = [a].[Id]
+WHERE ([p].[Type] = 2) AND ([a].[Id] = @__entity_equality_user_0_Id)" (0723d8ff)
+2020-12-10T00:53:58.1527648+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.1529075+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.1530337+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.1566277+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:58.1567906+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:58.1569283+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:58.1571616+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:58.1573312+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (65d11854)
+2020-12-10T00:53:58.1797399+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("11"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-12-10T00:53:58.1801448+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:58.1802700+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:58.1803727+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:58.4238922+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed action method "SocialNetwork.Controllers.UserController.Index (SocialNetwork)", returned result "Microsoft.AspNetCore.Mvc.ViewResult" in 2146.6319ms. (50a9e262)
+2020-12-10T00:53:58.4264939+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": Before executing "OnActionExecuted" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (b4eff790)
+2020-12-10T00:53:58.4266962+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": After executing "OnActionExecuted" on filter "Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter". (3551d07a)
+2020-12-10T00:53:58.4471760+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Action Filter": After executing "OnActionExecutionAsync" on filter "Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter". (3551d07a)
+2020-12-10T00:53:58.4490449+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": Before executing "OnResultExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:58.4492894+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": After executing "OnResultExecuting" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:58.4494267+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Before executing action result "Microsoft.AspNetCore.Mvc.ViewResult". (0156505a)
+2020-12-10T00:53:58.4589257+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] View lookup cache miss for view '"Index"' in controller '"User"'. (3dba704d)
+2020-12-10T00:53:58.4624534+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/User/Index.ru.cshtml"'. (021feaa8)
+2020-12-10T00:53:58.4632490+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/User/Index.cshtml"'. (54921207)
+2020-12-10T00:53:58.4800568+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/User/_ViewStart.cshtml"'. (021feaa8)
+2020-12-10T00:53:58.4803125+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/_ViewStart.cshtml"'. (54921207)
+2020-12-10T00:53:58.4829134+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/_ViewStart.cshtml"'. (021feaa8)
+2020-12-10T00:53:58.5088164+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-12-10T00:53:58.5094518+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] The view path '"/Views/User/Index.cshtml"' was found in 51.7754ms. (82c5a14f)
+2020-12-10T00:53:58.7617580+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"admin"' in '"SocialNetwork.Resources.Views.User.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:58.9614257+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:58.9627717+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/Update" and "" (98d001ee)
+2020-12-10T00:53:58.9629886+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/Update" (be9df4e7)
+2020-12-10T00:53:58.9632896+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"edit_page"' in '"SocialNetwork.Resources.Views.User.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:58.9634117+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"friends"' in '"SocialNetwork.Resources.Views.User.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:58.9758430+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:58.9802648+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=8b0fd855-7798-4579-bcc8-b62e706bca17" (98d001ee)
+2020-12-10T00:53:58.9804392+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=8b0fd855-7798-4579-bcc8-b62e706bca17" (be9df4e7)
+2020-12-10T00:53:58.9824110+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"all_friends"' in '"SocialNetwork.Resources.Views.User.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:58.9829279+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:58.9885242+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/Friends" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:58.9886960+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/Friends?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:58.9980706+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] View lookup cache miss for view '"Information"' in controller '"User"'. (3dba704d)
+2020-12-10T00:53:58.9983798+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/User/Information.ru.cshtml"'. (021feaa8)
+2020-12-10T00:53:58.9985053+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/User/Information.cshtml"'. (54921207)
+2020-12-10T00:53:59.0244646+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"birthday"' in '"SocialNetwork.Resources.Views.User.Information"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.0258877+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"country"' in '"SocialNetwork.Resources.Views.User.Information"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.0266806+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"city"' in '"SocialNetwork.Resources.Views.User.Information"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.0272250+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"university"' in '"SocialNetwork.Resources.Views.User.Information"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.0281240+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"email"' in '"SocialNetwork.Resources.Views.User.Information"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.0554963+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.0560269+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Post/Create" and "" (98d001ee)
+2020-12-10T00:53:59.0561623+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Post/Create" (be9df4e7)
+2020-12-10T00:53:59.0588030+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Performing unprotect operation to key {e693f770-8c37-475c-871e-eb6a787a5c06} with purposes "('C:\Users\User\source\repos\SocialNetworks\SocialNetwork', 'Microsoft.AspNetCore.Antiforgery.AntiforgeryToken.v1')". (97369f67)
+2020-12-10T00:53:59.0642771+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Performing protect operation to key {e693f770-8c37-475c-871e-eb6a787a5c06} with purposes "('C:\Users\User\source\repos\SocialNetworks\SocialNetwork', 'Microsoft.AspNetCore.Antiforgery.AntiforgeryToken.v1')". (33ed27fc)
+2020-12-10T00:53:59.0681809+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] An antiforgery cookie token was reused. (bc1eef01)
+2020-12-10T00:53:59.0878586+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"new_post"' in '"SocialNetwork.Resources.Views.User.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.0881866+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"choose_photo"' in '"SocialNetwork.Resources.Views.User.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.0883319+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"add_post"' in '"SocialNetwork.Resources.Views.User.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.1050175+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/Post/PostsList.cshtml"'. (54921207)
+2020-12-10T00:53:59.1196865+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/Post/Index.cshtml"'. (54921207)
+2020-12-10T00:53:59.1469117+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.1471285+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:59.1472437+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:59.1812085+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Compiling query expression: "
+"'"DbSet<Like>()
+    .Where(l => l.Owner == __user_0)"' (e980d05f)
+2020-12-10T00:53:59.2115896+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Generated query execution expression: "
+"'"queryContext => 
+{
+    queryContext.AddParameter(
+        name: \"__entity_equality_user_0_Id\", 
+        value: (object)Invoke(queryContext => ParameterValueExtractor(queryContext, \"__user_0\", Property: User.Id (string) Required PK AfterSave:Throw), queryContext)
+    );
+    return new SingleQueryingEnumerable<Like>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.SelectExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Like.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Like.OwnerId (string) FK Index, 1], [Property: Like.PostId (Nullable<int>) FK Index, 2], }
+            SELECT l.Id, l.OwnerId, l.PostId
+            FROM Likes AS l
+            LEFT JOIN AspNetUsers AS a ON l.OwnerId == a.Id
+            WHERE a.Id == @__entity_equality_user_0_Id), 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Like>, 
+        SocialNetwork.Infrastructure.Data.UsersContext, 
+        False, 
+        False
+    );
+}"' (02e79cda)
+2020-12-10T00:53:59.2120727+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:59.2121904+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:59.2124256+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:59.2126624+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:59.2128184+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (65d11854)
+2020-12-10T00:53:59.2387812+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("17"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (0723d8ff)
+2020-12-10T00:53:59.2396315+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Context '"UsersContext"' started tracking '"Like"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. (553054e9)
+2020-12-10T00:53:59.2398626+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:59.2399800+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:59.2400938+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:59.2990259+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/Comment/CommentsList.cshtml"'. (54921207)
+2020-12-10T00:53:59.3278636+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/Comment/Index.cshtml"'. (54921207)
+2020-12-10T00:53:59.3455150+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.3457067+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:59.3458136+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:59.3957093+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.3958879+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:59.3960007+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:59.3968231+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"comment"' in '"SocialNetwork.Resources.Views.Post.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.4149600+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.4151876+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:59.4153027+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:59.4191864+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:59.4193759+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (3ms). (eb909d95)
+2020-12-10T00:53:59.4195046+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:59.4197227+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:59.4198583+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (65d11854)
+2020-12-10T00:53:59.4426847+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (0723d8ff)
+2020-12-10T00:53:59.4437605+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:59.4438870+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:59.4440043+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:59.4452346+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"first_comment"' in '"SocialNetwork.Resources.Views.Comment.CommentsList"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.4456838+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"comment"' in '"SocialNetwork.Resources.Views.Post.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.4475671+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.4477642+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:59.4478699+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:59.4486648+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:59.4487941+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:59.4489166+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:59.4491608+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:59.4522959+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (65d11854)
+2020-12-10T00:53:59.4635935+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (0723d8ff)
+2020-12-10T00:53:59.4639165+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:59.4640252+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:59.4649007+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:59.4751440+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"first_comment"' in '"SocialNetwork.Resources.Views.Comment.CommentsList"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.4753699+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"comment"' in '"SocialNetwork.Resources.Views.Post.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.4757893+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.4759628+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:59.4760674+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:59.4768537+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Creating DbCommand for '"ExecuteReader"'. (b4e8d140)
+2020-12-10T00:53:59.4770072+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Created DbCommand for '"ExecuteReader"' (0ms). (eb909d95)
+2020-12-10T00:53:59.4771094+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opening connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (eeba43d7)
+2020-12-10T00:53:59.4774038+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Opened connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (18ee271c)
+2020-12-10T00:53:59.4776748+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Executing DbCommand [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (65d11854)
+2020-12-10T00:53:59.4882625+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__entity_equality_user_0_Id='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [l].[Id], [l].[OwnerId], [l].[PostId]
+FROM [Likes] AS [l]
+LEFT JOIN [AspNetUsers] AS [a] ON [l].[OwnerId] = [a].[Id]
+WHERE [a].[Id] = @__entity_equality_user_0_Id" (0723d8ff)
+2020-12-10T00:53:59.4890901+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] A data reader was disposed. (64939273)
+2020-12-10T00:53:59.4891896+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closing connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (dca661ac)
+2020-12-10T00:53:59.4893197+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Closed connection to database '"WebApplication1-0F9B1AD5-73E4-4C07-86B5-FAE63F1CBA83"' on server '"(localdb)\mssqllocaldb"'. (460d76c4)
+2020-12-10T00:53:59.4911940+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.4914663+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/MainPage" and "?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (98d001ee)
+2020-12-10T00:53:59.4918051+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/MainPage?userId=facf3a44-f2bf-4e42-a58d-cb26d2eb8c5a" (be9df4e7)
+2020-12-10T00:53:59.4920432+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"comment"' in '"SocialNetwork.Resources.Views.Post.Index"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.5018088+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"photo"' in '"SocialNetwork.Resources.Views.Post.PostsList"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.5107442+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] View lookup cache miss for view '"_Layout"' in controller '"User"'. (3dba704d)
+2020-12-10T00:53:59.5109215+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/User/_Layout.ru.cshtml"'. (021feaa8)
+2020-12-10T00:53:59.5110122+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/User/_Layout.cshtml"'. (021feaa8)
+2020-12-10T00:53:59.5111031+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/Shared/_Layout.ru.cshtml"'. (021feaa8)
+2020-12-10T00:53:59.5111766+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/Shared/_Layout.cshtml"'. (54921207)
+2020-12-10T00:53:59.6080174+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.6082892+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User" and "" (98d001ee)
+2020-12-10T00:53:59.6085080+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User" (be9df4e7)
+2020-12-10T00:53:59.6135290+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"my_page"' in '"SocialNetwork.Resources.Views.Shared._Layout"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.6141724+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.6143512+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/User/Friends" and "" (98d001ee)
+2020-12-10T00:53:59.6145351+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/User/Friends" (be9df4e7)
+2020-12-10T00:53:59.6245023+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"friends"' in '"SocialNetwork.Resources.Views.Shared._Layout"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.6249174+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.6250920+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Message" and "" (98d001ee)
+2020-12-10T00:53:59.6251999+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Message" (be9df4e7)
+2020-12-10T00:53:59.6271776+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"messages"' in '"SocialNetwork.Resources.Views.Shared._Layout"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.6276313+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.6278073+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/News" and "" (98d001ee)
+2020-12-10T00:53:59.6279038+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/News" (be9df4e7)
+2020-12-10T00:53:59.6299520+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"news"' in '"SocialNetwork.Resources.Views.Shared._Layout"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.6303876+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.6305551+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Search" and "" (98d001ee)
+2020-12-10T00:53:59.6306822+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Search" (be9df4e7)
+2020-12-10T00:53:59.6327020+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"search"' in '"SocialNetwork.Resources.Views.Shared._Layout"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.6342813+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.6344853+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Account/LogOff" and "" (98d001ee)
+2020-12-10T00:53:59.6345965+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Account/LogOff" (be9df4e7)
+2020-12-10T00:53:59.6364142+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] ResourceManagerStringLocalizer searched for '"exit"' in '"SocialNetwork.Resources.Views.Shared._Layout"' with culture '"ru"'. (6e26b244)
+2020-12-10T00:53:59.6385601+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] View lookup cache miss for view '"_SelectLanguagePartial"' in controller '"User"'. (3dba704d)
+2020-12-10T00:53:59.6387751+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/User/_SelectLanguagePartial.ru.cshtml"'. (021feaa8)
+2020-12-10T00:53:59.6388632+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/User/_SelectLanguagePartial.cshtml"'. (021feaa8)
+2020-12-10T00:53:59.6389607+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Could not find a file for view at path '"/Views/Shared/_SelectLanguagePartial.ru.cshtml"'. (021feaa8)
+2020-12-10T00:53:59.6390487+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] Located compiled view for view at path '"/Views/Shared/_SelectLanguagePartial.cshtml"'. (54921207)
+2020-12-10T00:53:59.6776191+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Found the endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] for address "Microsoft.AspNetCore.Routing.RouteValuesAddress" (a82d6b27)
+2020-12-10T00:53:59.6920049+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Successfully processed template "{controller=Home}/{action=Index}/{id?}" for "Route: {controller=Home}/{action=Index}/{id?}" resulting in "/Home/SetLanguage" and "?returnUrl=%2FUser" (98d001ee)
+2020-12-10T00:53:59.6922228+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] Link generation succeeded for endpoints ["Route: {controller=Home}/{action=Index}/{id?}"] with result "/Home/SetLanguage?returnUrl=%2FUser" (be9df4e7)
+2020-12-10T00:53:59.6925258+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] An antiforgery cookie token was reused. (bc1eef01)
+2020-12-10T00:53:59.8898502+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 1420.8903ms. (f66409e9)
+2020-12-10T00:53:59.8902966+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] After executing action result "Microsoft.AspNetCore.Mvc.ViewResult". (70c22601)
+2020-12-10T00:53:59.8904085+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": Before executing "OnResultExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:59.8905281+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Result Filter": After executing "OnResultExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:59.8932215+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": Before executing "OnResourceExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (b4eff790)
+2020-12-10T00:53:59.8935060+03:00 80000004-0000-fb00-b63f-84710c7967bb [VRB] "Resource Filter": After executing "OnResourceExecuted" on filter "Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter". (3551d07a)
+2020-12-10T00:53:59.9147327+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Executed action "SocialNetwork.Controllers.UserController.Index (SocialNetwork)" in 3816.4806ms (afa2e885)
+2020-12-10T00:53:59.9699372+03:00 80000004-0000-fb00-b63f-84710c7967bb [DBG] '"UsersContext"' disposed. (db68f4b4)
+2020-12-10T00:54:00.3387967+03:00 80000004-0000-fb00-b63f-84710c7967bb [INF] Request finished in 3979.9179ms 200 text/html; charset=utf-8 (791a596a)
+2020-12-10T00:54:00.3454595+03:00 80000002-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/css/site.css?Version=38   (ca22a1cb)
+2020-12-10T00:54:00.3457635+03:00 80000002-0000-fa00-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:54:00.3634798+03:00 80000008-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/js/signalr/dist/browser/signalr.js   (ca22a1cb)
+2020-12-10T00:54:00.3636930+03:00 80000008-0001-ff00-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:54:00.3611623+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/js/messages.js   (ca22a1cb)
+2020-12-10T00:54:00.3731916+03:00 80000002-0000-f900-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:54:00.3737530+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] The request path "/js/messages.js" does not match an existing file (806c7d0e)
+2020-12-10T00:54:00.3741837+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] No candidates found for the request path '"/js/messages.js"' (76d5928c)
+2020-12-10T00:54:00.3742640+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] Request did not match any endpoints (328c36bf)
+2020-12-10T00:54:00.3789971+03:00 80000008-0001-ff00-b63f-84710c7967bb [VRB] Range header's value is empty. (80056953)
+2020-12-10T00:54:00.3800783+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] No candidates found for the request path '"/js/messages.js"' (76d5928c)
+2020-12-10T00:54:00.3801854+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] Request did not match any endpoints (328c36bf)
+2020-12-10T00:54:00.3847251+03:00 80000002-0000-f900-b63f-84710c7967bb [VRB] Performing unprotect operation to key {e693f770-8c37-475c-871e-eb6a787a5c06} with purposes "('C:\Users\User\source\repos\SocialNetworks\SocialNetwork', 'Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationMiddleware', 'Identity.Application', 'v2')". (97369f67)
+2020-12-10T00:54:00.4122683+03:00 80000002-0000-fa00-b63f-84710c7967bb [VRB] Range header's value is empty. (80056953)
+2020-12-10T00:54:00.4126459+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/js/date_converter.js   (ca22a1cb)
+2020-12-10T00:54:00.4127808+03:00 80000002-0000-f800-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:54:00.4132030+03:00 80000002-0000-f800-b63f-84710c7967bb [VRB] Range header's value is empty. (80056953)
+2020-12-10T00:54:00.4432664+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2020-12-10T00:54:00.4434682+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] Request successfully matched the route with name '"default"' and template '"{controller=Home}/{action=Index}/{id?}"' (adc338ed)
+2020-12-10T00:54:00.4460966+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] No actions matched the current request. Route values: ["controller=js", "action=messages.js"] (e58a7353)
+2020-12-10T00:54:00.4463289+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] No actions matched the current request. Route values: ["controller=js", "action=messages.js"] (e58a7353)
+2020-12-10T00:54:00.4466920+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] Request did not match any routes (ff7848f7)
+2020-12-10T00:54:00.4489639+03:00 80000002-0000-f900-b63f-84710c7967bb [DBG] Request did not match any routes (ff7848f7)
+2020-12-10T00:54:00.4654928+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] The file "/js/date_converter.js" was not modified (f1f8d725)
+2020-12-10T00:54:00.4660175+03:00 80000002-0000-f800-b63f-84710c7967bb [DBG] Handled. Status code: 304 File: "/js/date_converter.js" (58f8d392)
+2020-12-10T00:54:00.4779795+03:00  [DBG] Connection ID ""17870283323016740865"" disconnecting. (72238361)
+2020-12-10T00:54:00.4931440+03:00 80000002-0000-fa00-b63f-84710c7967bb [INF] The file "/css/site.css" was not modified (f1f8d725)
+2020-12-10T00:54:00.4933408+03:00 80000002-0000-fa00-b63f-84710c7967bb [DBG] Handled. Status code: 304 File: "/css/site.css" (58f8d392)
+2020-12-10T00:54:00.4942083+03:00  [DBG] Connection ID ""18014398511092596737"" disconnecting. (72238361)
+2020-12-10T00:54:00.5238505+03:00 80000002-0000-f900-b63f-84710c7967bb [INF] Request finished in 192.9649ms 404 text/plain (791a596a)
+2020-12-10T00:54:00.5451294+03:00 80000002-0000-fa00-b63f-84710c7967bb [INF] Request finished in 224.975ms 304 text/css (791a596a)
+2020-12-10T00:54:00.5634974+03:00 80000002-0000-f800-b63f-84710c7967bb [INF] Request finished in 203.0512ms 304 application/javascript (791a596a)
+2020-12-10T00:54:00.6093823+03:00 80000002-0001-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/usersPostPhotos/postfacf3a44-f2bf-4e42-a58d-cb26d2eb8c5a12042020155254.jpg   (ca22a1cb)
+2020-12-10T00:54:00.6096883+03:00 80000002-0001-fe00-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:54:00.6103267+03:00 80000002-0001-fe00-b63f-84710c7967bb [VRB] Range header's value is empty. (80056953)
+2020-12-10T00:54:00.6228674+03:00 80000008-0001-ff00-b63f-84710c7967bb [INF] Sending file. Request path: '"/js/signalr/dist/browser/signalr.js"'. Physical path: '"C:\Users\User\source\repos\SocialNetworks\SocialNetwork\wwwroot\js\signalr\dist\browser\signalr.js"' (27b0a520)
+2020-12-10T00:54:00.6441480+03:00 80000008-0001-ff00-b63f-84710c7967bb [INF] Request finished in 293.6071ms 200 application/javascript (791a596a)
+2020-12-10T00:54:00.6475265+03:00 80000002-0001-fe00-b63f-84710c7967bb [INF] Sending file. Request path: '"/usersPostPhotos/postfacf3a44-f2bf-4e42-a58d-cb26d2eb8c5a12042020155254.jpg"'. Physical path: '"C:\Users\User\source\repos\SocialNetworks\SocialNetwork\wwwroot\usersPostPhotos\postfacf3a44-f2bf-4e42-a58d-cb26d2eb8c5a12042020155254.jpg"' (27b0a520)
+2020-12-10T00:54:00.6551988+03:00 80000002-0001-fe00-b63f-84710c7967bb [INF] Request finished in 43.7854ms 200 image/jpeg (791a596a)
+2020-12-10T00:54:00.6916779+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44375/usersPostPhotos/postfacf3a44-f2bf-4e42-a58d-cb26d2eb8c5a11292020173736.jpg   (ca22a1cb)
+2020-12-10T00:54:00.6923306+03:00 80000004-0000-f900-b63f-84710c7967bb [VRB] All hosts are allowed. (2e40afda)
+2020-12-10T00:54:00.6934584+03:00 80000004-0000-f900-b63f-84710c7967bb [VRB] Range header's value is empty. (80056953)
+2020-12-10T00:54:00.7283095+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Sending file. Request path: '"/usersPostPhotos/postfacf3a44-f2bf-4e42-a58d-cb26d2eb8c5a11292020173736.jpg"'. Physical path: '"C:\Users\User\source\repos\SocialNetworks\SocialNetwork\wwwroot\usersPostPhotos\postfacf3a44-f2bf-4e42-a58d-cb26d2eb8c5a11292020173736.jpg"' (27b0a520)
+2020-12-10T00:54:00.7374840+03:00 80000004-0000-f900-b63f-84710c7967bb [INF] Request finished in 54.3006ms 200 image/jpeg (791a596a)
+2020-12-10T00:54:01.0222850+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:01.0222850+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:01.0537959+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:01.0541394+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:01.0986306+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:01.1251527+03:00  [DBG] Received 3 bytes from service "3fc27327-6246-4df6-97de-8370d695ad57". (c903667d)
+2020-12-10T00:54:01.1277070+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:01.1284428+03:00  [DBG] Received 3 bytes from service "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16". (c903667d)
+2020-12-10T00:54:01.1286638+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:01.1288248+03:00  [DBG] Received 3 bytes from service "74cc6643-346e-4849-b06f-6edc9f4ff6eb". (c903667d)
+2020-12-10T00:54:01.1288689+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:01.1289115+03:00  [DBG] Received 3 bytes from service "6e304876-684a-47cc-a9d6-0cb11bf361b1". (c903667d)
+2020-12-10T00:54:01.1289416+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:01.1289942+03:00  [DBG] Received 3 bytes from service "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a". (c903667d)
+2020-12-10T00:54:01.1290238+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:01.1291345+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:01.1297803+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:01.1302955+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:01.1310076+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:01.1313853+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:07.0220156+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:07.0244059+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:07.0259132+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:07.0273333+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:07.0288593+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:07.0422507+03:00  [DBG] Received 3 bytes from service "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16". (c903667d)
+2020-12-10T00:54:07.0426465+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:07.0429507+03:00  [DBG] Received 3 bytes from service "3fc27327-6246-4df6-97de-8370d695ad57". (c903667d)
+2020-12-10T00:54:07.0432177+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:07.0434583+03:00  [DBG] Received 3 bytes from service "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a". (c903667d)
+2020-12-10T00:54:07.0436660+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:07.0438952+03:00  [DBG] Received 3 bytes from service "74cc6643-346e-4849-b06f-6edc9f4ff6eb". (c903667d)
+2020-12-10T00:54:07.0441329+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:07.0444096+03:00  [DBG] Received 3 bytes from service "6e304876-684a-47cc-a9d6-0cb11bf361b1". (c903667d)
+2020-12-10T00:54:07.0447127+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:07.0450306+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:07.0457297+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:07.0464103+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:07.0471125+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:07.0477058+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:12.0222493+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:12.0780722+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:12.0789948+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:12.0798578+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:12.0807110+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:12.1121305+03:00  [DBG] Received 3 bytes from service "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a". (c903667d)
+2020-12-10T00:54:12.1124692+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:12.1126630+03:00  [DBG] Received 3 bytes from service "3fc27327-6246-4df6-97de-8370d695ad57". (c903667d)
+2020-12-10T00:54:12.1126852+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:12.1127139+03:00  [DBG] Received 3 bytes from service "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16". (c903667d)
+2020-12-10T00:54:12.1127438+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:12.1127716+03:00  [DBG] Received 3 bytes from service "6e304876-684a-47cc-a9d6-0cb11bf361b1". (c903667d)
+2020-12-10T00:54:12.1127899+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:12.1128269+03:00  [DBG] Received 3 bytes from service "74cc6643-346e-4849-b06f-6edc9f4ff6eb". (c903667d)
+2020-12-10T00:54:12.1128461+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:12.1129171+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:12.1137009+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:12.1139764+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:12.1141705+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:12.1144641+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:18.0316816+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:18.0316808+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:18.0363444+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:18.0377192+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:18.0386763+03:00  [DBG] Received 3 bytes from service "3fc27327-6246-4df6-97de-8370d695ad57". (c903667d)
+2020-12-10T00:54:18.0389371+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:18.0391248+03:00  [DBG] Received 3 bytes from service "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16". (c903667d)
+2020-12-10T00:54:18.0391443+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:18.0391699+03:00  [DBG] Received 3 bytes from service "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a". (c903667d)
+2020-12-10T00:54:18.0391870+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:18.0392181+03:00  [DBG] Received 3 bytes from service "6e304876-684a-47cc-a9d6-0cb11bf361b1". (c903667d)
+2020-12-10T00:54:18.0392355+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:18.0393023+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:18.0397689+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:18.0400327+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:18.0402340+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:18.0405400+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:18.0429637+03:00  [DBG] Received 3 bytes from service "74cc6643-346e-4849-b06f-6edc9f4ff6eb". (c903667d)
+2020-12-10T00:54:18.0430298+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:18.0430741+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:24.0195319+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:24.0195319+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:24.0225440+03:00  [DBG] Received 3 bytes from service "2f6c80a4-dd5b-4e9d-9c90-f794d70a5e16". (c903667d)
+2020-12-10T00:54:24.0228878+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:24.0231354+03:00  [DBG] Received 3 bytes from service "1307b9c7-3f1d-48f1-aeea-2c677c58fa3a". (c903667d)
+2020-12-10T00:54:24.0231718+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:24.0232441+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:24.0235929+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:24.0273152+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:24.0273277+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:24.0300044+03:00  [DBG] Message received. Type: Binary, size: 3, EndOfMessage: True. (50c3e6db)
+2020-12-10T00:54:24.0309509+03:00  [DBG] Received 3 bytes from service "74cc6643-346e-4849-b06f-6edc9f4ff6eb". (c903667d)
+2020-12-10T00:54:24.0310194+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:24.0310629+03:00  [DBG] Received 3 bytes from service "3fc27327-6246-4df6-97de-8370d695ad57". (c903667d)
+2020-12-10T00:54:24.0310772+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:24.0313449+03:00  [DBG] Received 3 bytes from service "6e304876-684a-47cc-a9d6-0cb11bf361b1". (c903667d)
+2020-12-10T00:54:24.0313775+03:00  [DBG] Sent a ping message to service. (b5e6c80e)
+2020-12-10T00:54:24.0314043+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:24.0316993+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)
+2020-12-10T00:54:24.0318889+03:00  [DBG] Received message from application. Payload size: 28. (36fca6fa)

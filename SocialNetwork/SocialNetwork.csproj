@@ -50,6 +50,7 @@
 
    <ItemGroup>
     <Folder Include="Logs\" />
+    <Folder Include="wwwroot\js\signalr\" />
     <Folder Include="wwwroot\usersPhotos\" />
     <Folder Include="wwwroot\usersPostPhotos\" />
   </ItemGroup>
