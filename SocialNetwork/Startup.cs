@@ -101,11 +101,11 @@ namespace SocialNetwork
             app.UseStaticFiles();
             var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(locOptions.Value);
-
-            app.UseSignalR(routes =>
+            
+        /*    app.UseSignalR(routes =>
             {
                 routes.MapHub<ChatHub>("/chat");
-            });
+            });*/
 
             app.UseRouting();
 
@@ -146,6 +146,7 @@ namespace SocialNetwork
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<ChatHub>("/chat");
             });
         }
     }

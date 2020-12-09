@@ -30,12 +30,14 @@
 
 </section>
 
-<script src="js/signalr/dist/browser/signalr.js"></script>
-
+@*<script src="js/signalr/dist/browser/signalr.js"></script>
+*@
 <script>
-    let hubUrl = 'https://mysocialnetworkaspnetcore.azurewebsites.net/chat';
+    "use strict";
+
+    @*let hubUrl = 'https://localhost:44375/chat';*@
     const hubConnection = new signalR.HubConnectionBuilder()
-        .withUrl(hubUrl)
+        .withUrl("/chat")
         .configureLogging(signalR.LogLevel.Information)
         .build();
     hubConnection.on('Send', function (userFromId) {
