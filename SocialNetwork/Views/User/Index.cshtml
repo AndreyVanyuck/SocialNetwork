@@ -86,51 +86,51 @@
                                 </button>
                             }
                             @if ((ownerRoles.Contains("admin") && !roles.Contains("admin")) ||
-                            (ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
+                           (ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
                             {
-                        <div class="admin-area">
-                            @if (ownerRoles.Contains("admin"))
-                            {
-                                if (!roles.Contains("admin"))
-                                {
-                                    <button type="submit" class="btn btn-primary button-main-page"
-                                            onclick="@("window.location.href='" +
+                                <div class="admin-area">
+                                    @if (ownerRoles.Contains("admin"))
+                                    {
+                                        if (!roles.Contains("admin"))
+                                        {
+                                            <button type="submit" class="btn btn-primary button-main-page"
+                                                    onclick="@("window.location.href='" +
                                             @Url.Action("SetAdmin", "Roles",
                                             new { userId = Model.Id }) + "'");">
-                                        @Localizer["appoint_as_admin"].Value
-                                    </button>
-                                }
+                                                @Localizer["appoint_as_admin"].Value
+                                            </button>
+                                        }
 
-                                if (!roles.Contains("moderator"))
-                                {
-                                    <button type="submit" class="btn btn-primary button-main-page"
-                                            onclick="@("window.location.href='" +
+                                        if (!roles.Contains("moderator"))
+                                        {
+                                            <button type="submit" class="btn btn-primary button-main-page"
+                                                    onclick="@("window.location.href='" +
                                             @Url.Action("SetModerator", "Roles",
                                             new { userId = Model.Id }) + "'");">
-                                        @Localizer["appoint_as_moderator"].Value
-                                    </button>
-                                }
-                                else if (!roles.Contains("admin"))
-                                {
-                                    <button type="submit" class="btn btn-danger button-main-page-danger"
-                                            onclick="@("window.location.href='" +
+                                                @Localizer["appoint_as_moderator"].Value
+                                            </button>
+                                        }
+                                        else if (!roles.Contains("admin"))
+                                        {
+                                            <button type="submit" class="btn btn-danger button-main-page-danger"
+                                                    onclick="@("window.location.href='" +
                                             @Url.Action("RemoveModerator", "Roles",
                                             new { userId = Model.Id }) + "'");">
-                                        @Localizer["remove_moderator"].Value
-                                    </button>
-                                }
-                            }
+                                                @Localizer["remove_moderator"].Value
+                                            </button>
+                                        }
+                                    }
 
-                            @if ((ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
-                            {
-     
-                                <button type="submit" class="btn btn-danger button-main-page-danger"
-                                        onclick="@("window.location.href='" + @Url.Action("Block", "User",
+                                    @if ((ownerRoles.Contains("moderator") && !roles.Contains("moderator")))
+                                    {
+
+                                        <button type="submit" class="btn btn-danger button-main-page-danger"
+                                                onclick="@("window.location.href='" + @Url.Action("Block", "User",
                                         new { userId = Model.Id }) + "'");">
-                                    @Localizer["block"].Value
-                                </button>
-                            }
-                        </div>
+                                            @Localizer["block"].Value
+                                        </button>
+                                    }
+                                </div>
                             }
                         </div>
                     </div>
@@ -141,57 +141,58 @@
                         <div class="friends-main-list">
                             @foreach (var friend in Model.Friends.Take(5))
                             {
-                            <div class="friends-main-usd">
-                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@friend.Avatar))" />
-                            
+                                <div class="friends-main-usd">
+                                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@friend.Avatar))" />
 
-                                <div class="friends-text">
-                                    @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
+
+                                    <div class="friends-text">
+                                        @Html.ActionLink(@friend.ToString(), "MainPage", new { userId = @friend.Id })
+                                    </div>
                                 </div>
-                            </div>
                             }
                         </div>
                         <div class="view-more">
                             @Html.ActionLink(@Localizer["all_friends"].Value, "Friends", new { userId = @Model.Id })
                         </div>
                     </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 col-sm-8 pd-left-none no-pd">
-                    @{await Html.RenderPartialAsync("Information", new UserInfoViewModel(Model));}
-
-                    @if (Model == ownerUser)
-                    {
-                        <div class="container-fluid">
-                            <div class="post-area">
-                                <div class="form-group">
-  
-                                    <form asp-action="Create" asp-controller="Post" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#postsArea" enctype="multipart/form-data">
-                                        <textarea name="Text" id="postTextArea" class="form-control" rows="3" placeholder="@Localizer["new_post"]"></textarea>
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-md-10 col-sm-10 pd-right-none no-pd">
-                                                    <label id="attached-photo-name" for="photoPostInput" class="btn">@Localizer["choose_photo"]</label>
-                                                    <input name="Photo" id="photoPostInput" type="file" class="form-control add-post-image" />
-                                                </div>
-                                                <div class="col-md-2 col-sm-2 pd-right-none no-pd add-post-button-col">
-                                                    <input type="submit" value="@Localizer["add_post"]" class="btn btn-primary add-post-button" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    }
-                    <div class="posts" id="postsArea">
-                        @{await Html.RenderPartialAsync("~/Views/Post/PostsList.cshtml", @Model.WallPosts);}
-                    </div>
                 </div>
             </div>
+
+            <div class="col-md-8 col-sm-8 pd-left-none no-pd">
+                @{await Html.RenderPartialAsync("Information", new UserInfoViewModel(Model));}
+
+                @if (Model == ownerUser)
+                {
+                    <div class="container-fluid">
+                        <div class="post-area">
+                            <div class="form-group">
+
+                                <form asp-action="Create" asp-controller="Post" method="POST" data-ajax="true" data-ajax-mode="replace" data-ajax-update="#postsArea" enctype="multipart/form-data">
+                                    <textarea name="Text" id="postTextArea" class="form-control" rows="3" placeholder="@Localizer["new_post"]"></textarea>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-10 col-sm-10 pd-right-none no-pd">
+                                                <label id="attached-photo-name" for="photoPostInput" class="btn">@Localizer["choose_photo"]</label>
+                                                <input name="Photo" id="photoPostInput" type="file" class="form-control add-post-image" />
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 pd-right-none no-pd add-post-button-col">
+                                                <input type="submit" value="@Localizer["add_post"]" class="btn btn-primary add-post-button" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
+                <div class="posts" id="postsArea">
+                    @{await Html.RenderPartialAsync("~/Views/Post/PostsList.cshtml", @Model.WallPosts);}
+                </div>
+            </div>
+        </div>
+        <script src="~/js/date_converters.js"></script>
     </div>
 </div>
 <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js"></script>

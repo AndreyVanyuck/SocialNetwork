@@ -35,7 +35,11 @@ namespace SocialNetwork
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
             services.AddControllersWithViews();
-            services.AddSignalR();
+            services.AddSignalR(hubOptions =>
+            {
+                hubOptions.EnableDetailedErrors = true;
+                hubOptions.KeepAliveInterval = TimeSpan.FromMinutes(1);
+            });
 
             services.AddControllersWithViews(mvcOtions =>
             {
@@ -101,11 +105,6 @@ namespace SocialNetwork
             app.UseStaticFiles();
             var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(locOptions.Value);
-            
-        /*    app.UseSignalR(routes =>
-            {
-                routes.MapHub<ChatHub>("/chat");
-            });*/
 
             app.UseRouting();
 
@@ -147,6 +146,7 @@ namespace SocialNetwork
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapHub<ChatHub>("/chat");
+  
             });
         }
     }

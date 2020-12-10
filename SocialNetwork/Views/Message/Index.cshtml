@@ -36,10 +36,9 @@
     "use strict";
 
     @*let hubUrl = 'https://localhost:44375/chat';*@
-    const hubConnection = new signalR.HubConnectionBuilder()
-        .withUrl("/chat")
-        .configureLogging(signalR.LogLevel.Information)
-        .build();
+    var hubConnection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
+       @* .configureLogging(signalR.LogLevel.Information)*@
+        @*.build();*@
     hubConnection.on('Send', function (userFromId) {
         $(".main-conversation-box").load("dialog/" + userFromId, function () {
             $(".dialogs-list").load("dialogsList/", function () {
@@ -47,7 +46,7 @@
             })
         });
     });
-    $(document).on('click', '#sendMessageButton', function () {
+    document.getElementById("sendMessageBurron").addEventListener("click", function () {
         var messageText = $('#messageText').val();
         var userToId = event.target.getAttribute('userToId')
         $('#messageText').val("");
@@ -61,6 +60,20 @@
         }
         hubConnection.invoke('Send', "@ViewBag.loggedUserId", userToId);
     });
+@*    $(document).on('click', '#sendMessageButton', function () {
+        var messageText = $('#messageText').val();
+        var userToId = event.target.getAttribute('userToId')
+        $('#messageText').val("");
+        messageText = encodeURIComponent(messageText);
+        if (messageText != "") {
+            $(".main-conversation-box").load("sendMessage/" + userToId + "/" + messageText, function () {
+                $(".dialogs-list").load("dialogsList/", function () {
+                    $(".user-dialog:first").addClass('selected');
+                })
+            });
+        }
+        hubConnection.invoke('Send', "@ViewBag.loggedUserId", userToId);
+    });*@
 
     hubConnection.start();
 </script>
