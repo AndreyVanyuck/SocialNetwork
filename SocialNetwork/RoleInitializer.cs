@@ -11,8 +11,8 @@ namespace SocialNetwork
                                                  RoleManager<IdentityRole> roleManager,
                                                  IConfiguration configuration)
         {
-            string adminEmail = configuration.GetSection("AdminData")["Email"];
-            string password = configuration.GetSection("AdminData")["password"];
+            string adminEmail = configuration["adminEmail"];
+            string password = configuration["adminEmailPassword"];
             string name = "Босс";
             string surname = "ЭтойкОчалки";
 

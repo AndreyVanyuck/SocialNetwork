@@ -12,6 +12,7 @@ using SocialNetwork.ViewModels;
 
 namespace SocialNetwork.Controllers
 {
+    [Obsolete]
     public class PostController : Controller
     {
         IUsersRepository _repository;
@@ -19,7 +20,6 @@ namespace SocialNetwork.Controllers
         IHostingEnvironment _environment;
 
         const int pageSize = 5;
-
 
         public PostController(IUsersRepository repository,
                              IHttpContextAccessor httpContextAccessor,
@@ -48,7 +48,7 @@ namespace SocialNetwork.Controllers
             var post = new Post()
             {
                 Owner = _user,
-                Date = DateTime.UtcNow, //#TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time")),
+                Date = DateTime.UtcNow,
                 Text = postVM.Text,
                 Type = PostType.Normal
             };

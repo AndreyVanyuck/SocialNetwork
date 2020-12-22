@@ -16,12 +16,9 @@ namespace SocialNetwork
 {
     public class Program
     {
-      
         public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-            //host.Run();
-           
 
             using (var scope = host.Services.CreateScope())
             {
@@ -46,14 +43,7 @@ namespace SocialNetwork
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-          /*  .ConfigureAppConfiguration((context, config) =>
-            {
-                //var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
-                var client = new Uri("https://socialnetworkvault.vault.azure.net/");
-                config.AddAzureKeyVault(
-                client,
-                new DefaultAzureCredential());
-            })*/
+
           .ConfigureAppConfiguration((ctx, builder) =>
           {
               var keyVaultEndpoint = GetKeyVaultEndpoint();
@@ -68,7 +58,7 @@ namespace SocialNetwork
               }
           })
           
-              .ConfigureLogging((context, logging) =>
+          .ConfigureLogging((context, logging) =>
                 {
                     logging.ClearProviders();
                     logging.AddConfiguration(context.Configuration.GetSection("Logging"));

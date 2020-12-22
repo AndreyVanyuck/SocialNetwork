@@ -24,7 +24,7 @@
                             }
                     }
                     <h3 userId="@user.Item1.Id">@text</h3>
-                    <h4 userId="@user.Item1.Id">@user.Item2.Date</h4>
+                    <h4 userId="@user.Item1.Id">@user.Item2.Date.ToString("dd.MM.yyyy HH:mm:ss")</h4>
                     @{
                         text = user.Item2.UserFrom == user.Item1 ? user.Item1.Name: Localizer["you"].Value;
                         text += ": ";

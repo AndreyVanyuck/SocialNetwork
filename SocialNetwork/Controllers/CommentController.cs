@@ -35,7 +35,7 @@ namespace SocialNetwork.Controllers
                 Owner = _user,
                 Post = _repository.GetPostById(postId),
                 Text = text,
-                Date = DateTime.UtcNow //# TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time")) 
+                Date = DateTime.UtcNow
             };
 
             _repository.Create(comment);

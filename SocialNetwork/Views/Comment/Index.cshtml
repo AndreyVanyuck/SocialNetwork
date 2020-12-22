@@ -9,17 +9,14 @@
             <div class="comment-owner">
                 @Html.ActionLink(@Model.Owner.ToString(), "MainPage", "User", new { userId = @Model.Owner.Id })
             </div>
-            <small class="utc-date">   @Model.Date.ToString("MM/dd/yyyy HH:mm:ss")</small>
+            <small class="utc-date">   @Model.Date.ToString("dd.MM.yyyy HH:mm:ss")</small>
            
-            @*     <div class="comment-date">
-            @Model.Date.ToString("MM/dd/yyyy HH:mm:ss")
-        </div>*@
 
         </div>
         @if (Model.Owner == (User)ViewBag.LoggedUser)
         {
             <div class="col-md-2">
-                <button commentId="@Model.Id" postId="@Model.Post.Id" val="del" class="btn  delete-comment-button"></button>
+                <button commentId="@Model.Id" postId="@Model.Post.Id" val="del" class="btn  delete-comment-button">-</button>
             </div>
         }
     </div>
@@ -32,6 +29,4 @@
             </div>
         </div>
     </div>
-   @* <script src="~/js/date_converter.js"></script>*@
-
 </div>

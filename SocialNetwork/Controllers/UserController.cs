@@ -11,25 +11,27 @@ using Microsoft.AspNetCore.Identity;
 using SocialNetwork.Domain.Core;
 using SocialNetwork.Domain.Interfaces;
 using SocialNetwork.Services.BusinessLogic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SocialNetwork.Controllers
 {
+    [Obsolete]
     public class UserController : Controller
     {
         IUsersRepository _repository;
-        IHostingEnvironment _environment;
+      //  IHostingEnvironment _environment;
         User _user;
         UserManager<User> _userManager;
         IMailService _mailService;
 
         public UserController(IUsersRepository repository,
-                              IHostingEnvironment environment,
+                              //IHostingEnvironment environment,
                               IHttpContextAccessor httpContextAccessor,
                               UserManager<User> userManager,
                               IMailService mailService)
         {
             _repository = repository;
-            _environment = environment;
+           // _environment = environment;
             var id = userManager.GetUserId(httpContextAccessor.HttpContext.User);
             _user = _repository.GetUserById(id);
             _userManager = userManager;
@@ -64,12 +66,6 @@ namespace SocialNetwork.Controllers
             return View("Index", user);
         }
 
-/*        public ActionResult Posts(int userId)
-        {
-            User user = userId == 0 ? _user : _repository.GetUserById(userId);
-            _repository.GetUsersPosts(user);
-            return PartialView(user.WallPosts);
-        }*/
         public ViewResult Friends(string userId = null)
         {
             if (_user.IsBlocked)
@@ -98,7 +94,8 @@ namespace SocialNetwork.Controllers
                 _repository.GetUsersMainPhoto(r);
             return View(friendsVM);
         }
-      
+
+        [Authorize(Roles = "moderator")]
         public async Task<ActionResult> Block(string userId)
         {
             User user = _repository.GetUserById(userId);
@@ -108,19 +105,17 @@ namespace SocialNetwork.Controllers
             user.IsBlocked = true;
             _repository.Update(user);
             _repository.Save();
-            //#IMailService mailService = new MailService();
             await _mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was blocked!", user.Name, user.Surname));
             return await MainPage(userId);
         }
 
-      
+        [Authorize(Roles = "moderator")]
         public async Task<ActionResult> Unblock(string userId)
         {
             User user = _repository.GetUserById(userId);
             user.IsBlocked = false;
             _repository.Update(user);
             _repository.Save();
-            //MailService mailService = new MailService();
             await _mailService.SendEmailAsync(user.Email, "Support", String.Format("Hello {0} {1}, your account was unblocked!", user.Name, user.Surname));
             return await MainPage(userId);
         }

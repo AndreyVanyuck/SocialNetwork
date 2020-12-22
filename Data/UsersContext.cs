@@ -12,7 +12,7 @@ namespace SocialNetwork.Infrastructure.Data
     {
         public UsersContext(DbContextOptions<UsersContext> options)
             : base(options)
-        { 
+        {
         }
         public DbSet<Like> Likes { get; set; }
         public DbSet<Comment> Comments { get; set; }
@@ -22,5 +22,10 @@ namespace SocialNetwork.Infrastructure.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<Dialog> Dialogs { get; set; }
 
+/*        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Like>()
+                .HasAlternateKey(c => new { c.PostId, c.OwnerId });
+        }*/
     }
 }

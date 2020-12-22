@@ -281,7 +281,5 @@ namespace SocialNetwork.Infrastructure.Data
 
         public User GetUserById(int id) => context.Users.Find(id);
         public User GetUserById(string id) => context.Users.Find(id);
-
-
     }
 }

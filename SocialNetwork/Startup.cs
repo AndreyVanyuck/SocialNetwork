@@ -47,7 +47,6 @@ namespace SocialNetwork
             });
 
             services.AddScoped<IUsersRepository, UsersRepository>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IMailService, MailService>();
 
 
@@ -137,8 +136,6 @@ namespace SocialNetwork
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            applicationBuilder.UseMvc();
 
             app.UseEndpoints(endpoints =>
             {

@@ -27,7 +27,8 @@
             <div class="message-inner-dt">
                 <p>@message.Text</p>
             </div>
-            <span>@message.Date</span>
+            <span class="utc-date">@message.Date.ToString("dd.MM.yyyy HH:mm:ss")</span>
+          
         </div>
         <div class="msg-usr-img">
             <img src="data:image/jpeg;base64,@(Convert.ToBase64String(userWith.Avatar))" />
@@ -42,12 +43,10 @@
             <div class="message-inner-dt">
                 <p>@message.Text</p>
             </div>
-            <span>@message.Date</span>
+            <span>@message.Date.ToString("dd.MM.yyyy HH:mm:ss")</span>
         </div>
         <div class="msg-usr-img">
             <img src="data:image/jpeg;base64,@(Convert.ToBase64String(((User)ViewBag.ownerUser).Avatar))" />
-            @*<img src="@Url.Content((((User)ViewBag.ownerUser).MainPhotoPath))" alt="">*@
-
         </div>
     </div>
         }

@@ -14,14 +14,14 @@
                 <div class="post-owner">
                     @Html.ActionLink(@Model.Owner.ToString(), "MainPage", "User", new { userId = @Model.Owner.Id })
                 </div>
-                <div class="post-date">
-                    @Model.Date.ToString()
+                <div class="post-date utc-date">
+                    @Model.Date.ToString("dd.MM.yyyy HH:mm:ss")
                 </div>
             </div>
             @if (Model.Owner == (User)ViewBag.LoggedUser)
             {
                 <div class="col-md-2">
-                    <button postId="@Model.Id" class="glyphicon glyphicon-remove delete-post-button"></button>
+                    <button postId="@Model.Id" class="glyphicon glyphicon-remove delete-post-button">-</button>
                 </div>
             }
         </div>
@@ -57,7 +57,7 @@
             <textarea class="form-control comment-sending-form" commentForPost="@Model.Id" placeholder="@Localizer["comment"]"></textarea>
         </div>
         <div class="col-md-1">
-            <button postId="@Model.Id" val="++++" class="glyphicon glyphicon-plus add-comment-button"></button>
+            <button postId="@Model.Id" val="+" class="glyphicon glyphicon-plus add-comment-button">+</button>
         </div>
     </div>
 </div>
