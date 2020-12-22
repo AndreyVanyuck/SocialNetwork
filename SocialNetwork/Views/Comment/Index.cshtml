@@ -5,12 +5,15 @@
         <div class="col-md-2">
             <img class="comment-owner-photo" src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Owner.Avatar))" />
         </div>
+        <div class="form-group">
+            <input type="hidden" asp-for="@Model.PostId" class="form-control" id="ArticleInput" />
+        </div>
         <div class="col-md-8">
             <div class="comment-owner">
                 @Html.ActionLink(@Model.Owner.ToString(), "MainPage", "User", new { userId = @Model.Owner.Id })
             </div>
             <small class="utc-date">   @Model.Date.ToString("dd.MM.yyyy HH:mm:ss")</small>
-           
+
 
         </div>
         @if (Model.Owner == (User)ViewBag.LoggedUser)

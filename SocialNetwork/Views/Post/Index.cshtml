@@ -54,11 +54,41 @@
 <div class="container-fluid comment-sending-area">
     <div class="row">
         <div class="col-md-11">
-            <textarea class="form-control comment-sending-form" commentForPost="@Model.Id" placeholder="@Localizer["comment"]"></textarea>
+            <textarea class="form-control comment-sending-form"  id="TextInput" commentForPost="@Model.Id" placeholder="@Localizer["comment"]"></textarea>
         </div>
         <div class="col-md-1">
-            <button postId="@Model.Id" val="+" class="glyphicon glyphicon-plus add-comment-button">+</button>
+            <button postId="@Model.Id" val="+" id="sendButton" class="glyphicon glyphicon-plus add-comment-button">+</button>
         </div>
     </div>
 </div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script>
+        var connection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
+        document.getElementById("sendButton").disabled = true;         //Disable send button until connection is established
 
+        connection.on("ReceiveMessage", function (UserName, Text, DateTime) {
+            var d = new Date();
+            var s = d.getDate() + '.' + (d.getMonth() + 1) + '.' + d.getFullYear() + ' ' + d.getHours() + ':' + ((d.getMinutes() > 9) ? d.getMinutes() : '0' + d.getMinutes()) ;
+            var encodedMsg = "<p>Логин: ".concat(UserName, "</p>", "<p>Коментарий:", Text, "</p>", "<p>", s, "</p><br/>");
+            var li = document.createElement("li");
+            li.innerHTML = encodedMsg;
+            document.getElementById("commentsId").appendChild(li);
+        });
+
+        connection.start().then(function () {
+            var Article = document.getElementById("ArticleInput").value;
+            connection.invoke("JoinPostGroup", Article);
+            document.getElementById("sendButton").disabled = false;
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        document.getElementById("sendButton").addEventListener("click", function (event) {
+            var Article = document.getElementById("ArticleInput").value;
+            var Text = document.getElementById("TextInput").value;
+            connection.invoke("SendMessage", Article, Text).catch(function (err) {
+                return console.error(err.toString());
+            });
+            event.preventDefault();
+        });
+</script>

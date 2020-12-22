@@ -11,6 +11,8 @@ using Azure.Identity;
 using Microsoft.Azure.Services.AppAuthentication;
 using Microsoft.Azure.KeyVault;
 using Microsoft.Extensions.Configuration.AzureKeyVault;
+using Serilog;
+using Serilog.Events;
 
 namespace SocialNetwork
 {
@@ -23,7 +25,6 @@ namespace SocialNetwork
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 
                 try
                 {
@@ -31,10 +32,18 @@ namespace SocialNetwork
                     var rolesManager = services.GetRequiredService<RoleManager<IdentityRole>>();
                     var configs = services.GetRequiredService<IConfiguration>();
                     await RoleInitializer.InitializeAsync(userManager, rolesManager, configs);
+
+                    Log.Logger = new LoggerConfiguration()
+                        .Enrich.FromLogContext()
+                        .WriteTo.File(configs["all-logs"])
+                        .WriteTo.Logger(lc => lc
+                        .Filter.ByIncludingOnly(le => le.Level == LogEventLevel.Error)
+                        .WriteTo.File(configs["error-logs"]))
+                        .CreateLogger();
                 }
                 catch (Exception ex)
                 {
-                    var logger = loggerFactory.CreateLogger<Program>();
+                    var logger = services.GetRequiredService<ILogger<Program>>();
                     logger.LogError(ex, "An error occurred seeding the DB.");
                 }
             }
@@ -44,31 +53,23 @@ namespace SocialNetwork
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
 
-          .ConfigureAppConfiguration((ctx, builder) =>
-          {
-              var keyVaultEndpoint = GetKeyVaultEndpoint();
-              if (!string.IsNullOrEmpty(keyVaultEndpoint))
+              .ConfigureAppConfiguration((ctx, builder) =>
               {
-                  var azureServiceTokenProvider = new AzureServiceTokenProvider();
-                  var keyVaultClient = new KeyVaultClient(
-                      new KeyVaultClient.AuthenticationCallback(
-                          azureServiceTokenProvider.KeyVaultTokenCallback));
-                  builder.AddAzureKeyVault(
-                  keyVaultEndpoint, keyVaultClient, new DefaultKeyVaultSecretManager());
-              }
-          })
-          
-          .ConfigureLogging((context, logging) =>
-                {
-                    logging.ClearProviders();
-                    logging.AddConfiguration(context.Configuration.GetSection("Logging"));
-                    logging.AddDebug();
-                    logging.AddConsole();
-                })
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+                  var keyVaultEndpoint = GetKeyVaultEndpoint();
+                  if (!string.IsNullOrEmpty(keyVaultEndpoint))
+                  {
+                      var azureServiceTokenProvider = new AzureServiceTokenProvider();
+                      var keyVaultClient = new KeyVaultClient(
+                          new KeyVaultClient.AuthenticationCallback(
+                              azureServiceTokenProvider.KeyVaultTokenCallback));
+                      builder.AddAzureKeyVault(
+                      keyVaultEndpoint, keyVaultClient, new DefaultKeyVaultSecretManager());
+                  }
+              })
+              .ConfigureWebHostDefaults(webBuilder =>
+              {
+                  webBuilder.UseStartup<Startup>();
+              });
         private static string GetKeyVaultEndpoint() => Environment.GetEnvironmentVariable("VaultUri");
     }
 }
